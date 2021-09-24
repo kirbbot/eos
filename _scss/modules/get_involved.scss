@@ -8,6 +8,7 @@
         height:90vh;
         h1{
                 margin-left:30px;
+                width:100%;
         }
         ul{
                 @include flexbox();
@@ -15,12 +16,13 @@
                 width:100%;
                 @include align-items(space-between);
                 li{
-                        max-width:400px;
-                        padding:0 20px;
                         @include flexbox();
                         @include flex-direction(column);
                         @include align-items(center);
                         @include justify-content(space-between);
+                        max-width:400px;
+                        padding:0 20px;
+                        width:25%;
                         transition:all 0.5s ease;
                         padding:20px;
                         border-radius:10px;

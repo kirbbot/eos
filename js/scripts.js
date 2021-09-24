@@ -32,6 +32,51 @@ jQuery(document).ready(function( $ ) {
                 $("body").toggleClass("menu-active");
         });
 
+        // Slick
+        $('#Timeline').slick({
+                dots: false,
+                prevArrow: false,
+                nextArrow: false
+        });
+        $('#Timeline-2010').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 0);
+        });
+        $('#Timeline-2011').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 1);
+        });
+        $('#Timeline-2013').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 2);
+        });
+        $('#Timeline-2014').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 3);
+        });
+        $('#Timeline-2015').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 4);
+        });
+        $('#Timeline-2016').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 5);
+        });
+        $('#Timeline-2017').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 6);
+        });
+        $('#Timeline-2018').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 7);
+        });
+        $('#Timeline-2019').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 8);
+        });
+        $('#Timeline-2020').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 9);
+        });
+        $('#Timeline-2021').on('click', function(){
+                $('#Timeline').slick('slickGoTo', 10);
+        });
+
+        $('#Timeline-Nav li').on('click', function(){
+                $('#Timeline-Nav li').removeClass('active');
+                $(this).addClass('active');
+        });       
+
 
         // Add active class to nav
         // http://www.sweet-web-design.com/wordpress/how-to-add-active-navigation-class-based-on-url-to-menu-item/2401/

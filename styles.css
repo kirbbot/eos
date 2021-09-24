@@ -652,7 +652,8 @@ textarea:focus, input:focus {
   padding: 100px 40px;
   height: 90vh; }
   #Get_Involved h1 {
-    margin-left: 30px; }
+    margin-left: 30px;
+    width: 100%; }
   #Get_Involved ul {
     display: -webkit-box;
     display: -moz-box;
@@ -671,8 +672,6 @@ textarea:focus, input:focus {
     -ms-flex-align: space-between;
     align-items: space-between; }
     #Get_Involved ul li {
-      max-width: 400px;
-      padding: 0 20px;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -692,6 +691,9 @@ textarea:focus, input:focus {
       -ms-justify-content: space-between;
       justify-content: space-between;
       -ms-flex-pack: space-between;
+      max-width: 400px;
+      padding: 0 20px;
+      width: 25%;
       transition: all 0.5s ease;
       padding: 20px;
       border-radius: 10px; }
@@ -1294,17 +1296,17 @@ textarea:focus, input:focus {
   padding-left: 180px !important;
   padding-right: 10px; }
 
-.community {
+#Community {
   padding-top: 70px;
   padding-bottom: 70px;
   max-width: 1280px;
   margin: 0 auto; }
-  .community section {
+  #Community section {
     margin-bottom: 60px;
     padding: 0 40px; }
-    .community section h1 {
+    #Community section h1 {
       margin-bottom: 20px; }
-  .community header {
+  #Community header {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1322,15 +1324,15 @@ textarea:focus, input:focus {
     padding: 0 40px;
     position: relative;
     margin-bottom: 60px; }
-    .community header img {
+    #Community header img {
       position: absolute;
       left: 0;
       top: 0;
       height: 100%;
       padding-left: 10px; }
-    .community header h2 {
+    #Community header h2 {
       font-weight: 200; }
-  .community #Firsthand_Stories {
+  #Community #Firsthand_Stories {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1340,19 +1342,19 @@ textarea:focus, input:focus {
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .community #Firsthand_Stories h1 {
+    #Community #Firsthand_Stories h1 {
       width: 100%; }
-    .community #Firsthand_Stories ul {
+    #Community #Firsthand_Stories ul {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-    .community #Firsthand_Stories li {
+    #Community #Firsthand_Stories li {
       border-radius: 10px;
       padding: 0 10px;
       width: 33.33%; }
-    .community #Firsthand_Stories img {
+    #Community #Firsthand_Stories img {
       height: 400px;
       width: 100%;
       object-fit: cover;
@@ -1361,18 +1363,18 @@ textarea:focus, input:focus {
       border-right: 1px solid grey;
       border-top-right-radius: 10px;
       border-top-left-radius: 10px; }
-    .community #Firsthand_Stories h4 {
+    #Community #Firsthand_Stories h4 {
       padding: 10px 20px;
       border-left: 1px solid grey;
       border-right: 1px solid grey; }
-    .community #Firsthand_Stories p {
+    #Community #Firsthand_Stories p {
       padding: 0 20px 10px 20px;
       border-left: 1px solid grey;
       border-bottom: 1px solid grey;
       border-right: 1px solid grey;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px; }
-  .community #Community_Conversations > ul {
+  #Community #Community_Conversations > ul {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1387,21 +1389,21 @@ textarea:focus, input:focus {
     -ms-justify-content: space-between;
     justify-content: space-between;
     -ms-flex-pack: space-between; }
-    .community #Community_Conversations > ul > li {
+    #Community #Community_Conversations > ul > li {
       padding-bottom: 40px;
       width: 50%; }
-      .community #Community_Conversations > ul > li:nth-child(even) {
+      #Community #Community_Conversations > ul > li:nth-child(even) {
         padding-left: 20px; }
-      .community #Community_Conversations > ul > li:nth-child(odd) {
+      #Community #Community_Conversations > ul > li:nth-child(odd) {
         padding-right: 20px; }
-  .community #Community_Conversations .post-preview {
+  #Community #Community_Conversations .post-preview {
     padding: 20px;
     border-left: 1px solid grey;
     border-right: 1px solid grey; }
-    .community #Community_Conversations .post-preview p {
+    #Community #Community_Conversations .post-preview p {
       font-size: 22px;
       line-height: 38px; }
-  .community #Community_Conversations .post_footer {
+  #Community #Community_Conversations .post_footer {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1421,12 +1423,12 @@ textarea:focus, input:focus {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 10px 20px; }
-    .community #Community_Conversations .post_footer img {
+    #Community #Community_Conversations .post_footer img {
       height: 40px;
       width: 40px;
       border-radius: 50%;
       object-fit: cover; }
-    .community #Community_Conversations .post_footer .post-footer-posted {
+    #Community #Community_Conversations .post_footer .post-footer-posted {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -1436,7 +1438,7 @@ textarea:focus, input:focus {
       -moz-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; }
-      .community #Community_Conversations .post_footer .post-footer-posted .post-footer-posted-by {
+      #Community #Community_Conversations .post_footer .post-footer-posted .post-footer-posted-by {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -1448,9 +1450,9 @@ textarea:focus, input:focus {
         -ms-flex-align: center;
         align-items: center;
         margin-top: 10px; }
-        .community #Community_Conversations .post_footer .post-footer-posted .post-footer-posted-by h4, .community #Community_Conversations .post_footer .post-footer-posted .post-footer-posted-by p {
+        #Community #Community_Conversations .post_footer .post-footer-posted .post-footer-posted-by h4, #Community #Community_Conversations .post_footer .post-footer-posted .post-footer-posted-by p {
           margin-left: 8px; }
-    .community #Community_Conversations .post_footer .post-footer-interactions {
+    #Community #Community_Conversations .post_footer .post-footer-interactions {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -1461,12 +1463,12 @@ textarea:focus, input:focus {
       -ms-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
-      .community #Community_Conversations .post_footer .post-footer-interactions p {
+      #Community #Community_Conversations .post_footer .post-footer-interactions p {
         margin-right: 10px; }
-        .community #Community_Conversations .post_footer .post-footer-interactions p span {
+        #Community #Community_Conversations .post_footer .post-footer-interactions p span {
           margin-right: 5px;
           margin-top: 8px; }
-  .community #Community_Conversations .post-categories {
+  #Community #Community_Conversations .post-categories {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1482,19 +1484,19 @@ textarea:focus, input:focus {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     position: relative; }
-    .community #Community_Conversations .post-categories .bookmark {
+    #Community #Community_Conversations .post-categories .bookmark {
       position: absolute;
       top: 16px;
       right: 20px; }
-    .community #Community_Conversations .post-categories span {
+    #Community #Community_Conversations .post-categories span {
       padding-right: 8px; }
-    .community #Community_Conversations .post-categories p {
+    #Community #Community_Conversations .post-categories p {
       padding-right: 8px; }
-      .community #Community_Conversations .post-categories p:after {
+      #Community #Community_Conversations .post-categories p:after {
         content: ", "; }
-      .community #Community_Conversations .post-categories p:last-child:after {
+      #Community #Community_Conversations .post-categories p:last-child:after {
         content: ""; }
-  .community #Resources ul {
+  #Community #Resources ul {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1504,7 +1506,7 @@ textarea:focus, input:focus {
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .community #Resources ul li {
+    #Community #Resources ul li {
       width: 50%;
       display: -webkit-box;
       display: -moz-box;
@@ -1512,11 +1514,11 @@ textarea:focus, input:focus {
       display: -webkit-flex;
       display: flex;
       margin-bottom: 20px; }
-      .community #Resources ul li:nth-child(even) {
+      #Community #Resources ul li:nth-child(even) {
         padding-left: 10px; }
-      .community #Resources ul li:nth-child(odd) {
+      #Community #Resources ul li:nth-child(odd) {
         padding-right: 10px; }
-      .community #Resources ul li .resources-text {
+      #Community #Resources ul li .resources-text {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -1537,7 +1539,7 @@ textarea:focus, input:focus {
         border-bottom: 1px solid grey;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px; }
-      .community #Resources ul li .img-container {
+      #Community #Resources ul li .img-container {
         height: 100%;
         width: 200px;
         padding: 10px 20px;
@@ -1546,7 +1548,7 @@ textarea:focus, input:focus {
         border-bottom: 1px solid grey;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px; }
-      .community #Resources ul li img {
+      #Community #Resources ul li img {
         height: 100%;
         width: 100%;
         object-fit: cover; }
