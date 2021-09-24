@@ -1,0 +1,73 @@
+#Membership_Types{
+        width:100%;
+        max-width:1280px;
+        padding:100px 40px;
+        margin:0 auto;
+        h1{
+                margin-bottom:60px;
+                color:$chocolate;
+        }
+        ul{
+                @include flexbox();
+                width:100%;
+                padding-left:400px;
+                li{     
+                        @include flexbox();
+                        @include flex-direction(column);
+                        @include justify-content(space-between);
+                        width:calc(100% / 3);
+                        &:first-child{
+                                margin-right:20px;
+                        }
+                        &:nth-child(2){
+                                margin:0 10px;
+                        }
+                        &:last-child{
+                                margin-left:20px;
+                        }
+                        h4,
+                        .number,
+                        p{
+                                color:$chocolate;
+                        }
+                        h4{
+                                margin-bottom:20px;
+                        }
+                        .number{
+                                font-family:radley;
+                                font-size:44px;
+                                margin-bottom:20px;
+                        }
+                        p{
+                                margin-bottom:20px;
+                        }
+                        button{
+                                color:$beige;
+                                border-radius:35px;
+                                background-color:$forest;
+                                height:48px;
+                        }
+                }
+        }
+        h2{
+                line-height:100px;
+                color:$chocolate;
+        }
+        table{
+                width:100%;
+        }
+        tr{
+        }
+        td{
+                height:60px;
+                vertical-align: middle;
+                border-bottom: 1px solid darken($bg, 20%);
+                color:$chocolate;
+                &:first-child{
+                        width:400px;
+                }
+                &:not(:first-child){
+                        text-align:center;
+                }
+        }
+}

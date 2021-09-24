@@ -1,0 +1,39 @@
+/* Style the tab */
+.tabs{
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+
+        .tablinks{
+                font-family:apercu;
+                transition: 0.3s;
+                border-bottom:2px solid transparent;
+                font-weight:200;
+                text-transform:uppercase;
+                &:hover{
+
+                }
+                &.active{
+                        font-weight:400;
+                        color:$forest !important;
+                        border-bottom:2px solid $forest;
+                }
+        }
+}
+
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding-top:40px;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

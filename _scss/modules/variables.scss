@@ -1,0 +1,59 @@
+@mixin background-image($url){
+                background-image: url($url);
+                background-repeat: no-repeat;
+                background-position: center center; // centered vertically and horizontally at all times
+                background-size: cover;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')";
+}
+
+@mixin page_padding(){
+        @include tablet{
+                padding:8% 0.5%;
+        }
+        @include phone{
+                padding:8% 10px;
+        }
+}
+
+@mixin text_element_padding(){
+        padding: 0 10%;
+}
+// C O L O R S //
+$black: #000;
+$white: #fff;
+
+$cremsicle: #ffb284;
+$goldenhour: #ffc98b;
+$highlight: #C6C093;
+$sage: #c6c09c;
+$smoke: #e3dad5;
+
+$chocolate: #251E19;
+$milk_chocolate:lighten($chocolate,20%);
+
+$highlight:$sage;
+
+
+// E O S //
+//Colors
+$ltsage: #e5ede8;
+$sage: #afc9b8;
+$ltorchid: #e5d9e4;
+$orchid: #c7abcd;
+$ltblue: #d6e1eb;
+$blue: #abc2dd;
+$lttan: #f0e6d5;
+$tan: #d9bc90;
+
+$forest: #648C1A;
+$bg: #faf8f5;
+$olive: #515D45;
+$milk_cafe: #C0A271;
+$beige: #f2efe7;
+
+$text-primary:$chocolate;
+$silver: #ADADc9;
+$slate:#3E3D53;

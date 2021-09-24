@@ -1,0 +1,56 @@
+// M O D U L E S
+@import 'modules/resets.scss';
+@import 'modules/mixins.scss';
+@import 'modules/variables.scss';
+@import 'modules/typography.scss';
+@import 'modules/forms.scss';
+@import 'modules/header.scss';
+@import 'modules/tabs.scss';
+@import 'modules/circle.scss';
+@import 'modules/get_involved.scss';
+
+
+// P A G E S
+@import 'pages/index.scss';
+@import 'pages/membership_types.scss';
+@import 'pages/profile.scss';
+@import 'pages/life_transitions.scss';
+@import 'pages/profile_settings.scss';
+@import 'pages/about.scss';
+
+
+// * ˆ * // * ˆ * // * ˆ * // * ˆ * //
+html {
+    background-color:$bg;
+}
+
+html,
+body {
+    height: 100%; //Set so descendents vertically fill space
+    overflow-y: scroll;
+}
+body > .content{
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        overflow-y:scroll;
+        margin-top: $header_h_desktop;
+        >section{
+                width:100%;
+        }
+}
+
+ul.filters{
+        @include flexbox();
+        button{
+                border:1px solid $forest;
+                color:$forest;
+                padding:10px 20px;
+                border-radius:4px;
+                margin-right:20px;
+                span{
+                        margin-left:10px;
+                        font-size:80%;
+                }
+        }
+}

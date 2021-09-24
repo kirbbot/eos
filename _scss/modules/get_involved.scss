@@ -1,0 +1,61 @@
+#Get_Involved{
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include justify-content(space-around);
+        background-color:$ltblue;
+        padding:40px 0;
+        padding:100px 40px;
+        height:90vh;
+        h1{
+                margin-left:30px;
+        }
+        ul{
+                @include flexbox();
+                @include justify-content(space-around);
+                width:100%;
+                @include align-items(space-between);
+                li{
+                        max-width:400px;
+                        padding:0 20px;
+                        @include flexbox();
+                        @include flex-direction(column);
+                        @include align-items(center);
+                        @include justify-content(space-between);
+                        transition:all 0.5s ease;
+                        padding:20px;
+                        border-radius:10px;
+                        &:hover{
+                                background-color:darken($ltblue, 3%);
+                                cursor:pointer;
+                                .button{
+                                        opacity:1;
+                                }
+                        }
+                }
+        }
+
+        img{
+                height:150px;
+                width:150px !important;
+                margin:0 auto;
+                filter:saturate(1.2);
+        }
+        h3{
+                text-align:center;
+                color:darken($blue,40%);
+        }
+        p{
+                text-align: justify;
+                color:darken($blue,40%);
+        }
+        .button{
+                border:1px solid darken($blue, 40%);
+                padding:5px 10px;
+                border-radius:5px;
+                margin-top:10px;
+                transition:all 0.5s ease;
+                opacity:0;
+                background-color:darken($blue, 20%);
+                color:$ltblue;
+        }
+}

@@ -1,0 +1,132 @@
+#Profile{
+        @include flexbox();
+        @include justify-content(center);
+        width:100%;
+        #Profile-Image,
+        #Profile-Name,
+        #Profile-Username,
+        #Profile-Rating,
+        #Profile-Bio,
+        #Profile-Message,
+        #Profile-FriendRequest,
+        #Profile-Location{
+                margin-bottom:15px;
+        }
+        #Profile-About,
+        #Profile-Participation{
+                padding-top:70px;
+                padding-bottom:70px;
+        }
+        #Profile-About{
+                @include flexbox();
+                @include flex-direction(column);
+                @include align-items(center);
+                padding-left:20px;
+                padding-right:20px;
+                width:30%;
+                background-color: $ltsage;
+                border-right:2px solid $forest;
+                .wrapper{
+                         @include flexbox();
+                        @include flex-direction(column);
+                        @include align-items(center);
+                        max-width:350px;
+                }
+                img{
+                        object-fit: cover;
+                        width:200px;
+                        height:200px;
+                        border-radius:50%;
+                        border:10px solid $sage;
+                }
+        }
+        #Profile-Name,
+        #Profile-Username,
+        #Profile-Location,
+        #Profile-Rating{
+                @include flexbox();
+                @include flex-direction(column);
+                @include align-items(center);
+                width:100%;
+        }
+        #Profile-Rating ul{
+                @include flexbox();
+                span{
+                        font-size:24px;
+                }
+                li{
+                        padding:0 5px;
+                }
+        }
+        #Profile-Message{
+                background-color:$forest;
+                color:$white;
+        }
+        #Profile-FriendRequest{
+                border:2px solid $forest;
+                color:$forest;
+        }
+        .btn{
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                padding:20px 0;
+                width:100%;
+        }
+        #Profile-Participation{
+                width:70%;
+                padding-right:40px;
+                padding-left:40px;
+                max-width:960px;
+                margin: 0 auto;
+                .tablinks{
+                        color:$sage;
+                        span{
+                                margin-right:5px;
+                                margin-top:3px;
+                        }
+                }
+                #Activity{
+                        .profile-activity-new_friend{
+                                @include flexbox();
+                                @include justify-content(flex-start);
+                                @include align-items(center);
+                                img{
+                                        width:40px;
+                                        height:auto;
+                                        margin-right:10px;
+                                }
+                        }
+                        
+                }
+        }
+        label{
+                color:darken($sage, 10%);
+        }
+        .tabcontent{
+                >div{
+                        &:not(:first-child){
+                                padding:20px 0;
+                        }
+                        position:relative;
+                        border-bottom:1px solid $sage;
+                        p{
+                                margin-bottom:10px;
+                                a{ 
+                                        font-family:inherit; 
+                                        border-bottom:1px solid $forest; 
+                                        color:$forest;
+                                        font-size:inherit;
+                                }
+                        }
+                        date{
+                                position:absolute;
+                                top:15px;
+                                right:15px;
+                                font-family:apercu;
+                                font-weight:200;
+                                font-size:11px;
+                        }
+                }
+        }
+}

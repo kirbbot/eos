@@ -1,0 +1,153 @@
+--- 
+layout: wrapper 
+title: Community
+---
+
+<!-- 
+
+NOTES
+
+3 buckets fo community content - first hand stories, forum, events & activities
+2 buckets of community support - resources, member 2 member
+filters 
+
+-->
+
+
+<section id="Community">
+        <header>
+                <ul class="filters">
+                        <li class="dropdown">
+                                <button>Topics<span class="icon-standard">navigatedown</span></button>
+                                <!-- <ul>
+                                        <li>Abuse & Domestic Violence</li>
+                                        <li>Addiction</li>
+                                        <li>Aging</li>
+                                        <li>Career Change</li>
+                                        <li>Coming of Age</li>
+                                        <li>Community</li>
+                                        <li>Grieving</li>
+                                        <li>Health Crisis</li>
+                                        <li>Homelessness</li>
+                                        <li>Human Trafficking</li>
+                                        <li>Military</li>
+                                        <li>New Business</li>
+                                        <li>Parenting</li>
+                                        <li>Self Awareness</li>
+                                        <li>Union</li>
+                                </ul> -->
+                        </li>
+                        <li class="dropdown">
+                                <button>Location<span class="icon-standard">navigatedown</span></button>
+                        </li>
+                        <li class="dropdown">
+                                <button>Faith<span class="icon-standard">navigatedown</span></button>
+                        </li>
+                        <li class="dropdown">
+                                <button>Cost<span class="icon-standard">navigatedown</span></button>
+                        </li>
+                </ul>
+        </header>
+        <section id="Firsthand_Stories">
+                <h1>Firsthand Stories</h1>
+                <ul>
+                        {% for i in (1..3) %}
+                                <li>
+                                        <img src="./img/firsthand_stories_avatar.png">
+                                        <h4>I've been sober for 9 months and it all began when I shifted my thinking</h3>
+                                        <p>Posted By Abel on August 23, 2021</p>
+                                </li>
+                        {% endfor %}
+                </ul>
+        </section>
+        <section id="Community_Conversations">   
+                <h1>Community Conversations</h1>
+                <ul>
+                        {% for i in (1..6) %}
+                                <li>
+                                        <div class="post-categories">
+                                                <span class="icon">tag</span>
+                                                <p>Abuse</p>
+                                                <p>Advice</p>
+                                                <span class="icon-standard bookmark">bookmark</span>
+                                        </div>
+                                        <div class="post-preview">
+                                                <h3>I've been stuck in this really negative narrative</h3>
+                                                <p>Can you help me repharase this narrative: "I drive people away because my boyfriend is now distancing himself physically and emotionally"?</p>
+                                        </div>
+                                       <div class="post_footer">
+                                                <div class="post-footer-posted">
+                                                        <h6>Conversation created by</h6>
+                                                        <div class="post-footer-posted-by">
+                                                                <img src="../img/firsthand_stories_avatar.png">
+                                                                <h4>Abel</h4>
+                                                                <p>on August 23, 2021</p>
+                                                        </div>
+                                                </div>
+                                                <div class="post-footer-interactions">
+                                                        <p><span class="icon-standard">eye</span>300</p>
+                                                        <p><span class="icon-standard">comment</span>200</p>
+                                                </div>
+                                        </div>
+                                       
+                                </li>
+                        {% endfor %}
+                </ul>     
+        </section>
+        <section id="Events">
+                <h1>Events & Activities</h1>
+                <ul>
+                        {% for i in (1..4) reversed %}
+                                <li>
+                                        <div class="img-container">
+                                                <img src="./img/resources_placeholder.png">
+                                        </div>
+                                        
+                                        <div class="resources-text">
+                                                <h3>Event Name</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                <p>City, State</p>
+                                        </div>
+                                </li>
+                        {% endfor %}
+                </ul>
+        </section>
+        <section id="Resources">
+                <h1>Helpful Resources</h1>
+                <ul>
+                        {% for i in (1..4) reversed %}
+                                <li>
+                                        <div class="img-container">
+                                                <img src="./img/resources_placeholder.png">
+                                        </div>
+                                        
+                                        <div class="resources-text">
+                                                <h3>Service listing or provider</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                <p>City, State</p>
+                                        </div>
+                                </li>
+                        {% endfor %}
+                </ul>
+        </section>
+        <section id="Member2Member">
+                <h1>Member to Member</h1>
+                <ul>
+                        {% for i in (1..4) reversed %}
+                                <li>
+                                        <div class="img-container">
+                                                <img src="./img/resources_placeholder.png">
+                                        </div>
+                                        
+                                        <div class="resources-text">
+                                                <h3>Firstname Lastname</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                <p>City, State</p>
+                                                <p>Join date</p>
+                                                <p>Categories</p>
+                                        </div>
+                                </li>
+                        {% endfor %}
+                </ul>
+        </section>
+</section>      

@@ -1,0 +1,93 @@
+@include font-face(ssSocialCircle, "./fonts/SS-Social-Circle/ss-social-circle", regular, null, eot ttf svg);
+@include font-face(ssSocial, "./fonts/SS-Social/ss-social-regular", regular, null, eot ttf svg);
+@include font-face(ssBlock, "./fonts/SS-Block/ss-block", regular, null, eot ttf svg);
+@include font-face(ssStandard, "./fonts/SS-Standard/ss-standard", regular, null, eot ttf svg);
+@include font-face(radley, "./fonts/Radley/Radley-Regular", regular, null, eot ttf svg);
+@include font-face(apercu, "./fonts/Apercu/ApercuProRegular");
+@include font-face(apercu, "./fonts/Apercu/ApercuProLight", 200, normal);
+@include font-face(apercu, "./fonts/Apercu/ApercuProMedium", 400, normal);
+@include font-face(apercu, "./fonts/Apercu/ApercuProBold", 600, normal);
+@include font-face(radley, "./fonts/Radley/Radley");
+@include font-face(sabon, "./fonts/Sabon-Next/SabonNext");
+h1, h2, h3, h4, h5, h6, p, a, label{
+        color:$chocolate;
+}
+h1 {
+    font-family: radley;
+    font-size: 44px;
+    line-height: 55px;
+}
+
+h2 {
+    font-family: apercu;
+    font-size: 35px;
+    line-height: 45px;
+}
+
+h3 {
+    font-family: apercu;
+    font-size: 25px;
+    line-height: 32px;
+}
+
+h4 {
+    font-family: apercu;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+h5 {
+    font-family: apercu;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+h6 {
+    font-family: apercu;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+a {
+    font-family: apercu;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+p {
+    font-family: sabon;
+    font-size: 18px;
+    line-height: 28px;
+}
+label{
+        font-family: sabon;
+        font-size: 14px;
+        line-height: 28px;    
+}
+small{
+        font-family:inherit;
+        font-size:75%;
+        line-height:75%;
+}
+button{
+        font-family:apercu;
+        font-weight: 400;
+        font-size:16px;
+}
+.btn{
+        border-radius:20px;
+        padding:10px 13px;
+        border:1px solid $chocolate;
+
+}
+.icon-social {
+    font-family: ssSocial;
+}
+
+.icon {
+    font-family: ssBlock;
+}
+
+.icon-standard{
+    font-family: ssStandard;
+}

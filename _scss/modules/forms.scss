@@ -1,0 +1,177 @@
+textarea:focus, input:focus{
+        outline:none;
+}
+
+//colors
+$primary-color   : $sage;
+$secondary-color : #000;
+
+
+//contact form
+.form{
+    margin-top: 30px;
+    fieldset{
+        background-color: rgba(white, .8);
+        border: solid 1px $primary-color;
+        width: 100%;
+        height: auto;
+        padding: 25px;
+        position: relative;
+        margin-bottom: 20px;
+        transition: all 0.3s ease-out;
+        box-shadow:inset 0px 0px 3px #e8c99b;
+        border:1px solid #faf2e6;
+        background-color:#faf2e6;
+        border-radius:5px;
+        &.focus{
+            border: solid 1px darken($primary-color, 10%);
+        }
+        &.textarea{
+            height: auto;
+            .form-control{
+                height: auto;
+                resize: none;
+            }
+        }
+        p a,
+        label a{
+                font-family:inherit;
+                font-size:inherit;
+                font-style:inherit;
+                border-bottom:1px solid #d6ad6f;
+        }
+        &.membership_types{
+                height:auto;
+                // box-shadow:none;
+                // border:0px solid transparent;
+                // background-color:transparent;
+                // padding:0;
+                ul{
+                        @include flexbox();
+                        //@include flex-direction(column);
+                        @include justify-content(space-around);
+                        width:100%;
+                        li{
+                                @include flexbox();
+                                @include flex-direction(column);
+                                @include justify-content(flex-end);
+                                padding:0px 20px;
+                                width:33.3%;
+                                height:100px;
+                                background-color:#e8c99b;
+                                border-radius:5px;
+                                margin-bottom:10px;
+                                text-align:center;
+                                padding-bottom:30px;
+                                text-align: center;
+                                &:first-child{
+                                        margin-right:4px;
+                                }
+                                &:last-child{
+                                        margin-left:4px;
+                                }
+                                &:nth-child(2){
+                                        margin:0 2px;
+                                }
+                                input{
+                                        display:none;
+                                }   
+                                label{
+                                        span{
+                                                position:relative;
+                                                padding-top:10px;
+                                                text-transform:uppercase;
+                                                font-family:apercu;
+                                                font-weight:400;
+                                                letter-spacing:0.04em;
+                                                font-size:14px;
+                                                &:hover{
+                                                        cursor: pointer;
+                                                }
+                                                &:before,
+                                                &:after{
+                                                        content:'';
+                                                }
+                                                &:before{
+                                                        border:1px solid #ab7f3e;
+                                                        width:20px;
+                                                        height:20px;
+                                                        position:absolute;
+                                                        left:calc(50% - 10px);
+                                                        top:-20px;
+                                                }
+                                                &:after{
+                                                        background: #ab7f3e;
+                                                        width: 14px;
+                                                        height: 14px;
+                                                        position: absolute;
+                                                        top: -17px;
+                                                        left: calc(50% - 7px);
+                                                        transition: 300ms;
+                                                        opacity: 0;
+                                                }
+                                        }
+                                }
+                                label input:checked+span:after {
+                                  opacity: 1;
+                                }
+                        }
+                }
+                p{
+                        text-align: right;
+                }
+        }
+        .membership_terms{
+                @include flexbox();
+        }
+        label{
+            display: block;
+            margin: 0;
+            font-weight: 300;
+            z-index: 1;
+            color: $secondary-color;
+            font-size: 18px;
+            line-height: 10px;
+            &.animated{
+                position: absolute;  
+                left: 25px;
+                top: 25px;
+            }
+        }
+        .form-control{
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            font-size: 18px;
+            color: $secondary-color;
+        }
+        .form-control:focus{
+            label{
+                top: 0;
+            }
+        }
+    }
+    .square-button{
+        background-color: rgba(white, .8);
+        color: darken($primary-color, 10%);
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        padding: 0 60px;
+        height: 60px;
+        border: none;
+        width: 100%;
+        &:hover,
+        &:focus{
+            background-color: white;
+        }
+    }
+}
