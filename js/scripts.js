@@ -77,26 +77,17 @@ jQuery(document).ready(function( $ ) {
                 $(this).addClass('active');
         });       
 
+        // Modal
 
         // Add active class to nav
         // http://www.sweet-web-design.com/wordpress/how-to-add-active-navigation-class-based-on-url-to-menu-item/2401/
         jQuery(function($) {
-                var path = window.location.href.slice(0,-1); // because the 'href' property of the DOM element is the absolute path
-                var pathArray = window.location.href.split('/');
-                var pathLocation = pathArray[3];
-                $('#Nav_Secondary a').each(function() {
-                        var navPathArray = this.href.split('/');
-                        var navPathLocation = navPathArray[3];
-                        
-                        if (this.href === path || navPathLocation === 'syllabus' && pathLocation === 'classes') {
-                                console.log(pathLocation);
+                var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+                $('#Nav_Main a').each(function() {
+                        if (this.href === path) {
                                 $(this).addClass('active');
                         }
                 });
-        });
-        $('#Nav_Secondary a').on('click', function(){
-                $(this).removeClass('active');
-                $(this).addClass('active');
         });
 
         // FORMS
@@ -114,8 +105,8 @@ jQuery(document).ready(function( $ ) {
         $('.form').find('.form-control').focus(function() {
           $(this).parent('fieldset').addClass('focus');
           $(this).parent().find('label').animate({
-            'top': '10px',
-            'fontSize': '14px',
+            'top': '12px',
+            'fontSize': '12px',
             'color':'ADADc9'
           }, 300);
         })

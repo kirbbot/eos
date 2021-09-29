@@ -1,29 +1,34 @@
 #About{
         h1{
                 margin-bottom:60px;
+                text-align: center;
         }
         #About-Manifesto{
                 @include flexbox();
                 @include flex-direction(column);
                 @include align-items(center);
                 background-color:$ltsage;
+                h1{
+                        margin:40px 0 0px !important;
+                }
                 ul{
                         width:100%;
                         @include flexbox();
-                        @include flex-wrap(wrap);
-                        @include justify-content(center);
-                        @include align-items(center);
+                        @include flex-direction(column);
                 }
                 li{
-                        width:50%;
-                        height:calc(100vh / 2);
+                        padding:40px;
+                        width:100%;
+                        max-width:780px;
+                        margin:0 auto;
+                        &:not(:last-child){
+                                border-bottom:2px dotted $sage;
+                        }
                         @include flexbox();
                         @include flex-direction(column);
-                        @include justify-content(center);
-                        @include align-items(center);
+                        @include align-content(center);
                         h2{
                                 margin-bottom:20px;
-                                max-width:600px;
                         }
                         span{
                                 border-radius:50%;
@@ -37,51 +42,51 @@
                         }
                         p{
                                 margin-bottom:10px;
-                                max-width:600px;
-                        }
-                        &:nth-child(1){
-                                background-color:$ltorchid;
-                                border:1px dotted $orchid;
-                        }
-                        &:last-child{
-                                background-color:$ltsage;
-                                border:1px dotted $sage;
-                        }
-                        &:nth-child(2){
-                                background-color:$lttan;
-                                border:1px dotted $tan;
-                        }
-                        &:nth-child(3){
-                                background-color:$ltblue;
-                                border:1px dotted $blue;
                         }
                 }
         }
         #About-Core_Values{
                 @include flexbox();
+                @include flex-direction(column);
                 @include justify-content(center);
                 @include align-items(center);
-                padding:60px 0;
+                padding:40px;
+                margin:0 auto;
+                max-width:1200px;
+                .text{
+                        @include flexbox();
+                }
                 ul{
-                         max-width:700px;
+                         max-width:600px;
+                         &:first-child{
+                                padding-right:20px;
+                         }
+                         &:last-child{
+                                padding-left:20px;
+                         }
                          li{
-                                margin-bottom:10px;
+                                margin-bottom:30px;
                                 strong{
-                                        font-weight:400;
+                                        font-weight:600;
                                         font-family:apercu;
+                                        font-size:22px;
                                 }
                         }
                 }
                 img{
                         width:35%;
                         height:35%;
-                        min-width:300px;
+                        width:600px;
+                        padding:0 60px;
                 }
-                .text{
-                        margin-left:30px;
-                }
+                
                 h1{
                         margin-bottom:20px !important;
+                        border-top:5px dotted $lttan;
+                        border-bottom:5px dotted $lttan;
+                        width:100%;
+                        text-align: center;
+                        padding:10px 0;
                 }
         }
         #About-Team{
@@ -89,6 +94,8 @@
                 padding:100px 0;
                 h1{
                         text-align: center;
+                        color:darken($orchid, 50%);
+                        text-shadow: 1px 1px lighten($orchid, 4%);
                 }
                 ul{
                         @include flexbox();

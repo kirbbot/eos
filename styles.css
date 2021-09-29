@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box; }
 
@@ -152,158 +153,268 @@ button {
 textarea:focus, input:focus {
   outline: none; }
 
-.form {
-  margin-top: 30px; }
-  .form fieldset {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: solid 1px #afc9b8;
+.form #Signup-Profile_Type {
+  width: 100%;
+  background-color: #e6d3b6; }
+  .form #Signup-Profile_Type::before {
+    width: calc(100% / 2);
+    font-size: 18px;
+    color: #bf8e44; }
+  .form #Signup-Profile_Type label {
+    width: calc(100% / 2); }
+    .form #Signup-Profile_Type label::before {
+      border: 2px solid #e6d3b6; }
+  .form #Signup-Profile_Type .switch-button-checkbox + .switch-button-label:before {
+    background-color: #faf2e6; }
+.form .switch-button {
+  border-color: #e6d3b6; }
+.form fieldset {
+  margin-bottom: 20px; }
+  .form fieldset label {
+    font-size: 18px;
+    color: #bf8e44; }
+.form a {
+  font-weight: 200;
+  font-size: 14px;
+  border-bottom: 1px solid #000; }
+.form .fieldset-regular {
+  border: solid 2px #e6d3b6;
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease-out;
+  background-color: #faf2e6;
+  border-radius: 30px; }
+  .form .fieldset-regular.focus {
+    border: solid 2px #d9bc90; }
+  .form .fieldset-regular.textarea {
+    height: auto; }
+    .form .fieldset-regular.textarea .form-control {
+      height: auto;
+      resize: none; }
+  .form .fieldset-regular input {
     width: 100%;
+    padding: 30px 25px 10px; }
+  .form .fieldset-regular p a,
+  .form .fieldset-regular label a {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    border-bottom: 1px solid #d6ad6f; }
+  .form .fieldset-regular label {
+    display: block;
+    margin: 0;
+    font-weight: 300;
+    z-index: 1;
+    color: #bf8e44;
+    line-height: 10px; }
+    .form .fieldset-regular label.animated {
+      position: absolute;
+      left: 25px;
+      top: 25px; }
+  .form .fieldset-regular .form-control {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
     height: auto;
-    padding: 25px;
     position: relative;
-    margin-bottom: 20px;
-    transition: all 0.3s ease-out;
-    box-shadow: inset 0px 0px 3px #e8c99b;
-    border: 1px solid #faf2e6;
-    background-color: #faf2e6;
-    border-radius: 5px; }
-    .form fieldset.focus {
-      border: solid 1px #91b49d; }
-    .form fieldset.textarea {
-      height: auto; }
-      .form fieldset.textarea .form-control {
-        height: auto;
-        resize: none; }
-    .form fieldset p a,
-    .form fieldset label a {
-      font-family: inherit;
-      font-size: inherit;
-      font-style: inherit;
-      border-bottom: 1px solid #d6ad6f; }
-    .form fieldset.membership_types {
-      height: auto; }
-      .form fieldset.membership_types ul {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-justify-content: space-around;
-        -moz-justify-content: space-around;
-        -ms-justify-content: space-around;
-        justify-content: space-around;
-        -ms-flex-pack: space-around;
-        width: 100%; }
-        .form fieldset.membership_types ul li {
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-flex-direction: column;
-          -moz-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-justify-content: flex-end;
-          -moz-justify-content: flex-end;
-          -ms-justify-content: flex-end;
-          justify-content: flex-end;
-          -ms-flex-pack: flex-end;
-          padding: 0px 20px;
-          width: 33.3%;
-          height: 100px;
-          background-color: #e8c99b;
-          border-radius: 5px;
-          margin-bottom: 10px;
-          text-align: center;
-          padding-bottom: 30px;
-          text-align: center; }
-          .form fieldset.membership_types ul li:first-child {
-            margin-right: 4px; }
-          .form fieldset.membership_types ul li:last-child {
-            margin-left: 4px; }
-          .form fieldset.membership_types ul li:nth-child(2) {
-            margin: 0 2px; }
-          .form fieldset.membership_types ul li input {
-            display: none; }
-          .form fieldset.membership_types ul li label span {
-            position: relative;
-            padding-top: 10px;
-            text-transform: uppercase;
-            font-family: apercu;
-            font-weight: 400;
-            letter-spacing: 0.04em;
-            font-size: 14px; }
-            .form fieldset.membership_types ul li label span:hover {
-              cursor: pointer; }
-            .form fieldset.membership_types ul li label span:before, .form fieldset.membership_types ul li label span:after {
-              content: ''; }
-            .form fieldset.membership_types ul li label span:before {
-              border: 1px solid #ab7f3e;
-              width: 20px;
-              height: 20px;
-              position: absolute;
-              left: calc(50% - 10px);
-              top: -20px; }
-            .form fieldset.membership_types ul li label span:after {
-              background: #ab7f3e;
-              width: 14px;
-              height: 14px;
-              position: absolute;
-              top: -17px;
-              left: calc(50% - 7px);
-              transition: 300ms;
-              opacity: 0; }
-          .form fieldset.membership_types ul li label input:checked + span:after {
-            opacity: 1; }
-      .form fieldset.membership_types p {
-        text-align: right; }
-    .form fieldset .membership_terms {
+    z-index: 2;
+    font-size: 18px;
+    color: #251E19; }
+  .form .fieldset-regular .form-control:focus label {
+    top: 0; }
+.form #Signup-Profile_Type {
+  margin-bottom: 20px; }
+.form #Signup-Membership_Types {
+  height: auto;
+  width: 100%; }
+  .form #Signup-Membership_Types legend {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    width: 100%;
+    color: #bf8e44;
+    padding: 0 0 10px 25px;
+    font-size: 18px; }
+  .form #Signup-Membership_Types header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .form #Signup-Membership_Types input[type="radio"] {
+    opacity: 0;
+    display: inline-block;
+    z-index: 1; }
+    .form #Signup-Membership_Types input[type="radio"] + label {
+      display: inline-block;
+      position: relative; }
+    .form #Signup-Membership_Types input[type="radio"] + label::before {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #d9bc90;
+      margin-bottom: 5px;
+      margin-top: -16px; }
+    .form #Signup-Membership_Types input[type="radio"]:checked + label::before {
+      font-family: ssStandard;
+      content: "check";
+      border-color: transparent; }
+  .form #Signup-Membership_Types > ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around;
+    width: 100%; }
+    .form #Signup-Membership_Types > ul > li {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 33.3%;
+      height: 100%;
+      background-color: #e6d3b6;
+      border-radius: 5px;
+      text-align: center; }
+      .form #Signup-Membership_Types > ul > li:first-child {
+        margin-right: 6px; }
+      .form #Signup-Membership_Types > ul > li:last-child {
+        margin-left: 6px; }
+      .form #Signup-Membership_Types > ul > li:nth-child(2) {
+        margin: 0 3px; }
+      .form #Signup-Membership_Types > ul > li header {
+        background-color: #bf8e44;
+        padding: 15px 0;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px; }
+        .form #Signup-Membership_Types > ul > li header label {
+          color: #f0e6d5;
+          font-family: apercu; }
+      .form #Signup-Membership_Types > ul > li > label {
+        font-family: apercu; }
+  .form #Signup-Membership_Types ul li ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px; }
+    .form #Signup-Membership_Types ul li ul li {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-    .form fieldset label {
-      display: block;
-      margin: 0;
-      font-weight: 300;
-      z-index: 1;
+      .form #Signup-Membership_Types ul li ul li p {
+        text-align: left;
+        margin-left: 8px;
+        font-size: 16px; }
+      .form #Signup-Membership_Types ul li ul li:not(:last-child) {
+        margin-bottom: 8px; }
+      .form #Signup-Membership_Types ul li ul li:before {
+        content: "•";
+        margin-top: 5px; }
+
+#Signup {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f0e6d5;
+  width: 100%;
+  padding: 30px 0; }
+  #Signup fieldset {
+    max-width: 600px; }
+  #Signup #Signup-Buttons {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  #Signup #Signup-Cancel {
+    margin-left: 30px; }
+  #Signup #Signup-Membership_Terms {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    #Signup #Signup-Membership_Terms input {
+      margin-top: 7px;
+      margin-right: 10px; }
+    #Signup #Signup-Membership_Terms label {
       color: #000;
-      font-size: 18px;
-      line-height: 10px; }
-      .form fieldset label.animated {
-        position: absolute;
-        left: 25px;
-        top: 25px; }
-    .form fieldset .form-control {
-      background-color: transparent;
-      padding: 0;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      height: auto;
-      position: relative;
-      z-index: 2;
-      font-size: 18px;
-      color: #000; }
-    .form fieldset .form-control:focus label {
-      top: 0; }
-  .form .square-button {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #91b49d;
-    font-size: 26px;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    padding: 0 60px;
-    height: 60px;
-    border: none;
-    width: 100%; }
-    .form .square-button:hover, .form .square-button:focus {
-      background-color: white; }
+      font-family: apercu;
+      font-weight: 200;
+      font-size: 14px; }
+    #Signup #Signup-Membership_Terms input[type="checkbox"] {
+      opacity: 0;
+      display: inline-block;
+      z-index: 1; }
+      #Signup #Signup-Membership_Terms input[type="checkbox"] + label {
+        display: inline-block;
+        position: relative; }
+      #Signup #Signup-Membership_Terms input[type="checkbox"] + label::before {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #d9bc90;
+        margin-bottom: 5px;
+        margin-top: -16px; }
+      #Signup #Signup-Membership_Terms input[type="checkbox"]:checked + label::before {
+        font-family: ssStandard;
+        content: "check";
+        border-color: transparent; }
 
 #Header_Main {
   display: -webkit-box;
@@ -652,8 +763,9 @@ textarea:focus, input:focus {
   padding: 100px 40px;
   height: 90vh; }
   #Get_Involved h1 {
-    margin-left: 30px;
-    width: 100%; }
+    text-align: center;
+    width: 100%;
+    color: #365b86; }
   #Get_Involved ul {
     display: -webkit-box;
     display: -moz-box;
@@ -691,6 +803,7 @@ textarea:focus, input:focus {
       -ms-justify-content: space-between;
       justify-content: space-between;
       -ms-flex-pack: space-between;
+      position: relative;
       max-width: 400px;
       padding: 0 20px;
       width: 25%;
@@ -702,6 +815,12 @@ textarea:focus, input:focus {
         cursor: pointer; }
         #Get_Involved ul li:hover .button {
           opacity: 1; }
+      #Get_Involved ul li a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
   #Get_Involved img {
     height: 150px;
     width: 150px !important;
@@ -722,6 +841,72 @@ textarea:focus, input:focus {
     opacity: 0;
     background-color: #628dc0;
     color: #d6e1eb; }
+
+.switch-button {
+  border-radius: 30px;
+  overflow: hidden;
+  text-align: center;
+  position: relative; }
+  .switch-button:before {
+    content: "Organization";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none; }
+  .switch-button-checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2; }
+    .switch-button-checkbox:checked + .switch-button-label:before {
+      transform: translateX(100%);
+      transition: transform 300ms linear; }
+    .switch-button-checkbox + .switch-button-label {
+      position: relative;
+      padding: 15px 0;
+      display: block;
+      user-select: none;
+      pointer-events: none; }
+      .switch-button-checkbox + .switch-button-label:before {
+        content: "";
+        background: #fff;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 30px;
+        transform: translateX(0);
+        transition: transform 300ms; }
+      .switch-button-checkbox + .switch-button-label .switch-button-label-span {
+        position: relative; }
+
+a.button {
+  width: 250px;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #649475;
+  border: 1px solid #314839;
+  border-radius: 5px;
+  color: #e5ede8;
+  transition: all 0.5s ease;
+  font-family: apercu;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px; }
+  a.button:hover {
+    background-color: #afc9b8;
+    color: #e5ede8; }
 
 #Home section {
   display: -webkit-box;
@@ -1049,75 +1234,70 @@ textarea:focus, input:focus {
     padding: 40px 0 0 40px;
     max-width: 600px; }
 
-#Membership_Types {
+#Membership_Types h1 {
+  margin-bottom: 60px;
+  color: #251E19; }
+#Membership_Types ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   width: 100%;
-  max-width: 1280px;
-  padding: 100px 40px;
-  margin: 0 auto; }
-  #Membership_Types h1 {
-    margin-bottom: 60px;
-    color: #251E19; }
-  #Membership_Types ul {
+  padding-left: 400px; }
+  #Membership_Types ul li {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    width: 100%;
-    padding-left: 400px; }
-    #Membership_Types ul li {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      -ms-justify-content: space-between;
-      justify-content: space-between;
-      -ms-flex-pack: space-between;
-      width: calc(100% / 3); }
-      #Membership_Types ul li:first-child {
-        margin-right: 20px; }
-      #Membership_Types ul li:nth-child(2) {
-        margin: 0 10px; }
-      #Membership_Types ul li:last-child {
-        margin-left: 20px; }
-      #Membership_Types ul li h4,
-      #Membership_Types ul li .number,
-      #Membership_Types ul li p {
-        color: #251E19; }
-      #Membership_Types ul li h4 {
-        margin-bottom: 20px; }
-      #Membership_Types ul li .number {
-        font-family: radley;
-        font-size: 44px;
-        margin-bottom: 20px; }
-      #Membership_Types ul li p {
-        margin-bottom: 20px; }
-      #Membership_Types ul li button {
-        color: #f2efe7;
-        border-radius: 35px;
-        background-color: #648C1A;
-        height: 48px; }
-  #Membership_Types h2 {
-    line-height: 100px;
-    color: #251E19; }
-  #Membership_Types table {
-    width: 100%; }
-  #Membership_Types td {
-    height: 60px;
-    vertical-align: middle;
-    border-bottom: 1px solid #d8c8b1;
-    color: #251E19; }
-    #Membership_Types td:first-child {
-      width: 400px; }
-    #Membership_Types td:not(:first-child) {
-      text-align: center; }
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    width: calc(100% / 3); }
+    #Membership_Types ul li:first-child {
+      margin-right: 20px; }
+    #Membership_Types ul li:nth-child(2) {
+      margin: 0 10px; }
+    #Membership_Types ul li:last-child {
+      margin-left: 20px; }
+    #Membership_Types ul li h4,
+    #Membership_Types ul li .number,
+    #Membership_Types ul li p {
+      color: #251E19; }
+    #Membership_Types ul li h4 {
+      margin-bottom: 20px; }
+    #Membership_Types ul li .number {
+      font-family: radley;
+      font-size: 44px;
+      margin-bottom: 20px; }
+    #Membership_Types ul li p {
+      margin-bottom: 20px; }
+    #Membership_Types ul li button {
+      color: #f2efe7;
+      border-radius: 35px;
+      background-color: #648C1A;
+      height: 48px; }
+#Membership_Types h2 {
+  line-height: 100px;
+  color: #251E19; }
+#Membership_Types table {
+  width: 100%; }
+#Membership_Types td {
+  height: 60px;
+  vertical-align: middle;
+  border-bottom: 1px solid #d8c8b1;
+  color: #251E19; }
+  #Membership_Types td:first-child {
+    width: 400px; }
+  #Membership_Types td:not(:first-child) {
+    text-align: center; }
 
 #Profile {
   display: -webkit-box;
@@ -1594,7 +1774,8 @@ textarea:focus, input:focus {
         object-fit: contain; }
 
 #About h1 {
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  text-align: center; }
 #About #About-Manifesto {
   display: -webkit-box;
   display: -moz-box;
@@ -1611,6 +1792,8 @@ textarea:focus, input:focus {
   -ms-flex-align: center;
   align-items: center;
   background-color: #e5ede8; }
+  #About #About-Manifesto h1 {
+    margin: 40px 0 0px !important; }
   #About #About-Manifesto ul {
     width: 100%;
     display: -webkit-box;
@@ -1618,23 +1801,15 @@ textarea:focus, input:focus {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
   #About #About-Manifesto li {
-    width: 50%;
-    height: calc(100vh / 2);
+    padding: 40px;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1644,19 +1819,14 @@ textarea:focus, input:focus {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    align-content: center; }
+    #About #About-Manifesto li:not(:last-child) {
+      border-bottom: 2px dotted #afc9b8; }
     #About #About-Manifesto li h2 {
-      margin-bottom: 20px;
-      max-width: 600px; }
+      margin-bottom: 20px; }
     #About #About-Manifesto li span {
       border-radius: 50%;
       border: 2px solid #000;
@@ -1667,26 +1837,17 @@ textarea:focus, input:focus {
       font-weight: 600;
       margin: 0 auto 40px; }
     #About #About-Manifesto li p {
-      margin-bottom: 10px;
-      max-width: 600px; }
-    #About #About-Manifesto li:nth-child(1) {
-      background-color: #e5d9e4;
-      border: 1px dotted #c7abcd; }
-    #About #About-Manifesto li:last-child {
-      background-color: #e5ede8;
-      border: 1px dotted #afc9b8; }
-    #About #About-Manifesto li:nth-child(2) {
-      background-color: #f0e6d5;
-      border: 1px dotted #d9bc90; }
-    #About #About-Manifesto li:nth-child(3) {
-      background-color: #d6e1eb;
-      border: 1px dotted #abc2dd; }
+      margin-bottom: 10px; }
 #About #About-Core_Values {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
@@ -1697,27 +1858,46 @@ textarea:focus, input:focus {
   -ms-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 60px 0; }
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1200px; }
+  #About #About-Core_Values .text {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
   #About #About-Core_Values ul {
-    max-width: 700px; }
+    max-width: 600px; }
+    #About #About-Core_Values ul:first-child {
+      padding-right: 20px; }
+    #About #About-Core_Values ul:last-child {
+      padding-left: 20px; }
     #About #About-Core_Values ul li {
-      margin-bottom: 10px; }
+      margin-bottom: 30px; }
       #About #About-Core_Values ul li strong {
-        font-weight: 400;
-        font-family: apercu; }
+        font-weight: 600;
+        font-family: apercu;
+        font-size: 22px; }
   #About #About-Core_Values img {
     width: 35%;
     height: 35%;
-    min-width: 300px; }
-  #About #About-Core_Values .text {
-    margin-left: 30px; }
+    width: 600px;
+    padding: 0 60px; }
   #About #About-Core_Values h1 {
-    margin-bottom: 20px !important; }
+    margin-bottom: 20px !important;
+    border-top: 5px dotted #f0e6d5;
+    border-bottom: 5px dotted #f0e6d5;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; }
 #About #About-Team {
   background-color: #c7abcd;
   padding: 100px 0; }
   #About #About-Team h1 {
-    text-align: center; }
+    text-align: center;
+    color: #462d4c;
+    text-shadow: 1px 1px #d0b8d5; }
   #About #About-Team ul {
     display: -webkit-box;
     display: -moz-box;

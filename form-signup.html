@@ -24,61 +24,92 @@ have to review website terms of use and check to accept
 
 After signup - link to profile page
  -->
-<form action="" id="Signup-Individual" class="form">
-        <fieldset>
+<form action="" id="Signup" class="form">
+        <fieldset id="Signup-Profile_Type" class="switch-button">
+                 <input class="switch-button-checkbox" type="checkbox"></input>
+                 <label class="switch-button-label" for="">
+                        <span class="switch-button-label-span">Individual</span>
+                </label>
+        </fieldset>
+        <fieldset class="fieldset-regular">
                 <label class="animated" for="firstname">First Name</label>
                 <input type="text" name="First Name" id="firstname" class="form-control">
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldset-regular">
                 <label class="animated" for="lastname">Last Name</label>
                 <input type="text" name="Last Name" id="lastname" class="form-control">
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldset-regular">
                 <label class="animated" for="email">Email</label>
                 <input type="text" name="email" id="email" class="form-control">
         </fieldset>
 
-        <fieldset>
+        <fieldset class="fieldset-regular">
                 <label class="animated" for="username">Username</label>
                 <input type="text" name="username" id="username" class="form-control">
         </fieldset>
 
-        <fieldset>
+        <fieldset class="fieldset-regular">
                 <label class="animated" for="user-pwd">Password</label>
                 <input type="password" name="Password" id="user-pwd" class="form-control">
         </fieldset>
 
-        <fieldset class="membership_types">
-                <legend>Membership Types</legend>
+        <fieldset id="Signup-Membership_Types">
+                <legend>
+                        <span>Membership Types</span>
+                        <p><button id="Signup-Membership_Types-Btn">Learn about Membership Types</button></p>
+                </legend>
                 <ul>
                         <li>
-                                <label>
+                                <header>
                                         <input type="radio" name="membership" id="basic" checked>
-                                        <span>Basic</span>
-                                </label>
+                                        <label>Basic</br>Free</label>
+                                </header>
+                                <ul>
+                                        <li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                                        <li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                                        <li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                                </ul>
                         </li>
                         <li>
-                                <label>
+                                <header>
                                         <input type="radio" name="membership" id="preferred">
-                                        <span>Preferred</span>
-                                </label>
+                                        <label>Preferred</br>$50/year</label>
+                                </header>
+                                <ul>
+                                        <li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                                        <li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                                        <li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                                </ul>
                         </li>
                         <li>
-                                <label>
+                                <header>
                                         <input type="radio" name="membership" id="premiere">
-                                        <span>Premiere</span>
-                                </label>
+                                        <label>Premiere</br>$100/year</label>
+                                </header>
+                                <ul>
+                                        <li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                                        <li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                                        <li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
+                                </ul>
                         </li>
                 </ul>
-                <p><small>Learn about the different <a href="membership_types.html">Membership Types</a></small></p>
         </fieldset>
-        <fieldset class="membership_terms">
+        <fieldset id="Signup-Membership_Terms">
                 <input type="checkbox" name="Membership Terms" id="membership_terms">
-                <label for="membership_terms">I have read and accepted the <a href="membership_terms.html">Membership Terms</a></label>
+                <label for="membership_terms">I have read and accepted the <button id="Signup-Membership_Terms-Btn" class="modal-btn">Membership Terms</button></label>
+                <div id="Signup-Membership_Terms-Modal" class="modal">
+                        <div class="modal-content">
+                                {% include membership_terms.html %}
+                        </div>
+                </div>
         </fieldset>
-
-        <button>Sign Up</button>
+        <fieldset id="Signup-Buttons">
+                <a href="/profile.html" class="button">Sign Up</a>
+                <a href="/index.html" id="Signup-Cancel">Cancel</a>
+        </fieldset>
 </form>
 
 <form id="Signup-Organization">
 </form>
+        
