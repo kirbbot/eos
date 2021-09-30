@@ -76,7 +76,7 @@ a.button{
         font-weight:400;
         font-size:16px;
         &:hover{
-                background-color:darken($sage, 0%);
+                background-color:darken($sage, 40%);
                 color:$ltsage;
         }
 }

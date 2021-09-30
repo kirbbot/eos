@@ -77,7 +77,40 @@ jQuery(document).ready(function( $ ) {
                 $(this).addClass('active');
         });       
 
-        // Modal
+        // Modal - Signup Form Membership Types
+        $('#Signup-Membership_Types-Btn').click(function(){
+                event.preventDefault();
+                $('#Signup-Membership_Types-Modal').fadeToggle();
+        });
+        $("#Signup-Membership_Types-Modal-Close").click(function(){
+                event.preventDefault();
+                $('#Signup-Membership_Types-Modal').fadeToggle();
+        });
+        // Modal Signup Form Membership Agreement
+        $('#Signup-Membership_Agreement-Btn').click(function(){
+                event.preventDefault();
+                $('#Signup-Membership_Agreement-Modal').fadeToggle();
+        });
+        $("#Signup-Membership_Agreement-Modal-Close").click(function(){
+                event.preventDefault();
+                $('#Signup-Membership_Agreement-Modal').fadeToggle();
+        });
+        // Modal Signup Form Website Terms
+        $('#Signup-Website_Terms-Btn').click(function(){
+                event.preventDefault();
+                $('#Signup-Website_Terms-Modal').fadeToggle();
+        });
+        $("#Signup-Website_Terms-Modal-Close").click(function(){
+                event.preventDefault();
+                $('#Signup-Website_Terms-Modal').fadeToggle();
+        });
+        
+        // modal = $('#Signup-Membership_Types-Modal');
+        // window.onclick = function(event) {
+        //         if (event.target == modal) {
+        //                 modal.style.display = "none";
+        //         }
+        // }
 
         // Add active class to nav
         // http://www.sweet-web-design.com/wordpress/how-to-add-active-navigation-class-based-on-url-to-menu-item/2401/
@@ -119,6 +152,12 @@ jQuery(document).ready(function( $ ) {
               'color':'ADADc9'
             }, 300);
           }
+        });
+
+        // Signup Radio Buttons
+        $("#Signup-Membership_Types > ul > li").click(function(){
+                $("#Signup-Membership_Types > ul > li input").prop("checked",false);
+                $(this).find('input').prop("checked",true);
         });
 });
 function openReviewTab(reviewItem){

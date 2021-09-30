@@ -150,147 +150,138 @@ button {
 .icon-standard {
   font-family: ssStandard; }
 
+.bulleted:before {
+  content: "•";
+  margin-right: 10px; }
+
+.numbered,
+.lettered,
+.bulleted {
+  margin-left: 20px; }
+  .numbered p,
+  .lettered p,
+  .bulleted p {
+    margin-left: 20px;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 10px; }
+    .numbered p span,
+    .lettered p span,
+    .bulleted p span {
+      margin-left: -20px;
+      padding-right: 6px; }
+    .numbered p strong,
+    .numbered p a,
+    .lettered p strong,
+    .lettered p a,
+    .bulleted p strong,
+    .bulleted p a {
+      border-bottom: 1px solid #000;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit; }
+    .numbered p a,
+    .lettered p a,
+    .bulleted p a {
+      color: #456751;
+      border-bottom: 1px solid #afc9b8; }
+
 textarea:focus, input:focus {
   outline: none; }
 
-.form #Signup-Profile_Type {
-  width: 100%;
-  background-color: #e6d3b6; }
-  .form #Signup-Profile_Type::before {
-    width: calc(100% / 2);
-    font-size: 18px;
-    color: #bf8e44; }
-  .form #Signup-Profile_Type label {
-    width: calc(100% / 2); }
-    .form #Signup-Profile_Type label::before {
-      border: 2px solid #e6d3b6; }
-  .form #Signup-Profile_Type .switch-button-checkbox + .switch-button-label:before {
-    background-color: #faf2e6; }
-.form .switch-button {
-  border-color: #e6d3b6; }
-.form fieldset {
-  margin-bottom: 20px; }
-  .form fieldset label {
-    font-size: 18px;
-    color: #bf8e44; }
-.form a {
-  font-weight: 200;
-  font-size: 14px;
-  border-bottom: 1px solid #000; }
-.form .fieldset-regular {
-  border: solid 2px #e6d3b6;
-  width: 100%;
-  position: relative;
-  transition: all 0.3s ease-out;
-  background-color: #faf2e6;
-  border-radius: 30px; }
-  .form .fieldset-regular.focus {
-    border: solid 2px #d9bc90; }
-  .form .fieldset-regular.textarea {
-    height: auto; }
-    .form .fieldset-regular.textarea .form-control {
-      height: auto;
-      resize: none; }
-  .form .fieldset-regular input {
+.form {
+  max-width: 600px; }
+  .form #Signup-Profile_Type {
     width: 100%;
-    padding: 30px 25px 10px; }
-  .form .fieldset-regular p a,
-  .form .fieldset-regular label a {
-    font-family: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    border-bottom: 1px solid #d6ad6f; }
-  .form .fieldset-regular label {
-    display: block;
-    margin: 0;
-    font-weight: 300;
-    z-index: 1;
-    color: #bf8e44;
-    line-height: 10px; }
-    .form .fieldset-regular label.animated {
-      position: absolute;
-      left: 25px;
-      top: 25px; }
-  .form .fieldset-regular .form-control {
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    height: auto;
+    background-color: #e6d3b6; }
+    .form #Signup-Profile_Type::before {
+      width: calc(100% / 2);
+      font-size: 18px;
+      color: #bf8e44; }
+    .form #Signup-Profile_Type label {
+      width: calc(100% / 2); }
+      .form #Signup-Profile_Type label::before {
+        border: 2px solid #e6d3b6; }
+    .form #Signup-Profile_Type .switch-button-checkbox + .switch-button-label:before {
+      background-color: #faf2e6; }
+  .form .switch-button {
+    border-color: #e6d3b6; }
+  .form fieldset {
+    margin-bottom: 20px; }
+    .form fieldset label {
+      font-size: 18px;
+      color: #bf8e44; }
+  .form a {
+    font-weight: 200;
+    font-size: 14px;
+    border-bottom: 1px solid #000; }
+  .form .fieldset-regular {
+    border: solid 2px #e6d3b6;
+    width: 100%;
     position: relative;
-    z-index: 2;
-    font-size: 18px;
-    color: #251E19; }
-  .form .fieldset-regular .form-control:focus label {
-    top: 0; }
-.form #Signup-Profile_Type {
-  margin-bottom: 20px; }
-.form #Signup-Membership_Types {
-  height: auto;
-  width: 100%; }
-  .form #Signup-Membership_Types legend {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between;
-    -ms-flex-pack: space-between;
-    width: 100%;
-    color: #bf8e44;
-    padding: 0 0 10px 25px;
-    font-size: 18px; }
-  .form #Signup-Membership_Types header {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
-  .form #Signup-Membership_Types input[type="radio"] {
-    opacity: 0;
-    display: inline-block;
-    z-index: 1; }
-    .form #Signup-Membership_Types input[type="radio"] + label {
-      display: inline-block;
-      position: relative; }
-    .form #Signup-Membership_Types input[type="radio"] + label::before {
-      content: "";
+    transition: all 0.3s ease-out;
+    background-color: #faf2e6;
+    border-radius: 30px; }
+    .form .fieldset-regular.focus {
+      border: solid 2px #d9bc90; }
+    .form .fieldset-regular.textarea {
+      height: auto; }
+      .form .fieldset-regular.textarea .form-control {
+        height: auto;
+        resize: none; }
+    .form .fieldset-regular input {
+      width: 100%;
+      padding: 30px 25px 10px; }
+    .form .fieldset-regular p a,
+    .form .fieldset-regular label a {
+      font-family: inherit;
+      font-size: inherit;
+      font-style: inherit;
+      border-bottom: 1px solid #d6ad6f; }
+    .form .fieldset-regular label {
       display: block;
-      margin: 0 auto;
-      width: 20px;
-      height: 20px;
-      border: 2px solid #d9bc90;
-      margin-bottom: 5px;
-      margin-top: -16px; }
-    .form #Signup-Membership_Types input[type="radio"]:checked + label::before {
-      font-family: ssStandard;
-      content: "check";
-      border-color: transparent; }
-  .form #Signup-Membership_Types > ul {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: space-around;
+      margin: 0;
+      font-weight: 300;
+      z-index: 1;
+      color: #bf8e44;
+      line-height: 10px; }
+      .form .fieldset-regular label.animated {
+        position: absolute;
+        left: 25px;
+        top: 25px; }
+    .form .fieldset-regular .form-control {
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      height: auto;
+      position: relative;
+      z-index: 2;
+      font-size: 18px;
+      color: #251E19; }
+    .form .fieldset-regular .form-control:focus label {
+      top: 0; }
+  .form #Signup-Profile_Type {
+    margin-bottom: 20px; }
+  .form #Signup-Membership_Types {
+    height: auto;
     width: 100%; }
-    .form #Signup-Membership_Types > ul > li {
+    .form #Signup-Membership_Types legend {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: space-between;
+      width: 100%;
+      color: #bf8e44;
+      padding: 0 0 10px 25px;
+      font-size: 18px; }
+    .form #Signup-Membership_Types header {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -300,53 +291,165 @@ textarea:focus, input:focus {
       -moz-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      width: 33.3%;
-      height: 100%;
-      background-color: #e6d3b6;
-      border-radius: 5px;
-      text-align: center; }
-      .form #Signup-Membership_Types > ul > li:first-child {
-        margin-right: 6px; }
-      .form #Signup-Membership_Types > ul > li:last-child {
-        margin-left: 6px; }
-      .form #Signup-Membership_Types > ul > li:nth-child(2) {
-        margin: 0 3px; }
-      .form #Signup-Membership_Types > ul > li header {
-        background-color: #bf8e44;
-        padding: 15px 0;
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px; }
-        .form #Signup-Membership_Types > ul > li header label {
-          color: #f0e6d5;
-          font-family: apercu; }
-      .form #Signup-Membership_Types > ul > li > label {
-        font-family: apercu; }
-  .form #Signup-Membership_Types ul li ul {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 20px; }
-    .form #Signup-Membership_Types ul li ul li {
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .form #Signup-Membership_Types input[type="radio"] {
+      opacity: 0;
+      display: inline-block;
+      z-index: 1; }
+      .form #Signup-Membership_Types input[type="radio"] + label {
+        display: inline-block;
+        position: relative; }
+      .form #Signup-Membership_Types input[type="radio"] + label::before {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #d9bc90;
+        margin-bottom: 5px;
+        margin-top: -16px; }
+      .form #Signup-Membership_Types input[type="radio"]:checked + label::before {
+        font-family: ssStandard;
+        content: "check";
+        border-color: transparent; }
+    .form #Signup-Membership_Types button {
+      font-size: 14px;
+      font-weight: 200;
+      border-bottom: 1px solid #251E19;
+      padding: 0; }
+    .form #Signup-Membership_Types > ul {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
-      display: flex; }
-      .form #Signup-Membership_Types ul li ul li p {
-        text-align: left;
-        margin-left: 8px;
-        font-size: 16px; }
-      .form #Signup-Membership_Types ul li ul li:not(:last-child) {
-        margin-bottom: 8px; }
-      .form #Signup-Membership_Types ul li ul li:before {
-        content: "•";
-        margin-top: 5px; }
+      display: flex;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around;
+      width: 100%; }
+      .form #Signup-Membership_Types > ul > li {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 33.3%;
+        height: 100%;
+        background-color: #e6d3b6;
+        border-radius: 5px;
+        text-align: center; }
+        .form #Signup-Membership_Types > ul > li:first-child {
+          margin-right: 6px; }
+        .form #Signup-Membership_Types > ul > li:last-child {
+          margin-left: 6px; }
+        .form #Signup-Membership_Types > ul > li:nth-child(2) {
+          margin: 0 3px; }
+        .form #Signup-Membership_Types > ul > li:hover {
+          cursor: pointer; }
+        .form #Signup-Membership_Types > ul > li header {
+          background-color: #bf8e44;
+          padding: 15px 0;
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px; }
+          .form #Signup-Membership_Types > ul > li header label {
+            color: #f0e6d5;
+            font-family: apercu; }
+          .form #Signup-Membership_Types > ul > li header:hover {
+            cursor: pointer; }
+        .form #Signup-Membership_Types > ul > li > label {
+          font-family: apercu; }
+    .form #Signup-Membership_Types ul li ul {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 20px; }
+      .form #Signup-Membership_Types ul li ul li {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex; }
+        .form #Signup-Membership_Types ul li ul li p {
+          text-align: left;
+          margin-left: 8px;
+          font-size: 16px; }
+        .form #Signup-Membership_Types ul li ul li:not(:last-child) {
+          margin-bottom: 8px; }
+        .form #Signup-Membership_Types ul li ul li:before {
+          content: "•";
+          margin-top: 5px; }
+
+.checkbox input[type="checkbox"] {
+  margin-top: 7px;
+  margin-right: 10px;
+  opacity: 0;
+  display: inline-block;
+  z-index: 1; }
+  .checkbox input[type="checkbox"]:hover {
+    cursor: pointer; }
+  .checkbox input[type="checkbox"] + label {
+    display: inline-block;
+    position: relative; }
+  .checkbox input[type="checkbox"] + label::before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #251E19;
+    position: absolute;
+    top: 4px;
+    left: -28px; }
+  .checkbox input[type="checkbox"]:checked + label::before {
+    font-family: ssStandard;
+    content: "check";
+    border-color: transparent;
+    font-size: 18px;
+    top: 4px; }
+  .checkbox input[type="checkbox"]:hover {
+    cursor: pointer; }
+.checkbox input[type="checkbox"] ~ label {
+  color: #000;
+  font-family: apercu;
+  font-weight: 200;
+  font-size: 14px; }
+  .checkbox input[type="checkbox"] ~ label:hover {
+    cursor: pointer; }
+  .checkbox input[type="checkbox"] ~ label button {
+    font-weight: inherit;
+    font-size: inherit;
+    padding: 0;
+    border-bottom: 1px solid #251E19; }
+
+#Form-Signup {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  background-color: #f0e6d5;
+  width: 100%; }
 
 #Signup {
   display: -webkit-box;
@@ -363,7 +466,6 @@ textarea:focus, input:focus {
   -ms-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #f0e6d5;
   width: 100%;
   padding: 30px 0; }
   #Signup fieldset {
@@ -381,40 +483,18 @@ textarea:focus, input:focus {
     align-items: center; }
   #Signup #Signup-Cancel {
     margin-left: 30px; }
-  #Signup #Signup-Membership_Terms {
+  #Signup #Signup-Membership_Agreement {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
-    #Signup #Signup-Membership_Terms input {
-      margin-top: 7px;
-      margin-right: 10px; }
-    #Signup #Signup-Membership_Terms label {
-      color: #000;
-      font-family: apercu;
-      font-weight: 200;
-      font-size: 14px; }
-    #Signup #Signup-Membership_Terms input[type="checkbox"] {
-      opacity: 0;
-      display: inline-block;
-      z-index: 1; }
-      #Signup #Signup-Membership_Terms input[type="checkbox"] + label {
-        display: inline-block;
-        position: relative; }
-      #Signup #Signup-Membership_Terms input[type="checkbox"] + label::before {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #d9bc90;
-        margin-bottom: 5px;
-        margin-top: -16px; }
-      #Signup #Signup-Membership_Terms input[type="checkbox"]:checked + label::before {
-        font-family: ssStandard;
-        content: "check";
-        border-color: transparent; }
+  #Signup #Signup-Website_Terms {
+    margin-left: -60px; }
+
+#Signup-Membership_Types-Modal .modal-content {
+  background-color: #f0e6d5;
+  border: 5px solid #d9bc90; }
 
 #Header_Main {
   display: -webkit-box;
@@ -905,8 +985,70 @@ a.button {
   font-weight: 400;
   font-size: 16px; }
   a.button:hover {
-    background-color: #afc9b8;
+    background-color: #456751;
     color: #e5ede8; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(37, 30, 25, 0.6);
+  /* Black w/ opacity */ }
+  .modal.small .modal-content {
+    max-width: 800px;
+    padding: 60px;
+    margin: calc(100px + 40px) auto; }
+  .modal.legal h1 {
+    font-size: 24px;
+    line-height: 32px; }
+  .modal.legal p {
+    font-size: 14px;
+    line-height: 24px; }
+  .modal.legal h1, .modal.legal p {
+    margin-bottom: 10px; }
+  .modal.legal h5 {
+    margin: 30px 0 0; }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: calc(100px + 40px) auto;
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */ }
+
+/* The Close Button */
+.modal-close {
+  color: #251E19;
+  float: right;
+  font-size: 28px;
+  font-family: apercu;
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: -20px;
+  margin-right: -10px; }
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
 
 #Home section {
   display: -webkit-box;
