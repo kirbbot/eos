@@ -77,6 +77,11 @@ jQuery(document).ready(function( $ ) {
                 $(this).addClass('active');
         });       
 
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        // S I G N U P   M O D A L S
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
         // Modal - Signup Form Membership Types
         $('#Signup-Membership_Types-Btn').click(function(){
                 event.preventDefault();
@@ -173,7 +178,7 @@ function openReviewTab(reviewItem){
         //document.getElementById(reviewItem).classList.add('active');
 }
 
- // Tabs
+ // Profile
 function openProfileTab(evt, profileTabContent) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -192,6 +197,29 @@ function openProfileTab(evt, profileTabContent) {
 
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(profileTabContent).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+ // Tabs SignUp Form
+function signup(evt, signupTabContent) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+  console.log(tablinks);
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(signupTabContent).style.display = "block";
   evt.currentTarget.className += " active";
 }
 

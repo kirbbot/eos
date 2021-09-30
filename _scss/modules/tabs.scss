@@ -26,6 +26,10 @@
 .tabcontent {
   display: none;
   padding-top:40px;
+  width:100%;
+  &.active{
+        display:block;
+  }
 }
 
 .tabcontent {

@@ -191,26 +191,21 @@ textarea:focus, input:focus {
 
 .form {
   max-width: 600px; }
-  .form #Signup-Profile_Type {
-    width: 100%;
-    background-color: #e6d3b6; }
-    .form #Signup-Profile_Type::before {
-      width: calc(100% / 2);
-      font-size: 18px;
-      color: #bf8e44; }
-    .form #Signup-Profile_Type label {
-      width: calc(100% / 2); }
-      .form #Signup-Profile_Type label::before {
-        border: 2px solid #e6d3b6; }
-    .form #Signup-Profile_Type .switch-button-checkbox + .switch-button-label:before {
-      background-color: #faf2e6; }
-  .form .switch-button {
-    border-color: #e6d3b6; }
   .form fieldset {
     margin-bottom: 20px; }
     .form fieldset label {
       font-size: 18px;
       color: #bf8e44; }
+  .form input[type="radio"],
+  .form input[type="radio"] + label,
+  .form input[type="checkbox"],
+  .form input[type="checkbox"] + label {
+    margin: 0; }
+    .form input[type="radio"]:hover,
+    .form input[type="radio"] + label:hover,
+    .form input[type="checkbox"]:hover,
+    .form input[type="checkbox"] + label:hover {
+      cursor: pointer; }
   .form a {
     font-weight: 200;
     font-size: 14px;
@@ -437,19 +432,84 @@ textarea:focus, input:focus {
     padding: 0;
     border-bottom: 1px solid #251E19; }
 
-#Form-Signup {
+fieldset.toggle-switch {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  background-color: #f0e6d5;
-  width: 100%; }
+  position: relative;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 60px; }
+  fieldset.toggle-switch input.switch-button-radio {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2; }
+    fieldset.toggle-switch input.switch-button-radio:first-of-type {
+      left: 0; }
+    fieldset.toggle-switch input.switch-button-radio:last-of-type {
+      right: 0; }
+      fieldset.toggle-switch input.switch-button-radio:last-of-type:checked + .switch-button-label:before {
+        transform: translateX(0%);
+        transition: transform 300ms linear;
+        content: "Organization"; }
+  fieldset.toggle-switch label.switch-button-label {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    width: 50%;
+    user-select: none;
+    pointer-events: none; }
+    fieldset.toggle-switch label.switch-button-label span.switch-button-label-span {
+      position: relative; }
+    fieldset.toggle-switch label.switch-button-label:last-of-type {
+      border-radius: 30px; }
+      fieldset.toggle-switch label.switch-button-label:last-of-type:before {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        content: "Individual";
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        border-radius: 30px;
+        transform: translateX(-100%);
+        transition: transform 300ms;
+        background-color: #fff; }
+
+#Signup-Type.toggle-switch {
+  background-color: #e6d3b6;
+  border: 2px solid #e6d3b6; }
 
 #Signup {
   display: -webkit-box;
@@ -466,31 +526,55 @@ textarea:focus, input:focus {
   -ms-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #f0e6d5;
   width: 100%;
   padding: 30px 0; }
-  #Signup fieldset {
-    max-width: 600px; }
-  #Signup #Signup-Buttons {
+  #Signup .tabcontent {
+    padding: 0; }
+  #Signup .form {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
     -webkit-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
-  #Signup #Signup-Cancel {
-    margin-left: 30px; }
-  #Signup #Signup-Membership_Agreement {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; }
-  #Signup #Signup-Website_Terms {
-    margin-left: -60px; }
+    align-items: center;
+    margin: 0 auto; }
+    #Signup .form fieldset {
+      max-width: 600px; }
+    #Signup .form #Signup-Buttons {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    #Signup .form #Signup-Cancel {
+      margin-left: 30px; }
+    #Signup .form #Signup-Membership_Agreement {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
+    #Signup .form #Signup-Website_Terms {
+      margin-left: -60px; }
 
 #Signup-Membership_Types-Modal .modal-content {
   background-color: #f0e6d5;
@@ -610,7 +694,10 @@ textarea:focus, input:focus {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding-top: 40px; }
+  padding-top: 40px;
+  width: 100%; }
+  .tabcontent.active {
+    display: block; }
 
 .tabcontent {
   animation: fadeEffect 1s;
@@ -922,55 +1009,6 @@ textarea:focus, input:focus {
     background-color: #628dc0;
     color: #d6e1eb; }
 
-.switch-button {
-  border-radius: 30px;
-  overflow: hidden;
-  text-align: center;
-  position: relative; }
-  .switch-button:before {
-    content: "Organization";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    pointer-events: none; }
-  .switch-button-checkbox {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 2; }
-    .switch-button-checkbox:checked + .switch-button-label:before {
-      transform: translateX(100%);
-      transition: transform 300ms linear; }
-    .switch-button-checkbox + .switch-button-label {
-      position: relative;
-      padding: 15px 0;
-      display: block;
-      user-select: none;
-      pointer-events: none; }
-      .switch-button-checkbox + .switch-button-label:before {
-        content: "";
-        background: #fff;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        border-radius: 30px;
-        transform: translateX(0);
-        transition: transform 300ms; }
-      .switch-button-checkbox + .switch-button-label .switch-button-label-span {
-        position: relative; }
-
 a.button {
   width: 250px;
   padding: 20px 0;
@@ -994,7 +1032,7 @@ a.button {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 200;
   /* Sit on top */
   left: 0;
   top: 0;
