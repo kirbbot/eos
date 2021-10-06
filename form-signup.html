@@ -69,7 +69,7 @@ title: Sign Up / Login
       <fieldset id="Signup-Membership_Types">
       	<legend>
       		<span>Membership Types</span>
-      		<button id="Signup-Membership_Types-Btn">Learn about Membership Types</button>
+      		<button id="Signup-Membership_Types-Btn" class="btn-plain">Learn about Membership Types</button>
       	</legend>
       	<ul>
       		<li id="Signup-Membership_Types-Basic">
@@ -108,16 +108,16 @@ title: Sign Up / Login
       	</ul>
       </fieldset>
       <fieldset id="Signup-Membership_Agreement" class="checkbox">
-      	<input type="checkbox" name="Membership Agreement" id="membership_agreement">
-      	<label for="membership_agreement">I have read and accepted the <button id="Signup-Membership_Agreement-Btn" class="modal-btn">Membership Agreement</button></label>
+      	<input type="checkbox" name="Membership Agreement" id="Signup-Membership_Agreement-Checkbox" disabled>
+      	<label for="Signup-Membership_Agreement-Checkbox">I have read and accepted the <button id="Signup-Membership_Agreement-Btn" class="btn-plain modal-btn">Membership Agreement</button></label>
       </fieldset>
       <fieldset id="Signup-Website_Terms" class="checkbox">
-      	<input type="checkbox" name="Website Terms" id="website_terms">
-      	<label for="website_terms">I have read and accepted the <button id="Signup-Website_Terms-Btn" class="modal-btn">Website Terms</button></label>
+      	<input type="checkbox" name="Website Terms" id="Signup-Website_Terms-Checkbox" disabled>
+      	<label for="Signup-Website_Terms-Checkbox">I have read and accepted the <button id="Signup-Website_Terms-Btn" class="btn-plain modal-btn">Website Terms</button></label>
       </fieldset>
-      <fieldset id="Signup-Buttons">
-      	<a href="/profile.html" class="button">Sign Up</a>
-      	<a href="/index.html" id="Signup-Cancel">Cancel</a>
+      <fieldset class="btns-set">
+      	<a href="/profile.html" class="btn-primary">Sign Up</a>
+      	<a href="/index.html" class="btn-plain">Cancel</a>
       </fieldset>
    </form>
 </div><!-- #Signup -->
@@ -137,11 +137,19 @@ title: Sign Up / Login
 	<div class="modal-content">
 		<span id="Signup-Membership_Agreement-Modal-Close" class="modal-close">&times;</span>
 		{% include membership_agreement.html %}
+		<div class="btns-set">
+			<button id="Signup-Membership_Agreement-Modal-Agree" href="#" class="btn-primary">Agree</button>
+			<button id="Signup-Membership_Agreement-Modal-Cancel" href="#" class="btn-plain">Cancel</button>
+		</div>
 	</div>
 </div>
 <div id="Signup-Website_Terms-Modal" class="modal small legal">
 	<div class="modal-content">
 		<span id="Signup-Website_Terms-Modal-Close" class="modal-close">&times;</span>
 		{% include website_terms.html %}
+		<div class="btns-set">
+			<button id="Signup-Website_Terms-Modal-Agree" href="#" class="btn-primary">Agree</button>
+			<button id="Signup-Website_Terms-Modal-Cancel" href="#" class="btn-plain">Cancel</button>
+		</div>
 	</div>
 </div>

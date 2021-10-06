@@ -1,131 +1,212 @@
+$profile_avatar_h: 250px;
+
 #Profile{
         @include flexbox();
-        @include justify-content(center);
+        @include flex-direction(column);
+        @include align-items(center);
         width:100%;
-        #Profile-Image,
-        #Profile-Name,
-        #Profile-Username,
-        #Profile-Rating,
-        #Profile-Bio,
-        #Profile-Message,
-        #Profile-FriendRequest,
-        #Profile-Location{
-                margin-bottom:15px;
-        }
-        #Profile-About,
-        #Profile-Participation{
-                padding-top:70px;
-                padding-bottom:70px;
-        }
-        #Profile-About{
-                @include flexbox();
-                @include flex-direction(column);
-                @include align-items(center);
-                padding-left:20px;
-                padding-right:20px;
-                width:30%;
-                background-color: $ltsage;
-                border-right:2px solid $forest;
-                .wrapper{
-                         @include flexbox();
-                        @include flex-direction(column);
-                        @include align-items(center);
-                        max-width:350px;
-                }
-                img{
-                        object-fit: cover;
-                        width:200px;
-                        height:200px;
-                        border-radius:50%;
-                        border:10px solid $sage;
-                }
-        }
-        #Profile-Name,
-        #Profile-Username,
-        #Profile-Location,
-        #Profile-Rating{
-                @include flexbox();
-                @include flex-direction(column);
-                @include align-items(center);
+        background-color: $ltsage;
+        .wrapper{
                 width:100%;
+                max-width:1200px;
+                height:100%;
+                position:relative;
         }
-        #Profile-Rating ul{
+        // * * * * * * * *  
+        //   H E A D E R
+        // * * * * * * * * 
+        #Profile-Header{
                 @include flexbox();
-                span{
-                        font-size:24px;
-                }
-                li{
-                        padding:0 5px;
-                }
-        }
-        #Profile-Message{
-                background-color:$forest;
-                color:$white;
-        }
-        #Profile-FriendRequest{
-                border:2px solid $forest;
-                color:$forest;
-        }
-        .btn{
-                @include flexbox();
-                @include align-items(center);
                 @include justify-content(center);
-                padding:20px 0;
-                width:100%;
-        }
-        #Profile-Participation{
-                width:70%;
-                padding-right:40px;
-                padding-left:40px;
-                max-width:960px;
-                margin: 0 auto;
-                .tablinks{
-                        color:$sage;
-                        span{
-                                margin-right:5px;
-                                margin-top:3px;
+                position:relative;
+                height:$profile_avatar_h;
+                width:100%; 
+                background-image:url('./img/profile/cover-photo.jpg');
+                background-repeat:no-repeat;
+                background-size: cover;
+                #Profile-Avatar{
+                        position:absolute;
+                        top:110px;
+                        left:0;
+                        border:5px solid $ltsage;
+                        object-fit: cover;
+                        width:225px;
+                        height:225px;
+                        border-radius:50%;
+                }
+                #Profile-Btns{
+                        @include flexbox();
+                        position:absolute;
+                        bottom:10px;
+                        left:$profile_avatar_h;
+                        li{
+                                margin-right:10px;
+                                button,
+                                a{
+                                        background-color:rgba(229, 237, 232, .5);
+                                        //background-color:rgba(114, 160, 130,.5);
+                                        background-color:rgba(49, 72, 57,.7);
+                                        color:$ltsage;
+                                        font-weight:200;
+                                        &:hover{
+                                                background-color:rgba(8, 11, 9,.7);
+                                        }
+                                }
                         }
                 }
-                #Activity{
-                        .profile-activity-new_friend{
+        }
+        // * * * * * * * *  
+        //   Data
+        // * * * * * * * * 
+        #Profile-Data{
+                @include flexbox();
+                @include flex-direction(column);
+                h1{
+                      color:darken($sage, 50%);  
+                }
+                h2{
+                        font-weight:200;
+                        font-family:apercu;
+                        font-size: 28px;
+                        color:darken($sage, 50%);
+                }
+                #Profile-Name{
+                        margin-top:30px;
+                        margin-left:$profile_avatar_h;
+                        small{
+                                font-size:20px;
+                                margin-left:20px;
+                                font-family: apercu;
+                                font-weight: 200;
+                        }
+                }
+                ul{
+                        @include flexbox();
+                        @include align-items(center);
+                        margin-top:30px;
+                        li{
                                 @include flexbox();
-                                @include justify-content(flex-start);
                                 @include align-items(center);
+                                margin-bottom: 10px;
                                 img{
-                                        width:40px;
-                                        height:auto;
+                                        width:50px;
+                                        height: auto;
                                         margin-right:10px;
                                 }
-                        }
-                        
-                }
-        }
-        label{
-                color:darken($sage, 10%);
-        }
-        .tabcontent{
-                >div{
-                        &:not(:first-child){
-                                padding:20px 0;
-                        }
-                        position:relative;
-                        border-bottom:1px solid $sage;
-                        p{
-                                margin-bottom:10px;
-                                a{ 
-                                        font-family:inherit; 
-                                        border-bottom:1px solid $forest; 
-                                        color:$forest;
-                                        font-size:inherit;
+                                span.icon-location{
+                                        font-size:20px;
+                                        margin-right:10px;
+                                        color:darken($sage, 50%);
+                                }
+                                &:last-child{
+                                        margin-left:40px;
                                 }
                         }
-                        date{
-                                position:absolute;
-                                top:15px;
-                                right:15px;
-                                font-family:apercu;
-                                font-weight:200;
-                                font-size:11px;
+                }
+                #Profile-Rating{
+                        @include flexbox();
+                        @include justify-content(center);
+                        width:$profile_avatar_h;
+                        height:100%;
+                        padding-right:30px;
+                        span{
+                                padding:0 5px;
+                                color:$sage;
+                                font-size:23px;
+                                &.active{
+                                        color:darken($sage, 20%);
+                                }
+                        }
+                }
+                
+                
+        }
+        
+        #Profile-Participation{
+                width:100%;
+                padding-right:40px;
+                padding-left:40px;
+                max-width:1200px;
+                margin: 0 auto;
+                padding-top:40px;
+                .tabs{
+                }
+                .tablinks{
+                        color:lighten($sage, 5%);
+                        padding:8px 15px;
+                        border-top-right-radius:10px;
+                        border-top-left-radius:10px;
+                        width:100%;
+                        padding:15px 0;
+                        span{
+                                margin-right:9px;
+                                margin-top:3px;
+                                font-size:14px;
+                        }
+                        &.active{
+                                background-color:lighten($sage, 30%);
+                                &:hover{
+                                     background-color:lighten($sage, 30%);   
+                                }
+                        }
+                        &:hover{
+                                background-color:lighten($sage, 20%);
+                        }
+                }
+                .tabcontent{
+                        padding:40px;
+                        background-color:lighten($sage, 30%);
+                        border-radius:10px;
+                        width:100%;
+                        margin-bottom:80px;
+                }
+                #About{
+                        @include flexbox();
+                        border-radius:0 !important;
+                        #Profile-Bio{
+                                width:30%;
+                                padding-right:40px;
+                                border-right:2px solid $ltsage;
+                                header{
+                                        margin-bottom:20px;
+                                }
+                        }
+                        #Profile-Firsthand_Story{
+                                width:70%;
+                                padding-left:40px;
+                                header{
+                                        margin-bottom:30px;
+                                }
+                                h2,
+                                date,
+                                ul{
+                                        margin-bottom:10px;
+                                }
+                                date{
+                                      color:darken($sage, 20%); 
+                                      font-family:apercu;
+                                      font-weight: 200; 
+                                }
+                                ul{
+                                        @include flexbox();
+                                        li{
+                                                a{
+                                                        border-bottom:2px solid darken($sage, 20%);
+                                                        color:darken($sage, 20%);
+                                                        font-weight:400;
+                                                        padding:0 2px;
+                                                        &:hover{
+                                                                background-color:$ltsage;
+                                                        }
+                                                }
+                                                &:not(:last-child){
+                                                        margin-right:5px;
+                                                        &:after{
+                                                                content:",";
+                                                        }
+                                                }
+                                        }
+                                }
                         }
                 }
         }

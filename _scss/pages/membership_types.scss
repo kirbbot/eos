@@ -11,6 +11,9 @@
                 @include flexbox();
                 width:100%;
                 padding-left:400px;
+                &:last-of-type{
+                        margin-top:40px;
+                }
                 li{     
                         @include flexbox();
                         @include flex-direction(column);
@@ -42,10 +45,22 @@
                                 margin-bottom:20px;
                         }
                         button{
-                                color:$beige;
+                                color:darken($sage, 40%);
                                 border-radius:35px;
-                                background-color:$forest;
+                                background-color:$sage;
                                 height:48px;
+                                transition: all 0.5s ease;
+                                letter-spacing:0.03em;
+                                &.active{
+                                        background-color: darken($sage, 40%);
+                                        color:lighten($sage, 15%);
+                                        &:hover{
+                                                background-color:darken($sage, 40%);
+                                        }
+                                }
+                                &:hover{
+                                        background-color:darken($sage, 10%);
+                                }
                         }
                 }
         }

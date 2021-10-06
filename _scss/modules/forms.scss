@@ -98,119 +98,6 @@ $label-color:darken($tan, 20%);
             }
         }
     }
-    #Signup-Profile_Type{
-        margin-bottom:20px;
-    }
-    #Signup-Membership_Types{
-                height:auto;
-                width:100%;
-                legend{
-                        @include flexbox();
-                        @include justify-content(space-between);
-                        width:100%;
-                        color: $label-color;
-                        padding:0 0 10px 25px;
-                        font-size:18px;
-                }
-                header{
-                        @include flexbox();
-                        @include flex-direction(column);
-                        @include align-items(center);
-                }
-                input[type="radio"]{
-                        opacity:0;
-                        display: inline-block;
-                        z-index:1;
-                        + label{
-                                display:inline-block;
-                                position:relative;
-                        }
-                        + label::before{
-                                content:"";
-                                display:block;
-                                margin:0 auto;
-                                width:20px;
-                                height:20px;
-                                border:2px solid $tan;  
-                                margin-bottom:5px; 
-                                margin-top:-16px;
-                        }
-                        &:checked + label::before{
-                                font-family:ssStandard;
-                                content:"check"; 
-                                border-color:transparent;    
-                        }
-                }
-                button{
-                        font-size:14px;
-                        font-weight:200;
-                        border-bottom:1px solid $chocolate;
-                        padding:0;
-                }
-                > ul{
-                        @include flexbox();
-                        //@include flex-direction(column);
-                        @include justify-content(space-around);
-                        width:100%;
-                        > li{
-                                @include flexbox();
-                                @include flex-direction(column);
-                                width:33.3%;
-                                height:100%;
-                                background-color:$border-color;
-                                border-radius:5px;
-                                text-align: center;
-                                &:first-child{
-                                        margin-right:6px;
-                                }
-                                &:last-child{
-                                        margin-left:6px;
-                                }
-                                &:nth-child(2){
-                                        margin:0 3px;
-                                }
-                                &:hover{
-                                        cursor:pointer;
-                                }
-                                header{
-                                        background-color:$label-color;
-                                        padding:15px 0;
-                                        border-top-right-radius:5px;
-                                        border-top-left-radius:5px;
-                                        label{
-                                                color:$lttan;
-                                                font-family:apercu;
-                                        }
-                                        &:hover{
-                                                cursor:pointer;
-                                        }
-                                }
-                                > label{
-                                        font-family:apercu;
-                                }
-                        }
-                }
-                ul li ul{
-                        @include flexbox();
-                        @include flex-direction(column);
-                        padding:20px;
-                        li{
-                                @include flexbox();
-                                p{
-                                        text-align: left;
-                                        margin-left:8px;
-                                        font-size:16px;
-                                }
-                                &:not(:last-child){
-                                        margin-bottom:8px;
-                                }
-                                &:before{
-                                        content:"•";
-                                        margin-top:5px;     
-                                } 
-                        }
-                }
-        }
 }
 // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
 // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
@@ -252,6 +139,9 @@ $label-color:darken($tan, 20%);
                 &:hover{
                         cursor:pointer;
                 } 
+                // &:disabled + label::before{
+                //         border:2px solid $border-color; 
+                // }
         }
         input[type="checkbox"] ~ label{
                 color:$black;
@@ -337,7 +227,6 @@ fieldset.toggle-switch{
 // C U S T O M   F O R M   S T Y L E S
 // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
 // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
-
 #Signup{
         @include flexbox();
         @include flex-direction(column);
@@ -357,18 +246,121 @@ fieldset.toggle-switch{
                 fieldset{
                         max-width:600px;
                 }
-                #Signup-Buttons{
+        }
+}
+#Signup-Cancel{
+        margin-left:30px;
+}
+#Signup-Membership_Agreement{
+        @include flexbox();
+}
+#Signup-Website_Terms{
+        margin-left:-60px;
+}
+#Signup-Profile_Type{
+        margin-bottom:20px;
+}
+#Signup-Membership_Types{
+        height:auto;
+        width:100%;
+        legend{
+                @include flexbox();
+                @include justify-content(space-between);
+                width:100%;
+                color: $label-color;
+                padding:0 0 10px 25px;
+                font-size:18px;
+        }
+        header{
+                @include flexbox();
+                @include flex-direction(column);
+                @include align-items(center);
+        }
+        input[type="radio"]{
+                opacity:0;
+                display: inline-block;
+                z-index:1;
+                + label{
+                        display:inline-block;
+                        position:relative;
+                }
+                + label::before{
+                        content:"";
+                        display:block;
+                        margin:0 auto;
+                        width:20px;
+                        height:20px;
+                        border:2px solid $tan;  
+                        margin-bottom:5px; 
+                        margin-top:-16px;
+                }
+                &:checked + label::before{
+                        font-family:ssStandard;
+                        content:"check"; 
+                        border-color:transparent;    
+                }
+        }
+        > ul{
+                @include flexbox();
+                //@include flex-direction(column);
+                @include justify-content(space-around);
+                width:100%;
+                > li{
                         @include flexbox();
-                        @include align-items(center);
+                        @include flex-direction(column);
+                        width:33.3%;
+                        height:100%;
+                        background-color:$border-color;
+                        border-radius:5px;
+                        text-align: center;
+                        &:first-child{
+                                margin-right:6px;
+                        }
+                        &:last-child{
+                                margin-left:6px;
+                        }
+                        &:nth-child(2){
+                                margin:0 3px;
+                        }
+                        &:hover{
+                                cursor:pointer;
+                        }
+                        header{
+                                background-color:$label-color;
+                                padding:15px 0;
+                                border-top-right-radius:5px;
+                                border-top-left-radius:5px;
+                                label{
+                                        color:$lttan;
+                                        font-family:apercu;
+                                }
+                                &:hover{
+                                        cursor:pointer;
+                                }
+                        }
+                        > label{
+                                font-family:apercu;
+                        }
                 }
-                #Signup-Cancel{
-                        margin-left:30px;
-                }
-                #Signup-Membership_Agreement{
+        }
+        ul li ul{
+                @include flexbox();
+                @include flex-direction(column);
+                padding:20px;
+                li{
                         @include flexbox();
-                }
-                #Signup-Website_Terms{
-                        margin-left:-60px;
+                        p{
+                                text-align: left;
+                                margin-left:8px;
+                                font-size:16px;
+                        }
+                        &:not(:last-child){
+                                margin-bottom:8px;
+                        }
+                        &:before{
+                                content:"•";
+                                margin-top:5px;     
+                        } 
                 }
         }
 }

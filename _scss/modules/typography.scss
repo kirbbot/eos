@@ -54,7 +54,8 @@ a {
     line-height: 22px;
 }
 
-p {
+p,
+dd {
     font-family: sabon;
     font-size: 18px;
     line-height: 28px;
@@ -73,12 +74,6 @@ button{
         font-family:apercu;
         font-weight: 400;
         font-size:16px;
-}
-.btn{
-        border-radius:20px;
-        padding:10px 13px;
-        border:1px solid $chocolate;
-
 }
 .icon-social {
     font-family: ssSocial;

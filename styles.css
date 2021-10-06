@@ -116,7 +116,8 @@ a {
   font-size: 16px;
   line-height: 22px; }
 
-p {
+p,
+dd {
   font-family: sabon;
   font-size: 18px;
   line-height: 28px; }
@@ -135,11 +136,6 @@ button {
   font-family: apercu;
   font-weight: 400;
   font-size: 16px; }
-
-.btn {
-  border-radius: 20px;
-  padding: 10px 13px;
-  border: 1px solid #251E19; }
 
 .icon-social {
   font-family: ssSocial; }
@@ -178,8 +174,8 @@ button {
     .bulleted p a {
       border-bottom: 1px solid #000;
       font-size: inherit;
-      font-family: inherit;
-      font-weight: inherit; }
+      font-family: apercu;
+      font-weight: 600; }
     .numbered p a,
     .lettered p a,
     .bulleted p a {
@@ -256,139 +252,6 @@ textarea:focus, input:focus {
       color: #251E19; }
     .form .fieldset-regular .form-control:focus label {
       top: 0; }
-  .form #Signup-Profile_Type {
-    margin-bottom: 20px; }
-  .form #Signup-Membership_Types {
-    height: auto;
-    width: 100%; }
-    .form #Signup-Membership_Types legend {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      -ms-justify-content: space-between;
-      justify-content: space-between;
-      -ms-flex-pack: space-between;
-      width: 100%;
-      color: #bf8e44;
-      padding: 0 0 10px 25px;
-      font-size: 18px; }
-    .form #Signup-Membership_Types header {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    .form #Signup-Membership_Types input[type="radio"] {
-      opacity: 0;
-      display: inline-block;
-      z-index: 1; }
-      .form #Signup-Membership_Types input[type="radio"] + label {
-        display: inline-block;
-        position: relative; }
-      .form #Signup-Membership_Types input[type="radio"] + label::before {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #d9bc90;
-        margin-bottom: 5px;
-        margin-top: -16px; }
-      .form #Signup-Membership_Types input[type="radio"]:checked + label::before {
-        font-family: ssStandard;
-        content: "check";
-        border-color: transparent; }
-    .form #Signup-Membership_Types button {
-      font-size: 14px;
-      font-weight: 200;
-      border-bottom: 1px solid #251E19;
-      padding: 0; }
-    .form #Signup-Membership_Types > ul {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-justify-content: space-around;
-      -moz-justify-content: space-around;
-      -ms-justify-content: space-around;
-      justify-content: space-around;
-      -ms-flex-pack: space-around;
-      width: 100%; }
-      .form #Signup-Membership_Types > ul > li {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        -moz-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        width: 33.3%;
-        height: 100%;
-        background-color: #e6d3b6;
-        border-radius: 5px;
-        text-align: center; }
-        .form #Signup-Membership_Types > ul > li:first-child {
-          margin-right: 6px; }
-        .form #Signup-Membership_Types > ul > li:last-child {
-          margin-left: 6px; }
-        .form #Signup-Membership_Types > ul > li:nth-child(2) {
-          margin: 0 3px; }
-        .form #Signup-Membership_Types > ul > li:hover {
-          cursor: pointer; }
-        .form #Signup-Membership_Types > ul > li header {
-          background-color: #bf8e44;
-          padding: 15px 0;
-          border-top-right-radius: 5px;
-          border-top-left-radius: 5px; }
-          .form #Signup-Membership_Types > ul > li header label {
-            color: #f0e6d5;
-            font-family: apercu; }
-          .form #Signup-Membership_Types > ul > li header:hover {
-            cursor: pointer; }
-        .form #Signup-Membership_Types > ul > li > label {
-          font-family: apercu; }
-    .form #Signup-Membership_Types ul li ul {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      padding: 20px; }
-      .form #Signup-Membership_Types ul li ul li {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex; }
-        .form #Signup-Membership_Types ul li ul li p {
-          text-align: left;
-          margin-left: 8px;
-          font-size: 16px; }
-        .form #Signup-Membership_Types ul li ul li:not(:last-child) {
-          margin-bottom: 8px; }
-        .form #Signup-Membership_Types ul li ul li:before {
-          content: "•";
-          margin-top: 5px; }
 
 .checkbox input[type="checkbox"] {
   margin-top: 7px;
@@ -554,27 +417,149 @@ fieldset.toggle-switch {
     margin: 0 auto; }
     #Signup .form fieldset {
       max-width: 600px; }
-    #Signup .form #Signup-Buttons {
+
+#Signup-Cancel {
+  margin-left: 30px; }
+
+#Signup-Membership_Agreement {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+#Signup-Website_Terms {
+  margin-left: -60px; }
+
+#Signup-Profile_Type {
+  margin-bottom: 20px; }
+
+#Signup-Membership_Types {
+  height: auto;
+  width: 100%; }
+  #Signup-Membership_Types legend {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    width: 100%;
+    color: #bf8e44;
+    padding: 0 0 10px 25px;
+    font-size: 18px; }
+  #Signup-Membership_Types header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  #Signup-Membership_Types input[type="radio"] {
+    opacity: 0;
+    display: inline-block;
+    z-index: 1; }
+    #Signup-Membership_Types input[type="radio"] + label {
+      display: inline-block;
+      position: relative; }
+    #Signup-Membership_Types input[type="radio"] + label::before {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #d9bc90;
+      margin-bottom: 5px;
+      margin-top: -16px; }
+    #Signup-Membership_Types input[type="radio"]:checked + label::before {
+      font-family: ssStandard;
+      content: "check";
+      border-color: transparent; }
+  #Signup-Membership_Types > ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around;
+    width: 100%; }
+    #Signup-Membership_Types > ul > li {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    #Signup .form #Signup-Cancel {
-      margin-left: 30px; }
-    #Signup .form #Signup-Membership_Agreement {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 33.3%;
+      height: 100%;
+      background-color: #e6d3b6;
+      border-radius: 5px;
+      text-align: center; }
+      #Signup-Membership_Types > ul > li:first-child {
+        margin-right: 6px; }
+      #Signup-Membership_Types > ul > li:last-child {
+        margin-left: 6px; }
+      #Signup-Membership_Types > ul > li:nth-child(2) {
+        margin: 0 3px; }
+      #Signup-Membership_Types > ul > li:hover {
+        cursor: pointer; }
+      #Signup-Membership_Types > ul > li header {
+        background-color: #bf8e44;
+        padding: 15px 0;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px; }
+        #Signup-Membership_Types > ul > li header label {
+          color: #f0e6d5;
+          font-family: apercu; }
+        #Signup-Membership_Types > ul > li header:hover {
+          cursor: pointer; }
+      #Signup-Membership_Types > ul > li > label {
+        font-family: apercu; }
+  #Signup-Membership_Types ul li ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px; }
+    #Signup-Membership_Types ul li ul li {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; }
-    #Signup .form #Signup-Website_Terms {
-      margin-left: -60px; }
+      #Signup-Membership_Types ul li ul li p {
+        text-align: left;
+        margin-left: 8px;
+        font-size: 16px; }
+      #Signup-Membership_Types ul li ul li:not(:last-child) {
+        margin-bottom: 8px; }
+      #Signup-Membership_Types ul li ul li:before {
+        content: "•";
+        margin-top: 5px; }
 
 #Signup-Membership_Types-Modal .modal-content {
   background-color: #f0e6d5;
@@ -687,9 +672,7 @@ fieldset.toggle-switch {
     font-weight: 200;
     text-transform: uppercase; }
     .tabs .tablinks.active {
-      font-weight: 400;
-      color: #648C1A !important;
-      border-bottom: 2px solid #648C1A; }
+      font-weight: 400; }
 
 /* Style the tab content */
 .tabcontent {
@@ -1009,22 +992,84 @@ fieldset.toggle-switch {
     background-color: #628dc0;
     color: #d6e1eb; }
 
-a.button {
-  width: 250px;
-  padding: 20px 0;
-  text-align: center;
-  background-color: #649475;
-  border: 1px solid #314839;
-  border-radius: 5px;
-  color: #e5ede8;
-  transition: all 0.5s ease;
+.btn {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 10px 13px;
   font-family: apercu;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 16px; }
-  a.button:hover {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  transition: all 0.5s ease;
+  letter-spacing: 0.03em; }
+  .btn-small {
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 8px 11px;
+    font-weight: 400;
+    letter-spacing: 0.03em; }
+    .btn-small.inverse {
+      padding: 6px 9px; }
+  .btn-green {
+    background-color: #72a082;
+    color: #e5ede8; }
+    .btn-green:hover {
+      background-color: #456751; }
+  .btn.inverse {
+    border: 2px solid #afc9b8;
+    color: #91b49d; }
+    .btn.inverse:hover {
+      background-color: #afc9b8;
+      color: #5a8569; }
+
+.btn-plain {
+  font-size: 14px;
+  font-weight: 200;
+  border-bottom: 1px solid #251E19;
+  padding: 0; }
+
+.btn-primary {
+  width: 250px;
+  padding: 20px 0;
+  border-radius: 5px; }
+  .btn-primary:hover {
     background-color: #456751;
     color: #e5ede8; }
+
+.btns-set {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  width: 100%; }
+  .btns-set a:last-child,
+  .btns-set button:last-child {
+    margin-left: 20px; }
 
 /* The Modal (background) */
 .modal {
@@ -1425,6 +1470,8 @@ a.button {
   display: flex;
   width: 100%;
   padding-left: 400px; }
+  #Membership_Types ul:last-of-type {
+    margin-top: 40px; }
   #Membership_Types ul li {
     display: -webkit-box;
     display: -moz-box;
@@ -1460,10 +1507,19 @@ a.button {
     #Membership_Types ul li p {
       margin-bottom: 20px; }
     #Membership_Types ul li button {
-      color: #f2efe7;
+      color: #456751;
       border-radius: 35px;
-      background-color: #648C1A;
-      height: 48px; }
+      background-color: #afc9b8;
+      height: 48px;
+      transition: all 0.5s ease;
+      letter-spacing: 0.03em; }
+      #Membership_Types ul li button.active {
+        background-color: #456751;
+        color: #dde8e1; }
+        #Membership_Types ul li button.active:hover {
+          background-color: #456751; }
+      #Membership_Types ul li button:hover {
+        background-color: #91b49d; }
 #Membership_Types h2 {
   line-height: 100px;
   color: #251E19; }
@@ -1485,172 +1541,220 @@ a.button {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  width: 100%; }
-  #Profile #Profile-Image,
-  #Profile #Profile-Name,
-  #Profile #Profile-Username,
-  #Profile #Profile-Rating,
-  #Profile #Profile-Bio,
-  #Profile #Profile-Message,
-  #Profile #Profile-FriendRequest,
-  #Profile #Profile-Location {
-    margin-bottom: 15px; }
-  #Profile #Profile-About,
-  #Profile #Profile-Participation {
-    padding-top: 70px;
-    padding-bottom: 70px; }
-  #Profile #Profile-About {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: #e5ede8; }
+  #Profile .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    position: relative; }
+  #Profile #Profile-Header {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 30%;
-    background-color: #e5ede8;
-    border-right: 2px solid #648C1A; }
-    #Profile #Profile-About .wrapper {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      max-width: 350px; }
-    #Profile #Profile-About img {
-      object-fit: cover;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 10px solid #afc9b8; }
-  #Profile #Profile-Name,
-  #Profile #Profile-Username,
-  #Profile #Profile-Location,
-  #Profile #Profile-Rating {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%; }
-  #Profile #Profile-Rating ul {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; }
-    #Profile #Profile-Rating ul span {
-      font-size: 24px; }
-    #Profile #Profile-Rating ul li {
-      padding: 0 5px; }
-  #Profile #Profile-Message {
-    background-color: #648C1A;
-    color: #fff; }
-  #Profile #Profile-FriendRequest {
-    border: 2px solid #648C1A;
-    color: #648C1A; }
-  #Profile .btn {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center;
-    padding: 20px 0;
-    width: 100%; }
-  #Profile #Profile-Participation {
-    width: 70%;
-    padding-right: 40px;
-    padding-left: 40px;
-    max-width: 960px;
-    margin: 0 auto; }
-    #Profile #Profile-Participation .tablinks {
-      color: #afc9b8; }
-      #Profile #Profile-Participation .tablinks span {
-        margin-right: 5px;
-        margin-top: 3px; }
-    #Profile #Profile-Participation #Activity .profile-activity-new_friend {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background-image: url("./img/profile/cover-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+    #Profile #Profile-Header #Profile-Avatar {
+      position: absolute;
+      top: 110px;
+      left: 0;
+      border: 5px solid #e5ede8;
+      object-fit: cover;
+      width: 225px;
+      height: 225px;
+      border-radius: 50%; }
+    #Profile #Profile-Header #Profile-Btns {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      -webkit-justify-content: flex-start;
-      -moz-justify-content: flex-start;
-      -ms-justify-content: flex-start;
-      justify-content: flex-start;
-      -ms-flex-pack: flex-start;
+      position: absolute;
+      bottom: 10px;
+      left: 250px; }
+      #Profile #Profile-Header #Profile-Btns li {
+        margin-right: 10px; }
+        #Profile #Profile-Header #Profile-Btns li button,
+        #Profile #Profile-Header #Profile-Btns li a {
+          background-color: rgba(229, 237, 232, 0.5);
+          background-color: rgba(49, 72, 57, 0.7);
+          color: #e5ede8;
+          font-weight: 200; }
+          #Profile #Profile-Header #Profile-Btns li button:hover,
+          #Profile #Profile-Header #Profile-Btns li a:hover {
+            background-color: rgba(8, 11, 9, 0.7); }
+  #Profile #Profile-Data {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #Profile #Profile-Data h1 {
+      color: #314839; }
+    #Profile #Profile-Data h2 {
+      font-weight: 200;
+      font-family: apercu;
+      font-size: 28px;
+      color: #314839; }
+    #Profile #Profile-Data #Profile-Name {
+      margin-top: 30px;
+      margin-left: 250px; }
+      #Profile #Profile-Data #Profile-Name small {
+        font-size: 20px;
+        margin-left: 20px;
+        font-family: apercu;
+        font-weight: 200; }
+    #Profile #Profile-Data ul {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
       -webkit-align-items: center;
       -moz-align-items: center;
       -ms-align-items: center;
       -ms-flex-align: center;
-      align-items: center; }
-      #Profile #Profile-Participation #Activity .profile-activity-new_friend img {
-        width: 40px;
-        height: auto;
-        margin-right: 10px; }
-  #Profile label {
-    color: #91b49d; }
-  #Profile .tabcontent > div {
-    position: relative;
-    border-bottom: 1px solid #afc9b8; }
-    #Profile .tabcontent > div:not(:first-child) {
-      padding: 20px 0; }
-    #Profile .tabcontent > div p {
-      margin-bottom: 10px; }
-      #Profile .tabcontent > div p a {
-        font-family: inherit;
-        border-bottom: 1px solid #648C1A;
-        color: #648C1A;
-        font-size: inherit; }
-    #Profile .tabcontent > div date {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      font-family: apercu;
-      font-weight: 200;
-      font-size: 11px; }
+      align-items: center;
+      margin-top: 30px; }
+      #Profile #Profile-Data ul li {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 10px; }
+        #Profile #Profile-Data ul li img {
+          width: 50px;
+          height: auto;
+          margin-right: 10px; }
+        #Profile #Profile-Data ul li span.icon-location {
+          font-size: 20px;
+          margin-right: 10px;
+          color: #314839; }
+        #Profile #Profile-Data ul li:last-child {
+          margin-left: 40px; }
+    #Profile #Profile-Data #Profile-Rating {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      width: 250px;
+      height: 100%;
+      padding-right: 30px; }
+      #Profile #Profile-Data #Profile-Rating span {
+        padding: 0 5px;
+        color: #afc9b8;
+        font-size: 23px; }
+        #Profile #Profile-Data #Profile-Rating span.active {
+          color: #72a082; }
+  #Profile #Profile-Participation {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px; }
+    #Profile #Profile-Participation .tablinks {
+      color: #bed3c6;
+      padding: 8px 15px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      width: 100%;
+      padding: 15px 0; }
+      #Profile #Profile-Participation .tablinks span {
+        margin-right: 9px;
+        margin-top: 3px;
+        font-size: 14px; }
+      #Profile #Profile-Participation .tablinks.active {
+        background-color: white; }
+        #Profile #Profile-Participation .tablinks.active:hover {
+          background-color: white; }
+      #Profile #Profile-Participation .tablinks:hover {
+        background-color: #ecf2ee; }
+    #Profile #Profile-Participation .tabcontent {
+      padding: 40px;
+      background-color: white;
+      border-radius: 10px;
+      width: 100%;
+      margin-bottom: 80px; }
+    #Profile #Profile-Participation #About {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      border-radius: 0 !important; }
+      #Profile #Profile-Participation #About #Profile-Bio {
+        width: 30%;
+        padding-right: 40px;
+        border-right: 2px solid #e5ede8; }
+        #Profile #Profile-Participation #About #Profile-Bio header {
+          margin-bottom: 20px; }
+      #Profile #Profile-Participation #About #Profile-Firsthand_Story {
+        width: 70%;
+        padding-left: 40px; }
+        #Profile #Profile-Participation #About #Profile-Firsthand_Story header {
+          margin-bottom: 30px; }
+        #Profile #Profile-Participation #About #Profile-Firsthand_Story h2,
+        #Profile #Profile-Participation #About #Profile-Firsthand_Story date,
+        #Profile #Profile-Participation #About #Profile-Firsthand_Story ul {
+          margin-bottom: 10px; }
+        #Profile #Profile-Participation #About #Profile-Firsthand_Story date {
+          color: #72a082;
+          font-family: apercu;
+          font-weight: 200; }
+        #Profile #Profile-Participation #About #Profile-Firsthand_Story ul {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex; }
+          #Profile #Profile-Participation #About #Profile-Firsthand_Story ul li a {
+            border-bottom: 2px solid #72a082;
+            color: #72a082;
+            font-weight: 400;
+            padding: 0 2px; }
+            #Profile #Profile-Participation #About #Profile-Firsthand_Story ul li a:hover {
+              background-color: #e5ede8; }
+          #Profile #Profile-Participation #About #Profile-Firsthand_Story ul li:not(:last-child) {
+            margin-right: 5px; }
+            #Profile #Profile-Participation #About #Profile-Firsthand_Story ul li:not(:last-child):after {
+              content: ","; }
 
 #Life_Transition header {
   padding-left: 180px !important;

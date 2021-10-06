@@ -87,7 +87,7 @@ jQuery(document).ready(function( $ ) {
                 event.preventDefault();
                 $('#Signup-Membership_Types-Modal').fadeToggle();
         });
-        $("#Signup-Membership_Types-Modal-Close").click(function(){
+        $("#Signup-Membership_Types-Modal-Close, .Membership_Types-Btn-Free, .Membership_Types-Btn-Preferred, .Membership_Types-Btn-Premiere").click(function(){
                 event.preventDefault();
                 $('#Signup-Membership_Types-Modal').fadeToggle();
         });
@@ -96,26 +96,24 @@ jQuery(document).ready(function( $ ) {
                 event.preventDefault();
                 $('#Signup-Membership_Agreement-Modal').fadeToggle();
         });
-        $("#Signup-Membership_Agreement-Modal-Close").click(function(){
+        $("#Signup-Membership_Agreement-Modal-Close, #Signup-Membership_Agreement-Modal-Agree, #Signup-Membership_Agreement-Modal-Cancel").click(function(){
                 event.preventDefault();
                 $('#Signup-Membership_Agreement-Modal').fadeToggle();
+                document.getElementById("Signup-Membership_Agreement-Checkbox").disabled = false;
+                document.getElementById("Signup-Membership_Agreement-Checkbox").checked = true;
         });
         // Modal Signup Form Website Terms
         $('#Signup-Website_Terms-Btn').click(function(){
                 event.preventDefault();
                 $('#Signup-Website_Terms-Modal').fadeToggle();
         });
-        $("#Signup-Website_Terms-Modal-Close").click(function(){
+        $("#Signup-Website_Terms-Modal-Close, #Signup-Website_Terms-Modal-Agree, #Signup-Website_Terms-Modal-Cancel").click(function(){
                 event.preventDefault();
                 $('#Signup-Website_Terms-Modal').fadeToggle();
+                document.getElementById("Signup-Website_Terms-Checkbox").checked = true;
+                document.getElementById("Signup-Website_Terms-Checkbox").disabled = false;
         });
-        
-        // modal = $('#Signup-Membership_Types-Modal');
-        // window.onclick = function(event) {
-        //         if (event.target == modal) {
-        //                 modal.style.display = "none";
-        //         }
-        // }
+
 
         // Add active class to nav
         // http://www.sweet-web-design.com/wordpress/how-to-add-active-navigation-class-based-on-url-to-menu-item/2401/
