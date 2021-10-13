@@ -21,6 +21,17 @@
 @mixin text_element_padding(){
         padding: 0 10%;
 }
+
+// S T R U C T U R E //
+$winmax_w: 1280px;
+$sidebarmin_w: 260px;
+
+// H E A D E R   V A R I A B L E S // 
+$header_h:100px;
+$header_h_desktop:100px;
+$header_h_mobile:100px; 
+// // // // // // // // // // // /// 
+
 // C O L O R S //
 $black: #000;
 $white: #fff;

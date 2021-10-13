@@ -1,0 +1,106 @@
+ <section id="Community-Posts" class="posts tabcontent">
+                <h1>Posts</h1>
+                <a href="#">See More</a>
+                <ul>
+                        <li>
+                                <img src="./img/headshots/amanda.jpeg">
+                                <h4>Lorem ipsum dolor sit amet</h3>
+                                <p>Posted By <a href="./profile.html">Amanda Solipsaysum on October 8, 2021</p>
+                        </li>
+                        <li>
+                                <img src="./img/headshots/andrew.jpg">
+                                <h4>Lorem ipsum dolor sit amet</h3>
+                                <p>Posted By <a href="./profile-andrew.html">Andrew Myers</a> on September 29, 2021</p>
+                        </li>
+                </ul>
+        </section>
+        <section id="Community-Conversations" class="conversations tabcontent">   
+                <h1>Conversations</h1>
+                <ul>
+                        {% for i in (1..6) %}
+                                <li>
+                                        <div class="post-categories">
+                                                <span class="icon">tag</span>
+                                                <p>Abuse</p>
+                                                <p>Advice</p>
+                                                <span class="icon-standard bookmark">bookmark</span>
+                                        </div>
+                                        <div class="post-preview">
+                                                <h3>I've been stuck in this really negative narrative</h3>
+                                                <p>Can you help me repharase this narrative: "I drive people away because my boyfriend is now distancing himself physically and emotionally"?</p>
+                                        </div>
+                                       <div class="post_footer">
+                                                <div class="post-footer-posted">
+                                                        <h6>Conversation created by</h6>
+                                                        <div class="post-footer-posted-by">
+                                                                <img src="../img/firsthand_stories_avatar.png">
+                                                                <h4>Abel</h4>
+                                                                <p>on August 23, 2021</p>
+                                                        </div>
+                                                </div>
+                                                <div class="post-footer-interactions">
+                                                        <p><span class="icon-standard">eye</span>300</p>
+                                                        <p><span class="icon-standard">comment</span>200</p>
+                                                </div>
+                                        </div>
+                                       
+                                </li>
+                        {% endfor %}
+                </ul>     
+        </section>
+        <section id="Community-Events" class="events tabcontent">
+                <h1>Events & Activities</h1>
+                <ul>
+                        {% for i in (1..4) reversed %}
+                                <li>
+                                        <div class="img-container">
+                                                <img src="./img/resources_placeholder.png">
+                                        </div>
+                                        
+                                        <div class="resources-text">
+                                                <h3>Event Name</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                <p>City, State</p>
+                                        </div>
+                                </li>
+                        {% endfor %}
+                </ul>
+        </section>
+        <section id="Community-Resources" class="resources tabcontent">
+                <h1>Helpful Resources</h1>
+                <ul>
+                        {% for i in (1..4) reversed %}
+                                <li>
+                                        <div class="img-container">
+                                                <img src="./img/resources_placeholder.png">
+                                        </div>
+                                        
+                                        <div class="resources-text">
+                                                <h3>Service listing or provider</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                <p>City, State</p>
+                                        </div>
+                                </li>
+                        {% endfor %}
+                </ul>
+        </section>
+        <section id="Community-M2M" class="m2m">
+                <h1>Member to Member</h1>
+                <ul>
+                        {% for i in (1..4) reversed %}
+                                <li>
+                                        <div class="img-container">
+                                                <img src="./img/resources_placeholder.png">
+                                        </div>
+                                        
+                                        <div class="resources-text">
+                                                <h3>Firstname Lastname</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                <p>City, State</p>
+                                                <p>Join date</p>
+                                                <p>Categories</p>
+                                        </div>
+                                </li>
+                        {% endfor %}
+                </ul>
+        </section>

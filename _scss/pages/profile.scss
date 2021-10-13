@@ -1,4 +1,4 @@
-$profile_avatar_h: 250px;
+$profile_avatar_h: 225px;
 
 #Profile{
         @include flexbox();
@@ -12,6 +12,36 @@ $profile_avatar_h: 250px;
                 height:100%;
                 position:relative;
         }
+        &.andrew #Profile-Header{
+                background-image:url('./img/profile/cover-photo-mtns.jpg');
+                background-repeat:no-repeat;
+                background-size: cover;
+        }
+        &.amanda #Profile-Header{
+                background-image:url('./img/profile/cover-photo.jpg');
+                background-repeat:no-repeat;
+                background-size: cover;
+        }
+        &.newdawn #Profile-Header{
+                background-image:url('./img/profile/cover-photo-sunrise.jpg');
+                background-repeat:no-repeat;
+                background-size:cover;
+                background-position:50% 40%
+        }
+        #Organization-Contact{
+                img{
+                        width:50px !important;
+                        height:50px !important;
+                        object-fit: cover;
+                        border-radius:50%;
+                }
+                h2{
+                        text-decoration:underline;
+                        &:hover{
+                                cursor:pointer;
+                        }
+                }
+        }
         // * * * * * * * *  
         //   H E A D E R
         // * * * * * * * * 
@@ -21,36 +51,56 @@ $profile_avatar_h: 250px;
                 position:relative;
                 height:$profile_avatar_h;
                 width:100%; 
-                background-image:url('./img/profile/cover-photo.jpg');
-                background-repeat:no-repeat;
-                background-size: cover;
                 #Profile-Avatar{
                         position:absolute;
                         top:110px;
                         left:0;
                         border:5px solid $ltsage;
                         object-fit: cover;
-                        width:225px;
-                        height:225px;
+                        width:$profile_avatar_h;
+                        height:$profile_avatar_h;
                         border-radius:50%;
                 }
                 #Profile-Btns{
                         @include flexbox();
                         position:absolute;
                         bottom:10px;
-                        left:$profile_avatar_h;
+                        left:calc(#{$profile_avatar_h} + 20px);
                         li{
                                 margin-right:10px;
                                 button,
                                 a{
-                                        background-color:rgba(229, 237, 232, .5);
-                                        //background-color:rgba(114, 160, 130,.5);
-                                        background-color:rgba(49, 72, 57,.7);
+                                        background-color:rgba(49, 72, 57,0.7);
                                         color:$ltsage;
                                         font-weight:200;
                                         &:hover{
-                                                background-color:rgba(8, 11, 9,.7);
+                                                background-color:rgba(8, 11, 9,0.7);
                                         }
+                                }
+                        }
+                }
+                #Profile-Social{
+                        @include flexbox();
+                        position:absolute;
+                        bottom:10px;
+                        right:10px;
+                        li{
+                                @include flexbox();
+                                @include justify-content(center);
+                                @include align-items(center);
+                                margin:0 5px;
+                                background-color:rgba(49, 72, 57,0.7);
+                                border-radius:50%;
+                                width:30px;
+                                height:30px;
+                                transition:all 0.5s ease;
+                                &:hover{
+                                        background-color:rgba(8, 11, 9,0.7);  
+                                }
+                                a{
+                                        color:$ltsage;
+                                        font-size:14px;
+                                        padding-top:3px;
                                 }
                         }
                 }
@@ -60,55 +110,86 @@ $profile_avatar_h: 250px;
         // * * * * * * * * 
         #Profile-Data{
                 @include flexbox();
-                @include flex-direction(column);
-                h1{
-                      color:darken($sage, 50%);  
-                }
-                h2{
+                 h2{
                         font-weight:200;
                         font-family:apercu;
-                        font-size: 28px;
+                        font-size: 24px;
+                        line-height: 32px;
                         color:darken($sage, 50%);
-                }
-                #Profile-Name{
-                        margin-top:30px;
-                        margin-left:$profile_avatar_h;
-                        small{
-                                font-size:20px;
-                                margin-left:20px;
-                                font-family: apercu;
-                                font-weight: 200;
-                        }
                 }
                 ul{
                         @include flexbox();
-                        @include align-items(center);
-                        margin-top:30px;
+                        margin-top:15px;
+                        img{
+                                width:30px;
+                                height: auto;
+                                margin-right:10px;
+                        }
+                        span.icon-location{
+                                font-size:20px;
+                                margin-right:10px;
+                                color:darken($sage, 50%);
+                        }
                         li{
+                                width:50%;
+                                position:relative;
+                                padding-top:25px;
+                                &.column{
+                                        @include flexbox();
+                                        @include flex-direction(column);
+                                        @include align-items(flex-start);   
+                                }
+                                label{
+                                        position:absolute;
+                                        top:-5px;
+                                        font-family:apercu;
+                                        font-size:12px;
+                                        color:darken($sage, 20%);
+                                        width:100%;
+                                        font-weight:200;
+                                }
+                                &.row{
+                                        @include flexbox();
+                                        @include align-items(center);
+                                }
+                        }
+                }
+                #Profile-Data-Txt{
+                        width: calc(100% - #{$profile_avatar_h});
+                        padding-left:40px;
+                }
+                #Profile-Data-Rating{
+                        @include flexbox();
+                        @include flex-direction(column);
+                        @include align-items(center);
+                        width: $profile_avatar_h;
+                        padding-top:125px;
+                        #Profile-Rating,
+                        #Profile-Badges{
                                 @include flexbox();
-                                @include align-items(center);
-                                margin-bottom: 10px;
-                                img{
-                                        width:50px;
-                                        height: auto;
-                                        margin-right:10px;
-                                }
-                                span.icon-location{
+                                @include justify-content(center);
+                        }
+                        p{
+                                font-family:apercu;
+                                font-weight:200;
+                                font-size:14px;
+                                margin-top:10px;
+                        }
+                } 
+                #Profile-Name{
+                        @include flexbox();
+                        margin-top:30px;
+                        h1{ 
+                                color:darken($sage, 50%); 
+                                small{
                                         font-size:20px;
-                                        margin-right:10px;
-                                        color:darken($sage, 50%);
-                                }
-                                &:last-child{
-                                        margin-left:40px;
+                                        margin-left:20px;
+                                        font-family: apercu;
+                                        font-weight: 200;
                                 }
                         }
                 }
                 #Profile-Rating{
-                        @include flexbox();
-                        @include justify-content(center);
-                        width:$profile_avatar_h;
-                        height:100%;
-                        padding-right:30px;
                         span{
                                 padding:0 5px;
                                 color:$sage;
@@ -118,7 +199,48 @@ $profile_avatar_h: 250px;
                                 }
                         }
                 }
-                
+                #Profile-Badges{
+                        @include flexbox();
+                        @include align-items(flex-end);
+                        height:46px;
+                        margin-left:18px;
+                        .tooltip{
+                                margin:0 5px;
+                                height:25px;
+                                width:25px;
+                                color:$ltsage;
+                                font-size:14px;
+                                border-radius:50%;
+                                background-color:rgba(145, 180, 157,0.7); // darken($sage, 10%)
+                                text-align: center;
+                                line-height:29px;
+                        }
+                }
+                #Profile-Life_Transitions{
+                        li{     
+                                padding-top:30px !important;
+                                p{
+                                        color:darken($blue, 20%);
+                                        font-family:apercu;
+                                        letter-spacing:0.03em;
+                                        span{
+                                                border:1px solid darken($blue, 10%);
+                                                border-radius:30px; 
+                                                background-color:lighten($ltblue, 2%);   
+                                                margin-right:20px; 
+                                                padding:6px 15px; 
+                                                font-weight: 200;  
+                                        }
+                                }
+                        }
+                }
+                #Profile-Bio{
+                        margin-top:20px !important;
+                        li{
+                                width:83% !important;
+                                max-width:700px;
+                        }
+                }
                 
         }
         
@@ -127,8 +249,7 @@ $profile_avatar_h: 250px;
                 padding-right:40px;
                 padding-left:40px;
                 max-width:1200px;
-                margin: 0 auto;
-                padding-top:40px;
+                margin: 80px auto;
                 .tabs{
                 }
                 .tablinks{
@@ -145,12 +266,15 @@ $profile_avatar_h: 250px;
                         }
                         &.active{
                                 background-color:lighten($sage, 30%);
+                                color:darken($sage, 20%);
                                 &:hover{
-                                     background-color:lighten($sage, 30%);   
+                                     background-color:lighten($sage, 30%);
+                                     color:darken($sage, 20%);   
                                 }
                         }
                         &:hover{
                                 background-color:lighten($sage, 20%);
+                                color:darken($sage, 10%); 
                         }
                 }
                 .tabcontent{
@@ -160,20 +284,15 @@ $profile_avatar_h: 250px;
                         width:100%;
                         margin-bottom:80px;
                 }
-                #About{
+                #Posts{
                         @include flexbox();
-                        border-radius:0 !important;
-                        #Profile-Bio{
-                                width:30%;
-                                padding-right:40px;
-                                border-right:2px solid $ltsage;
-                                header{
-                                        margin-bottom:20px;
-                                }
-                        }
-                        #Profile-Firsthand_Story{
+                        border-top-left-radius:0 !important;
+                        #Profile-Posts{
                                 width:70%;
-                                padding-left:40px;
+                                padding:40px 0;
+                                margin:0 auto;
+                                @include flexbox();
+                                @include flex-direction(column);
                                 header{
                                         margin-bottom:30px;
                                 }
@@ -186,23 +305,40 @@ $profile_avatar_h: 250px;
                                       color:darken($sage, 20%); 
                                       font-family:apercu;
                                       font-weight: 200; 
+                                      font-size:14px;
+                                }
+                                .post{
+                                        &:not(:first-child){
+                                                margin-top:60px;
+                                                padding-top:80px;
+                                                border-top:5px dotted $ltsage;    
+                                        }
+                                        p{
+                                                &:not(:last-child){
+                                                        margin-top:15px;
+                                                }
+                                        }
+                                        
                                 }
                                 ul{
                                         @include flexbox();
                                         li{
+
                                                 a{
-                                                        border-bottom:2px solid darken($sage, 20%);
-                                                        color:darken($sage, 20%);
+                                                        border:1px solid $sage;
+                                                        color:darken($sage, 10%);
                                                         font-weight:400;
                                                         padding:0 2px;
+                                                        border-radius:15px;
+                                                        padding:2px 6px;
+                                                        margin-right:10px;
+                                                        transition:all 0.5s ease;
+                                                        font-weight: 200;
+                                                        font-size: 14px;
                                                         &:hover{
-                                                                background-color:$ltsage;
-                                                        }
-                                                }
-                                                &:not(:last-child){
-                                                        margin-right:5px;
-                                                        &:after{
-                                                                content:",";
+                                                                background-color:$sage;
+                                                                color:darken($sage, 25%);
+                                                                border:2px solid darken($sage, 20%);
                                                         }
                                                 }
                                         }

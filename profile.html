@@ -7,10 +7,10 @@ title: Profile
 Profile pages for Amanda, Andrew, New Dawn
 -->
 
-<div id="Profile">
+<div id="Profile" class="amanda">
     <div id="Profile-Header">
         <div class="wrapper">
-            <img id="Profile-Avatar" src="./img/headshots/andrea.jpeg">
+            <img id="Profile-Avatar" src="./img/headshots/amanda.jpeg">
             <ul id="Profile-Btns">
                 <li>
                     <button id="Profile-Message" class="btn btn-small">Message</button>
@@ -18,65 +18,153 @@ Profile pages for Amanda, Andrew, New Dawn
                 <li>
                     <button id="Profile-FriendRequest" class="btn btn-small">Send Friend Request</button>
                 </li>
-                <li>
+                <!-- <li>
                     <a id="Profile-Edit-Btn" class="btn btn-small" href="profile_settings.html">Edit Profile</a>
+                </li> -->
+            </ul>
+            <ul id="Profile-Social">
+                <li>
+                    <a href="#" target="_blank" class="icon-social">facebook</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon-social">instagram</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon-social">linkedin</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon-social">twitter</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon-social">youtube</a>
                 </li>
             </ul>
         </div>
     </div>
     <div id="Profile-Data" class="wrapper">
-        <h1 id="Profile-Name">Amanda EOS <small>@amanda</small></h1>
+        <div id="Profile-Data-Rating">
+            <div id="Profile-Rating">
+                <span class="icon-standard active">star</span>
+                <span class="icon-standard active">star</span>
+                <span class="icon-standard active">star</span>
+                <span class="icon-standard active">star</span>
+                <span class="icon-standard">star</span>
+            </div>
+            <p>@amanda</p>
+            <p>Joined October 2020</p>
+        </div>
+        <div id="Profile-Data-Txt">
+            <div id="Profile-Name">
+                <h1>Amanda Solipsaysum</h1>
+                <div id="Profile-Badges">
+                    <div class="tooltip">
+                        <span class="tooltiptxt">Verified</span>
+                        <span class="icon-standard verified">check</span>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltiptxt">Pledged</span>
+                        <span class="icon">medal</span>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltiptxt">Donor</span>
+                        <span class="icon-standard">cost</span>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltiptxt">Beta Tester</span>
+                        <span class="icon-standard">user</span>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li class="column">
+                    <label>Organization</label>
+                    <h2><a href="./profile-newdawn.html">A New Dawn</a></h2>
+                </li>
+            </ul>
         <ul>
-            <li id="Profile-Rating">
-                    <span class="icon-standard active">star</span>
-                    <span class="icon-standard active">star</span>
-                    <span class="icon-standard active">star</span>
-                    <span class="icon-standard active">star</span>
-                    <span class="icon-standard">star</span>
+            <li class="column">
+                <label>Location</label>
+                <h2><span class="icon-location icon-standard">location</span>Ann Arbor, Michigan</h2>
             </li>
-            <li>
+            <li class="column">
+                <label>Faith</label>
+                <h2>Buddhism</h2>
+            </li>
+        </ul>
+        <ul>
+            <li class="row">
+                <label>Ambassador</label>
                 <img src="./img/topics-abuse.png">
                 <h2>Lead Midwest Abuse Ambassador</h2>
             </li>
-            <li>
-                <span class="icon-location icon-standard">location</span>
-                <h2>Ann Arbor, Michigan</h2>
+            <li class="row">
+                <label>Awards</label>
+                <img src="./img/risingphoenix.png">
+                <h2>Rising Phoenix Award Winner 2019</h2>
             </li>
         </ul>
+        <ul id="Profile-Life_Transitions">
+            <li>
+                <label>Life Transitions Experienced</label>
+                <p><span>Abuse</span></p>
+            </li>
+            <li>
+                <label>Seeking Help With</label>
+                <p><span>Aging</span></p>
+            </li>
+        </ul>
+        <ul id="Profile-Bio">
+            <li>
+                <label>Bio</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </li>
+        </ul>
+    </li>
+</ul>
     </div>
+</div>
 <div id="Profile-Participation">
     <div class="tabs">
-        <button class="tablinks active" onclick="openProfileTab(event,'About')"><span class="icon ss-standard">user</span>About</button>
-        <button class="tablinks" onclick="openProfileTab(event,'Activity')"><span class="icon">activity</span>Activity</button>
-        <button class="tablinks" onclick="openProfileTab(event, 'Events')"><span class="icon-standard">calendar</span>Events</button>
-        <button class="tablinks" onclick="openProfileTab(event,'Groups')"><span class="icon-standard">users</span>Groups</button>
-        <button class="tablinks" onclick="openProfileTab(event, 'Inbox')"><span class="icon-standard">mail</span>Inbox</button>
-        <button class="tablinks" onclick="openProfileTab(event,'Friends')"><span class="icon-standard">user</span>Friends</button>
-        <button class="tablinks" onclick="openProfileTab(event,'Bookmarks')"><span class="icon-standard">bookmark</span>Bookmarks</button>
-        <button class="tablinks" onclick="openProfileTab(event,'Reviews')"><span class="icon-standard">write</span>Reviews</button>
+        <button class="tablinks active" onclick="openTab(event,'Posts')"><span class="icon ss-standard">compose</span>Posts</button>
+        <button class="tablinks" onclick="openTab(event,'Activity')"><span class="icon">activity</span>Activity</button>
+        <button class="tablinks" onclick="openTab(event, 'Events')"><span class="icon-standard">calendar</span>Events</button>
+        <button class="tablinks" onclick="openTab(event,'Groups')"><span class="icon-standard">users</span>Groups</button>
+        <button class="tablinks" onclick="openTab(event, 'Inbox')"><span class="icon-standard">mail</span>Inbox</button>
+        <button class="tablinks" onclick="openTab(event,'Friends')"><span class="icon-standard">user</span>Friends</button>
+        <button class="tablinks" onclick="openTab(event,'Bookmarks')"><span class="icon-standard">bookmark</span>Bookmarks</button>
+        <button class="tablinks" onclick="openTab(event,'Reviews')"><span class="icon-standard">write</span>Reviews</button>
     </div>
-    <div id="About" class="tabcontent active">
-        <div id="Profile-Bio">
-            <header>
-                <h4>Biography</h4>
-            </header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="Profile-Firsthand_Story">
-            <header>
-                <h2>Firsthand Story</h2>
-                <ul>
-                    <li><a href="./community.html">Category</a></li>
-                    <li><a href="./community.html">Category</a></li>
-                </ul>
-                <date>Published May 6, 2019</date>
-            </header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-        </div>
-    </div>
+    <div id="Posts" class="tabcontent active">
+        <ul id="Profile-Posts">
+            <li class="post">
+                <header>
+                    <h2>Blog Post</h2>
+                    <ul>
+                        <li><a href="./community.html">Category</a></li>
+                        <li><a href="./community.html">Category</a></li>
+                    </ul>
+                    <date>January 6, 2021</date>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+            </li>
+            <li class="post">
+                <header>
+                    <h2>Blog Post</h2>
+                    <ul>
+                        <li><a href="./community.html">Longer Category Name</a></li>
+                    </ul>
+                    <date>Published October 18, 2020</date>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+            </li>
+        </ul>
     
     <div id="Activity" class="tabcontent">
      <div>

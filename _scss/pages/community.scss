@@ -1,0 +1,288 @@
+#Life_Transition{
+        header{
+
+            padding-left:180px !important;  
+            padding-right:10px;  
+        }
+}
+#Community{
+        @include flexbox();
+        @include justify-content(center);
+        width:100%;
+        background-color:$ltblue;
+
+        .wrapper{
+                width:85%;
+                position:relative;
+                //max-width:$winmax_w;
+                //background-color:$ltblue;
+                section{
+                        height:100%;
+                        margin-top:calc($header_h);
+                        padding:40px;
+                        header{
+                                @include flexbox();
+                                @include justify-content(space-between);
+                                width:100%;
+                        }
+                }
+        }
+        #Community_Conversations{
+                > ul{
+                        @include flexbox();
+                        @include flex-wrap(wrap);
+                        @include justify-content(space-between);
+                        > li{
+                                padding-bottom:40px;
+                                width:50%;
+                                &:nth-child(even){
+                                   padding-left:20px;  
+                                }
+                                &:nth-child(odd){
+                                        padding-right:20px;
+                                }
+                        }
+                }
+                
+                .post-preview{
+                        padding:20px;
+                        border-left:1px solid grey;
+                        border-right:1px solid grey;
+                        p{
+                                font-size:22px;
+                                line-height: 38px;
+                        }
+                }
+                .post_footer{
+                        @include flexbox();
+                        @include align-items(center);
+                        @include justify-content(space-between);
+                        border:1px solid grey;
+                        border-bottom-left-radius:10px;
+                        border-bottom-right-radius:10px;
+                        padding:10px 20px;
+                        img{
+                                height:40px;
+                                width:40px;
+                                border-radius:50%;
+                                object-fit:cover;
+                        }
+                        .post-footer-posted{
+                                @include flexbox();
+                                @include flex-direction(column);
+                                .post-footer-posted-by{
+                                        @include flexbox();
+                                        @include align-items(center);
+                                        margin-top:10px;
+                                        h4,p{
+                                                margin-left:8px;
+                                        }
+                                }
+                        }
+                        .post-footer-interactions{
+                                @include flexbox();
+                                @include align-items(center);
+                                p{
+                                        margin-right:10px;
+                                        span{
+                                                margin-right:5px;
+                                                margin-top:8px;
+                                        }
+                                }
+                        }
+                }
+                .post-categories{
+                        @include flexbox();
+                        @include align-items(center);
+                        padding:10px 40px 10px 20px;
+                        border:1px solid grey;
+                        border-top-right-radius:10px;
+                        border-top-left-radius:10px;
+                        position:relative;
+                        .bookmark{
+                                position:absolute;
+                                top:16px;
+                                right:20px;
+                        }
+                        span{
+                                padding-right:8px;
+                        }
+                        p{
+                                padding-right:8px;
+                                &:after{
+                                        content:", ";
+                                }
+                                &:last-child{
+                                        &:after{
+                                                content:"";
+                                        }
+                                }
+                        }
+                }
+        }
+        #Resources{
+                ul{
+                    @include flexbox();
+                    @include flex-wrap(wrap);
+                    li{
+                        width:50%;
+                        @include flexbox();
+                        margin-bottom:20px;
+                        &:nth-child(even){
+                                padding-left:10px;  
+                        }
+                        &:nth-child(odd){
+                                padding-right:10px;
+                        }
+                        .resources-text{
+                                @include flexbox();
+                                @include flex-direction(column);
+                                @include justify-content(space-between);
+                                padding:10px 20px;
+                                border-top:1px solid grey;
+                                border-right:1px solid grey;
+                                border-bottom:1px solid grey;
+                                border-top-right-radius:10px;
+                                border-bottom-right-radius:10px;
+                        }
+                        .img-container{
+                                height:100%;
+                                width:200px;
+                                padding:10px 20px;
+                                border-top:1px solid grey;
+                                border-left:1px solid grey;
+                                border-bottom:1px solid grey;
+                                border-top-left-radius:10px;
+                                border-bottom-left-radius:10px;
+                        }
+                        img{
+                                height:100%;
+                                width:100%;
+                                object-fit:cover;
+                        }
+                    }    
+                }
+        }
+        #Community-Stories{
+                header{
+                        @include flexbox();
+                        @include justify-content(space-between);
+                        @include align-items(flex-end);
+                        width:100%;
+                }
+        }
+}
+
+.stories{
+        @include flexbox();
+        @include flex-wrap(wrap);
+        header{
+                        @include flexbox();
+                        @include justify-content(space-between);
+                        @include align-items(flex-end);
+                        width:100%;
+                }
+        ul{
+                @include flexbox();
+                @include flex-wrap(wrap);
+                @include justify-content(center);
+        }
+        li{
+                width:25%;
+                position:relative;
+        }
+        img{
+                height:300px;
+                width:100%;
+                object-fit: cover;
+                // border-top:1px solid grey;
+                // border-left:1px solid grey;
+                // border-right:1px solid grey;
+                // border-top-right-radius:10px;
+                // border-top-left-radius:10px;
+        }
+        .text{
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                @include flex-direction(column);
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background-color:darken($blue,50%);
+                opacity:.9;
+                color:$white;
+        }
+        h4{
+                padding:10px 20px;
+                // border-left:1px solid grey;
+                // border-right:1px solid grey;
+        }
+        p{
+                padding:0 20px 10px 20px;
+                // border-left:1px solid grey;
+                // border-bottom:1px solid grey;
+                // border-right:1px solid grey;
+                // border-bottom-left-radius:10px;
+                // border-bottom-right-radius:10px;
+        }
+}
+#Community-Filters{
+        margin:40px;
+        border:5px solid darken($blue,20%);
+        border-radius:10px;
+        @include flexbox();
+        @include flex-direction(column);
+        width:15%;
+        min-width:$sidebarmin_w;
+        height:fit-content;
+        h2{
+                font-weight: 200;
+        }
+        .dropdown{
+                button{
+                        text-transform:uppercase;
+                        background-color:darken($blue,20%);  
+                        padding:10px 10px 10px 20px;
+                        color:$ltblue;
+                        width:100%;
+                        font-weight: 400;
+                        font-size:12px;
+                        line-height: 28px;
+                        text-align: left;
+                        span{
+                                margin-left:10px;
+                                font-size:9px;
+                        }
+                }
+                &:last-child{
+                        button{
+                                border-bottom:0px solid transparent;
+                        }
+                }
+                ul{
+                        li{
+                                @include flexbox();
+                                @include align-items(center);
+                                padding:20px 10px 20px 30px;
+                                border-bottom:2px solid darken($ltblue,1%);
+                                font-weight: 200;
+                                font-family:apercu;
+                                &.active{
+                                        background-color:darken($ltblue,3%);
+                                }
+                                &:hover{
+                                        background-color:darken($ltblue,3%);    
+                                        cursor:pointer;
+                                }
+                                img{
+                                        height:30px;
+                                        width:auto;
+                                        margin-right:10px;
+                                }
+                        }
+                }
+        }
+}

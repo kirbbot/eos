@@ -32,6 +32,11 @@ jQuery(document).ready(function( $ ) {
                 $("body").toggleClass("menu-active");
         });
 
+        // Dropdowns
+        $('.dropdown button').on('click', function(){
+                $(this).closest('ul').css('height','100%');
+        });
+
         // Slick
         $('#Timeline').slick({
                 dots: false,
@@ -102,6 +107,7 @@ jQuery(document).ready(function( $ ) {
                 document.getElementById("Signup-Membership_Agreement-Checkbox").disabled = false;
                 document.getElementById("Signup-Membership_Agreement-Checkbox").checked = true;
         });
+        
         // Modal Signup Form Website Terms
         $('#Signup-Website_Terms-Btn').click(function(){
                 event.preventDefault();
@@ -176,8 +182,8 @@ function openReviewTab(reviewItem){
         //document.getElementById(reviewItem).classList.add('active');
 }
 
- // Profile
-function openProfileTab(evt, profileTabContent) {
+ // Tabs
+function openTab(evt, tabContent) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -194,33 +200,9 @@ function openProfileTab(evt, profileTabContent) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(profileTabContent).style.display = "block";
+  document.getElementById(tabContent).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
- // Tabs SignUp Form
-function signup(evt, signupTabContent) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-  console.log(tablinks);
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(signupTabContent).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
 
 // Topics Wheel
 window.addEventListener('resize', () => {
