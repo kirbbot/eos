@@ -15,37 +15,33 @@ filters
 
 
 <section id="Community">
-        <sidebar id="Community-Filters" class="filters">
-                <div class="dropdown">
-                        <button>Viewing<span class="icon-standard">navigateup</span></button>
-                        <ul>
-                                <li class="tablinks active" onclick="openTab(event,'Community-Latest')">Latest</li>
-                                <li class="tablinks" onclick="openTab(event,'Community-Stories')">Stories</li>
-                                <li class="tablinks" onclick="openTab(event,'Community-Posts')">Posts</li>
-                                <li class="tablinks" onclick="openTab(event,'Community-Conversations')">Conversations</li>
-                                <li class="tablinks" onclick="openTab(event,'Community-Events')">Events</li>
-                                <li class="tablinks" onclick="openTab(event,'Community-Resources')">Resources</li>
-                        </ul>
-                </div><!-- end tabs -->
-                <div class="dropdown">
+        <header id="Community-Filters" class="filters">
+                <div class="dropdown" id="Community-Filters-Topics">
                         <button>Topics<span class="icon-standard">navigatedown</span></button>
-                        <ul>
-                                <li><img src="./img/topics-abuse.png">Abuse & Domestic Violence</li>
-                                <li><img src="./img/topics-addiction.png">Addiction</li>
-                                <li><img src="./img/topics-aging.png">Aging</li>
-                                <li><img src="./img/topics-careerchange.png">Career Change</li>
-                                <li><img src="./img/topics-comingofage.png">Coming of Age</li>
-                                <li><img src="./img/topics-community.png">Community</li>
-                                <li><img src="./img/topics-grieving.png">Grieving</li>
-                                <li><img src="./img/topics-healthcrisis.png">Health Crisis</li>
-                                <li><img src="./img/topics-homelessness.png">Homelessness</li>
-                                <li><img src="./img/topics-humantrafficking.png">Human Trafficking</li>
-                                <li><img src="./img/topics-military.png">Military</li>
-                                <li><img src="./img/topics-newbusiness.png">New Business</li>
-                                <li><img src="./img/topics-parenting.png">Parenting</li>
-                                <li><img src="./img/topics-selfawareness.png">Self Awareness</li>
-                                <li><img src="./img/topics-union.png">Union</li>
-                        </ul>
+                        <div class="dropdown-content">
+                                <span class="close">&times;</span>
+                                <ul>
+                                        <li><img src="./img/topics-abuse.png">Abuse & Domestic Violence</li>
+                                        <li><img src="./img/topics-addiction.png">Addiction</li>
+                                        <li><img src="./img/topics-aging.png">Aging</li>
+                                        <li><img src="./img/topics-careerchange.png">Career Change</li>
+                                        <li><img src="./img/topics-comingofage.png">Coming of Age</li>
+                                        <li><img src="./img/topics-community.png">Community</li>
+                                        <li><img src="./img/topics-grieving.png">Grieving</li>
+                                        <li><img src="./img/topics-healthcrisis.png">Health Crisis</li>
+                                        <li><img src="./img/topics-homelessness.png">Homelessness</li>
+                                        <li><img src="./img/topics-humantrafficking.png">Human Trafficking</li>
+                                        <li><img src="./img/topics-military.png">Military</li>
+                                        <li><img src="./img/topics-newbusiness.png">New Business</li>
+                                        <li><img src="./img/topics-parenting.png">Parenting</li>
+                                        <li><img src="./img/topics-selfawareness.png">Self Awareness</li>
+                                        <li><img src="./img/topics-union.png">Union</li>
+                                </ul>
+                                <ul>
+                                        <li>Gender</li>
+                                        <li>Equality</li>
+                                </ul>
+                        </div>
                 </div>
                 <div class="dropdown">
                         <button>Location<span class="icon-standard">navigatedown</span></button>
@@ -56,91 +52,220 @@ filters
                 <div class="dropdown">
                         <button>Cost<span class="icon-standard">navigatedown</span></button>
                 </div>
+        </header>
+        <sidebar id="Community-Tabs">
+                <ul>
+                        <li class="tablinks active" onclick="openTab(event,'Community-Latest')">Latest</li>
+                        <li class="tablinks" onclick="openTab(event,'Community-Stories')">Stories</li>
+                        <li class="tablinks" onclick="openTab(event,'Community-Posts')">Posts</li>
+                        <li class="tablinks" onclick="openTab(event,'Community-Conversations')">Conversations</li>
+                        <li class="tablinks" onclick="openTab(event,'Community-Events')">Events</li>
+                        <li class="tablinks" onclick="openTab(event,'Community-Resources')">Resources</li>
+                </ul>
         </sidebar>
-        <div class="wrapper">
-                <section id="Community-Latest" class="latest tabcontent active">
-                        <div class="stories">
-                                <header>
-                                        <h1>Stories</h1>
-                                        <a href="#">See More</a>
-                                </header>
-                                <ul>
-                                        <li>
-                                                <img src="./img/headshots/amanda.jpeg">
-                                                <div class="text">
-                                                        <h4>Lorem ipsum dolor sit amet</h4>
-                                                        <p>Posted By <a href="./profile.html">Amanda Solipsaysum</a> on October 8, 2021</p>
-                                                </div>
-                                        </li>
+        <section id="Community-Latest" class="latest tabcontent active">
+                <div class="stories">
+                        <header>
+                                <h1>Stories</h1>
+                                <a href="#" onclick="openTab(event,'Community-Stories')">See More</a>
+                        </header>
+                        <ul>
+                                <li>
+                                        <img src="./img/headshots/amanda.jpeg">
+                                        <div class="text">
+                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                                <p class="byline">By <a href="./profile.html">Amanda Solipsaysum</a></br>October 8, 2021</p>
+                                        </div>
+                                </li>
 
-                                        <li>
-                                                <img src="./img/headshots/andrew.jpg">
-                                                <div class="text">
-                                                        <h4>Lorem ipsum dolor sit amet</h4>
-                                                        <p>Posted By <a href="./profile-andrew.html">Andrew Myers</a> on September 29, 2021</p>
-                                                </div>
-                                        </li>
-                                        <li>
-                                                <img src="./img/headshots/hillary.png">
-                                                <div class="text">
-                                                        <h4>Lorem ipsum dolor sit amet</h4>
-                                                        <p>Posted By <a href="./profile.html">Hillary</a> on September 29, 2021</p>
-                                                </div>
-                                        </li>
-                                        <li>
-                                                <img src="./img/headshots/diane.png">
-                                                <div class="text">
-                                                        <h4>Lorem ipsum dolor sit amet</h4>
-                                                        <p>Posted By <a href="./profile.html">Diane</a> on September 29, 2021</p>
-                                                </div>
-                                        </li>
-                                        <li>
-                                                <img src="./img/headshots/jesse.jpg">
-                                                <div class="text">
-                                                        <h4>Lorem ipsum dolor sit amet</h4>
-                                                        <p>Posted By <a href="./profile.html">Jesse</a> on September 29, 2021</p>
-                                                </div>
-                                        </li>
-                                        <li>
-                                                <img src="./img/headshots/marta.jpg">
-                                                <div class="text">
-                                                        <h4>Lorem ipsum dolor sit amet</h4>
-                                                        <p>Posted By <a href="./profile.html">Andrew Myers</a> on September 29, 2021</p>
-                                                </div>
-                                        </li>
-                                        <li>
-                                                <img src="./img/headshots/michael.png">
-                                                <div class="text">
-                                                        <h4>Lorem ipsum dolor sit amet</h4>
-                                                        <p>Posted By <a href="./profile.html">Michael</a> on September 29, 2021</p>
-                                                </div>
-                                        </li>
-                                </ul>
-                        </div><!-- end latest-stories -->
-                </section>
-                <section id="Community-Stories" class="tabcontent">
-                        <ul class="stories">
-                                        <li>
-                                                <img src="./img/headshots/amanda.jpeg">
+                                <li>
+                                        <img src="./img/headshots/andrew.jpg">
+                                        <div class="text">
                                                 <h4>Lorem ipsum dolor sit amet</h4>
-                                                <p>Posted By <a href="./profile.html">Amanda Solipsaysum</a> on October 8, 2021</p>
-                                        </li>
-                                        <li>
-                                                <img src="./img/headshots/andrew.jpg">
+                                                <p class="byline">By <a href="./profile-andrew.html">Andrew Myers</a></br>September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/hillary.png">
+                                        <div class="text">
+                                                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                                                <p class="byline">By <a href="./profile.html">Hillary</a></br> September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/diane.png">
+                                        <div class="text">
                                                 <h4>Lorem ipsum dolor sit amet</h4>
-                                                <p>Posted By <a href="./profile-andrew.html">Andrew Myers</a> on September 29, 2021</p>
-                                        </li>
-                                        <li>
-                                                <img src="./img/headshots/marta.jpg">
+                                                <p class="byline">By <a href="./profile.html">Diane</a></br> September 29, 2021</p>
+                                        </div>
+                                </li>
+                        </ul>
+                </div>
+                <div class="posts">
+                        <header>
+                                <h1>Posts</h1>
+                                <a href="#" onclick="openTab(event,'Community-Posts')">See More</a>
+                        </header>
+                        <ul>
+                                <li>
+                                        <img src="./img/headshots/diane.png">
+                                        <div class="text">
+                                                <h4>Title of post</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
+                                                <p class="byline">By <a href="./profile.html">Diane</a> on September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/andrew.jpg">
+                                        <div class="text">
+                                                <h4>Title of post</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
+                                                <p class="byline">By <a href="./profile.html">Andrew</a> on September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/amanda.jpeg">
+                                        <div class="text">
+                                                <h4>Title of post</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
+                                                <p class="byline">By <a href="./profile.html">Amanda</a> on September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/amanda.jpeg">
+                                        <div class="text">
+                                                <h4>Title of post</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
+                                                <p class="byline">By <a href="./profile.html">Amanda</a> on September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/amanda.jpeg">
+                                        <div class="text">
+                                                <h4>Title of post</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
+                                                <p class="byline">By <a href="./profile.html">Amanda</a> on September 29, 2021</p>
+                                        </div>
+                                </li>
+                        </ul>
+                </div>
+                <div class="conversations">
+                        <header>
+                                <h1>Conversations</h1>
+                                <a href="#" onclick="openTab(event,'Community-Conversations')">See More</a>
+                        </header>
+                        <ul>
+                                {% for i in (1..6) %}
+                                <li>
+                                        <div class="post-categories">
+                                                <span class="icon">tag</span>
+                                                <p>Abuse</p>
+                                                <p>Advice</p>
+                                                <span class="icon-standard bookmark">bookmark</span>
+                                        </div>
+                                        <div class="post-preview">
+                                                <h4>I've been stuck in this really negative narrative</h4>
+                                                <p>Can you help me repharase this narrative: "I drive people away because my boyfriend is now distancing himself physically and emotionally"?</p>
+                                        </div>
+                                       <div class="post_footer">
+                                                <div class="post-footer-posted">
+                                                        <h6>Conversation created by</h6>
+                                                        <div class="post-footer-posted-by">
+                                                                <img src="../img/headshots/amanda.jpeg">
+                                                                <p><a href="./profile.html">Amanda Solipsaysum</a> on August 23, 2021</p>
+                                                        </div>
+                                                </div>
+                                                <div class="post-footer-interactions">
+                                                        <p><span class="icon-standard">eye</span>300</p>
+                                                        <p><span class="icon-standard">comment</span>200</p>
+                                                </div>
+                                        </div>
+                                       
+                                </li>
+                        {% endfor %}
+                        </ul>
+                </div>
+        </section><!--#Community-Latest -->
+        <section id="Community-Stories" class="tabcontent">
+                <ul class="stories">
+                                <li>
+                                        <img src="./img/headshots/amanda.jpeg">
+                                        <div class="text">
                                                 <h4>Lorem ipsum dolor sit amet</h4>
-                                                <p>Posted By <a href="./profile-andrew.html">Andrew Myers</a> on September 29, 2021</p>
-                                        </li>
-                                        <li>
-                                                <img src="./img/headshots/alix.jpeg">
+                                                <p>Posted By <a href="./profile.html">Amanda Solipsaysum</a></br>October 8, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/andrew.jpg">
+                                        <div class="text">
                                                 <h4>Lorem ipsum dolor sit amet</h4>
-                                                <p>Posted By <a href="./profile-andrew.html">Andrew Myers</a> on September 29, 2021</p>
-                                        </li>
-                                </ul>
-                </section>
-        </div>
+                                                <p>Posted By <a href="./profile-andrew.html">Andrew Myers</a></br>September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/marta.jpg">
+                                        <div class="text">
+                                                <h4>Lorem ipsum dolor sit amet</h4>
+                                                <p>Posted By <a href="./profile-andrew.html">Andrew Myers</a></br>September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/jesse.jpg">
+                                        <div class="text">
+                                                <h4>Lorem ipsum dolor sit amet</h4>
+                                                <p>Posted By <a href="./profile.html">Jesse</a> </br>September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/marta.jpg">
+                                        <div class="text">
+                                                <h4>Lorem ipsum dolor sit amet</h4>
+                                                <p>Posted By <a href="./profile.html">Andrew Myers</a></br>September 29, 2021</p>
+                                        </div>
+                                </li>
+                                <li>
+                                        <img src="./img/headshots/michael.png">
+                                        <div class="text">
+                                                <h4>Lorem ipsum dolor sit amet</h4>
+                                                <p>Posted By <a href="./profile.html">Michael</a> on September 29, 2021</p>
+                                        </div>
+                                </li>
+                        </ul>
+        </section><!-- #Community-Stories -->
+        <section id="Community-Posts" class="tabcontent">
+        </section><!-- #Community-Posts -->
+        <section id="Community-Conversations" class="conversations tabcontent">   
+                <h1>Conversations</h1>
+                <ul>
+                        {% for i in (1..6) %}
+                                <li>
+                                        <div class="post-categories">
+                                                <span class="icon">tag</span>
+                                                <p>Abuse</p>
+                                                <p>Advice</p>
+                                                <span class="icon-standard bookmark">bookmark</span>
+                                        </div>
+                                        <div class="post-preview">
+                                                <h3>I've been stuck in this really negative narrative</h3>
+                                                <p>Can you help me repharase this narrative: "I drive people away because my boyfriend is now distancing himself physically and emotionally"?</p>
+                                        </div>
+                                       <div class="post_footer">
+                                                <div class="post-footer-posted">
+                                                        <h6>Conversation created by</h6>
+                                                        <div class="post-footer-posted-by">
+                                                                <img src="../img/amanda.jpeg">
+                                                                <h4>Abel</h4>
+                                                                <p>on August 23, 2021</p>
+                                                        </div>
+                                                </div>
+                                                <div class="post-footer-interactions">
+                                                        <p><span class="icon-standard">eye</span>300</p>
+                                                        <p><span class="icon-standard">comment</span>200</p>
+                                                </div>
+                                        </div>
+                                       
+                                </li>
+                        {% endfor %}
+                </ul>     
+        </section>
 </section> <!-- end #Community -->    

@@ -132,6 +132,14 @@ jQuery(document).ready(function( $ ) {
                 });
         });
 
+        // COMMUNITY PORTAL
+        $('.dropdown button').on("click", function(){
+                $(this).closest(".dropdown").addClass('active');
+        });
+        $('.dropdown .close').on("click", function(){
+                $('.dropdown').removeClass('active');
+        });
+
         // FORMS
         // https://codepen.io/nikhil8krishnan/pen/gaybLK
         $('.form').find('.form-control').each(function() {
