@@ -18,7 +18,7 @@ $label-color:darken($tan, 20%);
 // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
 // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
 .form{
-        max-width:600px;
+        max-width:800px;
         fieldset{
                 margin-bottom:20px;
                 label{
@@ -221,6 +221,7 @@ fieldset.toggle-switch{
 #Signup-Type.toggle-switch{
         background-color:$border-color;
         border:2px solid $border-color;
+        margin:30px 0 30px;
 }
 // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
 // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
@@ -244,7 +245,7 @@ fieldset.toggle-switch{
                 @include align-items(center);
                 margin:0 auto;
                 fieldset{
-                        max-width:600px;
+                        width:100%;
                 }
         }
 }
@@ -253,9 +254,12 @@ fieldset.toggle-switch{
 }
 #Signup-Membership_Agreement{
         @include flexbox();
+        @include justify-content(center);
 }
 #Signup-Website_Terms{
         margin-left:-60px;
+        @include flexbox();
+        @include justify-content(center);
 }
 #Signup-Profile_Type{
         margin-bottom:20px;
@@ -263,6 +267,7 @@ fieldset.toggle-switch{
 #Signup-Membership_Types{
         height:auto;
         width:100%;
+        margin:40px 0;
         legend{
                 @include flexbox();
                 @include justify-content(space-between);
@@ -302,14 +307,15 @@ fieldset.toggle-switch{
         }
         > ul{
                 @include flexbox();
-                //@include flex-direction(column);
-                @include justify-content(space-around);
+                @include align-items(stretch);
+                position:relative;
                 width:100%;
                 > li{
                         @include flexbox();
                         @include flex-direction(column);
+                        @include align-items(stretch);
+                        position:relative;
                         width:33.3%;
-                        height:100%;
                         background-color:$border-color;
                         border-radius:5px;
                         text-align: center;

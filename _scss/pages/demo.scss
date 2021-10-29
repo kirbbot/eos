@@ -23,6 +23,7 @@
                         white-space: nowrap;
                         color:darken($sage, 40%);
                         transition:none !important;
+                        text-transform:none !important;
                         &.active,
                         &:hover{
                                 background-color:rgba(220, 231, 224, 0.8);
@@ -40,20 +41,25 @@
                 }
         }
         section.tabcontent{
-                width:calc(100% - 250px);
                 padding-right:40px;
                 &.active{
                         display:flex !important;
+                        @include flex-direction(column);
+                        @include align-items(center);
                         @include justify-content(center);
                 }
                 .video-wrapper{
-                        max-width:1200px;
                         width:100%;
+                        max-width:1000px;
+                }
+                p{
+                        font-size:24px;
+                        line-height: 32px;
+                        margin-top:40px;
+                        width:800px;
                 }
                 iframe{
                         margin:0 auto;
-                        box-shadow:0 0 4px 4px darken($sage, 20%);
-                        background-color:darken($sage, 20%);
                         border-radius:15px;
                 }
         }

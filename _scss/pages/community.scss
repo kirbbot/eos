@@ -55,11 +55,12 @@
         }
 }
 #Community-Header{
-        margin-bottom:20px;
-        padding:20px 0;
+        margin-bottom:30px;
+        padding-top:30px;
+        padding-right:40px;
         border-bottom:5px dotted darken($ltblue, 5%);
         > section{
-                margin-bottom:20px;
+                margin-bottom:30px;
         }
 }
 #Community-Life_Transition{
@@ -76,14 +77,10 @@
         .text{
 
         }
-        h1{
-                margin-bottom:20px;
-        }
         p{
                 width:100%;
                 font-size:24px;
                 line-height: 36px;
-                margin-top:20px;
         }   
 }
 #Community-Filters{
@@ -236,47 +233,6 @@
                         }
                 }
         }
-        #Community-Filters-Applied{
-                @include flexbox();
-                @include flex-wrap(wrap);
-                width:100%;
-                padding:20px 0;
-                ul.tokens{
-                        @include flexbox();
-                        li:not(:last-child){
-                                margin-right:10px;
-                        }
-                        .token{
-                                @include flexbox();
-                                @include align-items(center);
-                                padding:10px 20px 10px 20px;
-                                background-color:darken($blue, 20%);
-                                border-radius:30px;
-                                &:hover{
-                                        cursor:pointer;
-                                        span{
-                                                display:block;
-                                        }
-                                }
-                                p{
-                                        color:$ltblue;
-                                        font-family:apercu;
-                                        font-size:12px;
-                                        font-weight:400;
-                                        text-transform: uppercase;
-                                }
-                                span{
-                                        margin-left:10px;
-                                        margin-top:-3px;
-                                        font-weight:600;
-                                        font-family:apercu;
-                                        color:$ltblue;
-                                        transition:all 0.5s ease;
-                                        font-size:14px;
-                                }
-                        }
-                }
-        }
 }
 #Community{
         @include flexbox();
@@ -303,6 +259,7 @@
         }
         .tabcontent{
                 min-height:800px;
+                padding-top:0 !important;
                 padding-right:20px !important;
                 h1{
                         margin-bottom:20px;

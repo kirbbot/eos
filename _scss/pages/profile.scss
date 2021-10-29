@@ -116,6 +116,12 @@ $profile_avatar_h: 225px;
                         font-size: 24px;
                         line-height: 32px;
                         color:darken($sage, 50%);
+                        a{
+                                font-size:inherit;
+                                font-family:inherit;
+                                font-weight:inherit;
+                                border-bottom:1px solid $black;
+                        }
                 }
                 ul{
                         @include flexbox();

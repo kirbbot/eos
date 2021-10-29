@@ -192,7 +192,7 @@ textarea:focus, input:focus {
   outline: none; }
 
 .form {
-  max-width: 600px; }
+  max-width: 800px; }
   .form fieldset {
     margin-bottom: 20px; }
     .form fieldset label {
@@ -378,7 +378,8 @@ fieldset.toggle-switch {
 
 #Signup-Type.toggle-switch {
   background-color: #e6d3b6;
-  border: 2px solid #e6d3b6; }
+  border: 2px solid #e6d3b6;
+  margin: 30px 0 30px; }
 
 #Signup {
   display: -webkit-box;
@@ -422,7 +423,7 @@ fieldset.toggle-switch {
     align-items: center;
     margin: 0 auto; }
     #Signup .form fieldset {
-      max-width: 600px; }
+      width: 100%; }
 
 #Signup-Cancel {
   margin-left: 30px; }
@@ -432,17 +433,33 @@ fieldset.toggle-switch {
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex; }
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
 
 #Signup-Website_Terms {
-  margin-left: -60px; }
+  margin-left: -60px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
 
 #Signup-Profile_Type {
   margin-bottom: 20px; }
 
 #Signup-Membership_Types {
   height: auto;
-  width: 100%; }
+  width: 100%;
+  margin: 40px 0; }
   #Signup-Membership_Types legend {
     display: -webkit-box;
     display: -moz-box;
@@ -499,11 +516,12 @@ fieldset.toggle-switch {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: space-around;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    position: relative;
     width: 100%; }
     #Signup-Membership_Types > ul > li {
       display: -webkit-box;
@@ -515,8 +533,13 @@ fieldset.toggle-switch {
       -moz-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-align-items: stretch;
+      -moz-align-items: stretch;
+      -ms-align-items: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      position: relative;
       width: 33.3%;
-      height: 100%;
       background-color: #e6d3b6;
       border-radius: 5px;
       text-align: center; }
@@ -989,7 +1012,7 @@ fieldset.toggle-switch {
   justify-content: center;
   -ms-flex-pack: center;
   width: 100%;
-  margin-top: 40px; }
+  margin-top: 20px; }
   .btns-set a:last-child,
   .btns-set button:last-child {
     margin-left: 20px; }
@@ -1956,6 +1979,11 @@ footer {
       font-size: 24px;
       line-height: 32px;
       color: #314839; }
+      #Profile #Profile-Data h2 a {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        border-bottom: 1px solid #000; }
     #Profile #Profile-Data ul {
       display: -webkit-box;
       display: -moz-box;
@@ -2258,11 +2286,12 @@ footer {
       margin-right: 10px; }
 
 #Community-Header {
-  margin-bottom: 20px;
-  padding: 20px 0;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-right: 40px;
   border-bottom: 5px dotted #c5d4e3; }
   #Community-Header > section {
-    margin-bottom: 20px; }
+    margin-bottom: 30px; }
 
 #Community-Life_Transition {
   display: -webkit-box;
@@ -2282,13 +2311,10 @@ footer {
     width: auto;
     margin-right: 30px;
     border-radius: 50%; }
-  #Community-Life_Transition h1 {
-    margin-bottom: 20px; }
   #Community-Life_Transition p {
     width: 100%;
     font-size: 24px;
-    line-height: 36px;
-    margin-top: 20px; }
+    line-height: 36px; }
 
 #Community-Filters {
   display: -webkit-box;
@@ -2444,58 +2470,6 @@ footer {
         border-top: 5px dotted #4573aa;
         padding-top: 20px;
         margin-top: 20px; }
-  #Community-Filters #Community-Filters-Applied {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px 0; }
-    #Community-Filters #Community-Filters-Applied ul.tokens {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex; }
-      #Community-Filters #Community-Filters-Applied ul.tokens li:not(:last-child) {
-        margin-right: 10px; }
-      #Community-Filters #Community-Filters-Applied ul.tokens .token {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding: 10px 20px 10px 20px;
-        background-color: #628dc0;
-        border-radius: 30px; }
-        #Community-Filters #Community-Filters-Applied ul.tokens .token:hover {
-          cursor: pointer; }
-          #Community-Filters #Community-Filters-Applied ul.tokens .token:hover span {
-            display: block; }
-        #Community-Filters #Community-Filters-Applied ul.tokens .token p {
-          color: #d6e1eb;
-          font-family: apercu;
-          font-size: 12px;
-          font-weight: 400;
-          text-transform: uppercase; }
-        #Community-Filters #Community-Filters-Applied ul.tokens .token span {
-          margin-left: 10px;
-          margin-top: -3px;
-          font-weight: 600;
-          font-family: apercu;
-          color: #d6e1eb;
-          transition: all 0.5s ease;
-          font-size: 14px; }
 
 #Community {
   display: -webkit-box;
@@ -2538,6 +2512,7 @@ footer {
     height: 100%; }
   #Community .tabcontent {
     min-height: 800px;
+    padding-top: 0 !important;
     padding-right: 20px !important; }
     #Community .tabcontent h1 {
       margin-bottom: 20px; }
@@ -3239,7 +3214,8 @@ p a {
       border-bottom: 2px solid #a9c5b3;
       white-space: nowrap;
       color: #456751;
-      transition: none !important; }
+      transition: none !important;
+      text-transform: none !important; }
       #Demo .tabs a.tablinks.active, #Demo .tabs a.tablinks:hover {
         background-color: rgba(220, 231, 224, 0.8); }
         #Demo .tabs a.tablinks.active:after, #Demo .tabs a.tablinks:hover:after {
@@ -3252,22 +3228,33 @@ p a {
           border-left: 28px solid rgba(220, 231, 224, 0.8);
           border-bottom: 29px solid transparent; }
   #Demo section.tabcontent {
-    width: calc(100% - 250px);
     padding-right: 40px; }
     #Demo section.tabcontent.active {
       display: flex !important;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       -webkit-justify-content: center;
       -moz-justify-content: center;
       -ms-justify-content: center;
       justify-content: center;
       -ms-flex-pack: center; }
     #Demo section.tabcontent .video-wrapper {
-      max-width: 1200px;
-      width: 100%; }
+      width: 100%;
+      max-width: 1000px; }
+    #Demo section.tabcontent p {
+      font-size: 24px;
+      line-height: 32px;
+      margin-top: 40px;
+      width: 800px; }
     #Demo section.tabcontent iframe {
       margin: 0 auto;
-      box-shadow: 0 0 4px 4px #72a082;
-      background-color: #72a082;
       border-radius: 15px; }
 
 html {
