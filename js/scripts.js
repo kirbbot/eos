@@ -38,6 +38,7 @@ jQuery(document).ready(function( $ ) {
         });
 
         // Slick
+        // About page Timeline Carousel
         $('#Timeline').slick({
                 dots: false,
                 prevArrow: false,
@@ -80,7 +81,16 @@ jQuery(document).ready(function( $ ) {
         $('#Timeline-Nav li').on('click', function(){
                 $('#Timeline-Nav li').removeClass('active');
                 $(this).addClass('active');
-        });       
+        });   
+
+
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        // F I T V I D
+        // https://github.com/davatron5000/FitVids.js
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        $('iframe[src*="youtube"]').parent().fitVids();
 
         // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
         // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
@@ -233,7 +243,7 @@ const makeCircle = (circleValue, idx) => {
     // image
     const imagehtml = `<img src="${imagesrc}"></img>`
     const imagecontainer = $(document.createElement("li"))
-    const imagelink = '<a href="topics.html"></a>'
+    const imagelink = '<a href="community.html"></a>'
     imagecontainer.addClass(contentColor)
     const image = $('<img></img>')
     $(image).attr('src', `${imagesrc}`)
@@ -256,7 +266,7 @@ const makeCircle = (circleValue, idx) => {
         imagecontainer.addClass('active');
         const headingstuff = $(`<h2>${heading}</h2>`)
         const contentstuff = $(`<p>${textValue}</p>`)
-        const linkstuff = $('<a href="topics.html"></a>')
+        const linkstuff = $('<a href="community.html"></a>')
         const linkcta = $('<p>Learn More <span class="icon-standard">navigateright</span></p>')
         const contentBox = document.getElementById('spin-text')
         contentBox.innerHTML = '';

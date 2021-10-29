@@ -7,7 +7,7 @@
         position:fixed;
         top:225px;
         left:0;
-        li.tablinks{
+        .tablinks{
                 @include flexbox();
                 @include align-items(center);
                 position:relative;
@@ -40,21 +40,36 @@
 
 #Community-Filters{
         @include flexbox();
+        @include flex-wrap(wrap);
         width:calc(100% - ( #{$sidebar_w} + 30px) );
-        margin:40px 40px 40px calc(#{$sidebar_w} + 30px);
+        margin:10px 40px 40px calc(#{$sidebar_w} + 30px);
         max-width:1280px;
+        padding-bottom:20px;
+        border-bottom:5px dotted darken($ltblue, 5%);
+        label{
+                width:100%;
+                font-family:apercu;
+                font-weight:200;
+                color:darken($blue, 20%);
+                margin-left:20px;
+        }
         h2{
                 font-weight: 200;
         }
         .dropdown{
-                margin-left:10px;
                 position:relative;
+                margin-right:10px;
                 &.active{
                         button{
-                                background-color:darken($blue, 40%);
+                                background-color:darken($blue, 20%);
                         }
                         .dropdown-content{
                                 display:block;
+                        }
+                }
+                &:not(.active){
+                        button{
+                                background-color:darken($blue, 7%);
                         }
                 }
                 button{
@@ -70,9 +85,13 @@
                         line-height: 28px;
                         border-radius:30px;
                         width:200px;
+                        transition:all 0.3s ease;
                         span{
                                 margin-left:10px;
                                 font-size:9px;
+                        }
+                        &:hover{
+                                background-color:darken($blue, 20%);
                         }
                 }
                 .dropdown-content{
@@ -109,12 +128,15 @@
                                 padding:20px;
                                 font-weight: 200;
                                 font-family:apercu;
-                                width:20%;
+                                width:calc(20% - 3px);
                                 border:2px solid transparent;
-                                transition:all 0.5s ease;
+                                transition:all 0.1s ease;
                                 color:$ltblue;
                                 font-size:18px;
                                 line-height:24px;
+                                border-radius:10px;
+                                margin-right:3px;
+                                margin-bottom:3px;
                                 &.active{
                                         background-color:darken($ltblue,3%);
                                 }
@@ -122,6 +144,9 @@
                                         //border:2px solid darken($ltblue,3%);    
                                         cursor:pointer;
                                         background-color:darken($blue,25%);
+                                }
+                                &.active{
+                                    background-color:darken($blue,25%);    
                                 }
                                 img{
                                         height:30px;
@@ -131,13 +156,85 @@
                         }
                 }
         }
+         .tilc-topic{
+                        @include flexbox();
+                        @include align-items(center);
+                        @include flex-wrap(wrap);
+                        width:100%;
+                        margin-top:20px;
+                        padding:20px 0;
+                        h1{
+                                width:100%;
+                                margin-bottom:20px;
+                        }
+                        img{
+                                width:130px;
+                                margin-right:20px;
+                        }
+                        p{
+                                font-size:36px;
+                                line-height: 44px;
+                                max-width: 640px;
+                        }
+                }
         #Community-Filters-Topics{
                 .dropdown-content{
                         padding:20px 40px 20px 40px;
-                        ul:last-of-type{
-                                border-top:5px dotted darken($blue,30%);
-                                padding-top:20px; 
-                                margin-top:20px;                       
+                        label{
+                                @include flexbox();
+                                padding-left:20px;
+                                font-size:12px;
+                                text-transform:uppercase;
+                                font-weight:600;
+                                letter-spacing:0.03em;
+                                color:darken($blue,40%);
+                                text-shadow:1px 1px darken($blue, 20%);
+                                font-family:apercu;
+                                &:last-of-type{
+                                        border-top:5px dotted darken($blue,30%);
+                                        padding-top:20px; 
+                                        margin-top:20px;                       
+                                }
+                        }
+                }
+        }
+        #Community-Filters-Applied{
+                @include flexbox();
+                @include flex-wrap(wrap);
+                width:100%;
+                padding:20px 0;
+                ul.tokens{
+                        @include flexbox();
+                        li:not(:last-child){
+                                margin-right:10px;
+                        }
+                        .token{
+                                @include flexbox();
+                                @include align-items(center);
+                                padding:10px 20px 10px 20px;
+                                background-color:darken($blue, 20%);
+                                border-radius:30px;
+                                &:hover{
+                                        cursor:pointer;
+                                        span{
+                                                display:block;
+                                        }
+                                }
+                                p{
+                                        color:$ltblue;
+                                        font-family:apercu;
+                                        font-size:12px;
+                                        font-weight:400;
+                                        text-transform: uppercase;
+                                }
+                                span{
+                                        margin-left:10px;
+                                        font-weight:600;
+                                        font-family:apercu;
+                                        color:$ltblue;
+                                        transition:all 0.5s ease;
+                                        font-size:14px;
+                                }
                         }
                 }
         }
@@ -148,6 +245,7 @@
         @include flex-wrap(wrap);
         width:100%;
         background-color:$ltblue;
+        min-height: calc(100vh - #{$header_h});
 
         section{
                 height:100%;
@@ -160,7 +258,47 @@
                         @include flexbox();
                         @include justify-content(space-between);
                         width:100%;
+                }
+        }
+        .tabcontent{
+                min-height:800px;
+                padding-right:20px !important;
+                h1{
                         margin-bottom:20px;
+                }
+        }
+        ul.posts{
+                li{
+                        @include flexbox();
+                        @include align-items(center);
+                        margin-bottom:15px;
+                        background-color:lighten($ltblue, 5%);
+                        border-radius:10px;
+                        padding:20px 30px;
+                        transition:all 0.1s ease;
+                        .text{
+                                @include flexbox();
+                                @include flex-direction(column);
+                                padding-left:20px;
+                        }
+                        &:hover{
+                                box-shadow:0 0 4px 4px rgba(98, 141, 192, .2);
+                                cursor:pointer;
+                        }
+                }
+                .img-container{
+                        width:100px;
+                        height:80px;
+                        overflow:hidden;
+                        border-radius:50%; 
+                }
+                img{
+                        object-fit: cover;
+                        height:100%;
+                        width:100%;
+                }
+                .byline a{
+                        border-bottom:1px solid $black;
                 }
         }
 
@@ -170,16 +308,16 @@
                         @include flex-wrap(wrap);
                         @include justify-content(space-between);
                         > li{
-                                margin-bottom:20px;
-                                width:calc(50% - 10px);
+                                margin-bottom:30px;
+                                width:calc(50% - 15px);
                                 background-color:lighten($ltblue, 5%);
                                 border-radius:10px;
-                                transition:all 0.5s ease;
+                                transition:all 0.1s ease;
                                 &:nth-child(even){
-                                   margin-left:10px;  
+                                   margin-left:15px;  
                                 }
                                 &:nth-child(odd){
-                                        margin-right:10px;
+                                        margin-right:15px;
                                 }
                                 &:hover{
                                         box-shadow:0 0 4px 4px rgba(98, 141, 192, .2);
@@ -281,21 +419,20 @@
                 @include justify-content(center);
         }
         li{
-                width:calc(25% - 4px);
+                width:calc(25% - 12px);
                 position:relative;
+                margin-bottom:12px;
                 &:nth-child(4n+1){
-                        margin-right:4px;
-                        margin-bottom:6px;
+                        margin-right:12px;
                 }
                 &:nth-child(4n+2){
-                        margin:0 2px 6px;
+                        margin:0 6px;
                 }
                 &:nth-child(4n+3){
-                        margin:0 2px 6px;
+                        margin:0 6px;
                 }
                 &:nth-child(4n+4){
-                        margin-left:4px;
-                        margin-bottom:6px;
+                        margin-left:12px;
                 }
                 &:hover{
                         cursor:pointer;
@@ -318,8 +455,8 @@
                 top:0;
                 left:0;
                 width:100%;
-                height:100%;
-                background-color:rgba(39, 66, 98, 0.85);
+                height:300px;
+                background-color:rgba(98, 141, 192,.95);
                 opacity:.9;
                 color:$white;
                 padding:20px;
@@ -350,36 +487,6 @@
                                 border-bottom:1px solid $blue;
                         }
                 }
-        }
-        div.posts{
-                li{
-                        @include flexbox();
-                        @include align-items(center);
-                        margin-bottom:15px;
-                        background-color:lighten($ltblue, 5%);
-                        border-radius:10px;
-                        padding:20px 30px;
-                        transition:all 0.5s ease;
-                        .text{
-                                @include flexbox();
-                                @include flex-direction(column);
-                        }
-                        &:hover{
-                                box-shadow:0 0 4px 4px rgba(98, 141, 192, .2);
-                                cursor:pointer;
-                        }
-                }
-                img{
-                        width:80px;
-                        height:80px;
-                        border-radius:50%;
-                        margin-right:20px;
-                }
-                .byline a{
-                        border-bottom:1px solid $black;
-                }
-        }
-        div.conversations{
         }
 }
 p.byline{

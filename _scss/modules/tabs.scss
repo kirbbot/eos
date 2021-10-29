@@ -5,17 +5,13 @@
         @include align-items(center);
 
         .tablinks{
-                font-family:apercu;
+                font-family:apercu !important;
                 transition: 0.3s;
                 border-bottom:2px solid transparent;
                 font-weight:200;
                 text-transform:uppercase;
-                letter-spacing:0.03em;
                 &:hover{
-
-                }
-                &.active{
-                        font-weight:400;
+                        cursor:pointer;
                 }
         }
 }
@@ -29,14 +25,4 @@
   &.active{
         display:block;
   }
-}
-
-.tabcontent {
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
-}
-
-/* Go from zero to full opacity */
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }

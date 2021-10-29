@@ -30,9 +30,9 @@
     }
 }
 
-$spinwheelsize: 600px;
-$imagesize:100px;
-$spacer:40px;
+$spinwheelsize: 500px;
+$imagesize:85px;
+$spacer:30px;
 #topics {
     @include flexbox();
     @include flex-direction(column);
@@ -79,7 +79,7 @@ $spacer:40px;
         }
         &.active {
             img {
-                transform: scale(1.75);
+                transform: scale(1.5);
             }
             &.orchid {
                 img {

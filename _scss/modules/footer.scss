@@ -1,0 +1,30 @@
+footer{
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        background-color:darken($sage, 60%);
+        padding:40px;
+        section{
+                padding:0 40px;
+        }
+        .btn{
+                border:2px solid darken($sage, 20%);
+                color:darken($sage, 20%);
+                border-radius:10px;
+                padding:20px 40px;
+                &:hover{
+                        background-color:darken($sage, 20%);
+                        color:darken($sage, 60%);
+                }
+        }
+        p{
+                color:darken($sage, 20%);
+                font-size:14px;
+                line-height:20px;
+                font-family:apercu;
+                font-weight:200;
+        }
+        a{
+                border-bottom:1px solid darken($sage, 20%);
+        }
+}

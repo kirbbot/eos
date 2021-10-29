@@ -17,23 +17,58 @@
                 <script src="./js/topics.js"></script>
                 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
                 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                <script src="./js/fitvid.js"></script> 
                 <script src="./js/scripts.js"></script> 
         </head>
         <body>
                 <header id="Header_Main">
                         <a id="Logo_Main" href="index.html"><img src="./img/logo.png"></a>
-                        <nav id="Nav_Main">
-                                <a href="community.html">Community</a>
-                                <a href="about.html">About</a>
-                                <a href="faq.html">Support</a>
-                                <a href="profile.html">Login / Sign Up</a>
-                        </nav>
+                        <ul id="Nav_Main">
+                                <li>
+                                        <a href="demo.html">Demo</a>
+                                </li>
+                                <li>
+                                        <a href="community.html">Community</a>
+                                        <ul>
+                                                <li>
+                                                        <p>Sample Community Pages</p>
+                                                </li>
+                                                <li>
+                                                        <a href="community-abuse.html">Abuse</a>
+                                                </li>
+                                                <li>
+                                                        <a href="community-healthcrisis.html">Health Crisis</a>
+                                                </li>
+                                        </ul>
+                                </li>
+                                <li>
+                                        <a href="about.html">About</a>
+                                </li>
+                                <li>
+                                        <a href="faq.html">FAQ</a>
+                                </li>
+                                <li>
+                                        <a id="Nav_Main-Profile" href="form-signup.html">Login / Sign Up</a>
+                                        <ul>
+                                                <li>
+                                                        <p>Sample Profiles</p>
+                                                </li>
+                                                <li>
+                                                        <a href="profile.html">Amanda</a>
+                                                </li>
+                                                <li>
+                                                        <a href="profile-andrew.html">Andrew</a>
+                                                </li>
+                                                <li>
+                                                        <a href="profile-newdawn.html">New Dawn</a>
+                                                </li>
+                                        </ul>
+                                </li>
+                        </ul>
                 </header>
                 <div class="content">
                         {{content}}
                 </div>
-                <footer>
-                </footer>
+                {% include footer.html %}
         </body>
 </html>

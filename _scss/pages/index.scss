@@ -1,6 +1,6 @@
 $padding:40px;
 
-#Home section{
+#Index section{
         @include flexbox();
         //min-height: calc(100vh - 200px);
         > .section-container{
@@ -42,20 +42,8 @@ $padding:40px;
                         width:auto;
                 }
         }
-        .register{
-                width:250px;
-                padding:20px 0;
+        .btn.register{
                 margin-top:20px;
-                text-align: center;
-                background-color:darken($sage, 25%);
-                border:1px solid darken($sage, 50%);
-                border-radius:5px;
-                color:$ltsage;
-                transition:all 0.5s ease;
-                &:hover{
-                        background-color:darken($sage, 50%);
-                        color:$ltsage;
-                }
         }
 }
 #Index-TILC{
@@ -64,6 +52,7 @@ $padding:40px;
         margin:0 auto;
         border-bottom:5px dotted $tan;
         padding-top:60px;
+        padding:0 40px;
         img{
         }
         p{
@@ -172,6 +161,7 @@ $padding:40px;
 }
 #Index-Topics{
         position:relative;
+        padding:0 40px;
         .section-container{
                 @include flexbox();
                 @include justify-content(center);
@@ -191,11 +181,11 @@ $padding:40px;
                 }
         }
         #spin-text{
-                height:450px;
-                width:450px;
+                height:400px;
+                width:400px;
                 position:absolute;
-                left:130px;
-                top:70px;
+                left:90px;
+                top:50px;
                 @include flexbox();
                 @include flex-direction(column);
                 @include justify-content(center);
@@ -232,6 +222,12 @@ $padding:40px;
         @include flex-wrap(wrap);
         @include align-items(flex-start);
         padding-top:$padding;
+        .section-container{
+                @include flexbox();
+                @include flex-wrap(wrap);
+                max-width:960px !important;
+                padding-bottom:0 !important;
+        }
         header{
                 width:100%;
         }
@@ -245,5 +241,110 @@ $padding:40px;
         .text{
                 padding:$padding 0 0 $padding;
                 max-width:600px;
+        }
+}
+#Index-Demo_Disclaimer{
+        background-color:rgba(175, 201, 184, 0.85);
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        z-index: 2000;
+        .modal-content{
+                width:600px;
+                background-color:darken($sage, 60%);
+                position:relative;
+                @include flexbox();
+                @include flex-direction(column);
+                @include align-items(center);
+                img{
+                        width:200px;
+                        height:auto;
+                }
+                .modal-close{
+                        position:absolute;
+                        right:40px;
+                        top:40px;
+                        color:$ltsage;
+                }
+                h2{
+                        margin-top:40px;
+                }
+                p{
+                        margin-top:20px;
+                }
+                h2,
+                p{
+                        color:$ltsage;
+                }
+        }
+}
+.mobileContent{
+        display:none;
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(space-between);
+        position:fixed;
+        height:100vh;
+        width:100vw;
+        top:0;
+        z-index:5000;
+        overflow-y:scroll;
+        background: rgb(114,160,130);
+        background: linear-gradient(180deg, rgba(114,160,130,1) 37%, rgba(58,88,68,1) 93%);
+        @media only screen and (max-width:1300px){
+                @include flexbox();
+        }
+        @include phone{
+                padding:0 20px 40px;
+        }
+        @include tablet{
+                padding:0 40px 40px;       
+        }
+        img{
+                @include align-self(center);
+                width:200px;
+                height:auto;
+                margin:20px 0 0px;
+        }
+        h1, h4, p, a{ color:$ltsage; }
+        h1{
+                font-size:34px;
+                text-align:center;
+                margin:20px 0 10px;
+        }
+        h4{
+                margin:20px 0 5px;
+                font-family:radley;
+                @include desktop{
+                        margin-bottom:0;
+                        margin-top:40px;
+                }
+        }
+        p{
+                margin-bottom:10px;
+
+        }
+        .text{
+                color:$ltsage;
+                max-width:800px;
+        }
+        .feedback{
+                max-width:800px;
+                width:100%;
+                a{
+                        border-bottom:1px solid $ltsage;
+                }
+        }
+        .tilc{
+                width:100%;
+                color:darken($sage, 80%);
+                text-align: center;
+                margin-top:60px;
+                span{
+                        border-bottom:1px solid darken($sage, 80%);
+                }
+                font-size:12px;
+                font-weight:200;
+                line-height: 18px;
         }
 }

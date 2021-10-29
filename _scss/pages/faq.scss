@@ -1,0 +1,53 @@
+#Support{
+        padding:40px;
+        max-width:960px;
+        margin:0 auto;
+        background-color:$bg;
+        >header{
+                @include flexbox();
+                @include justify-content(space-between);
+                margin-bottom:80px;
+                h1{
+                        width:100%;
+                }
+                p{
+                        padding-left:25px;
+                        span{
+                                position:absolute;
+                                left:0;
+                                font-size:14px;
+                                color:darken($sage, 20%);
+                                top:5px;
+                        }
+                }
+        }
+        > ul >li{
+                margin-bottom:40px;
+        }
+        ul{
+                margin-left:0;
+        }
+        h1{
+                margin-bottom:20px;
+        }
+        h4{
+                display: inline;
+        }
+        p{
+                font-size:18px;
+                line-height: 32px;
+                position:relative;
+        }
+        .numbered{
+                margin-left:20px;
+                span{
+                        font-size:85%;
+                }
+                strong{
+                        border-bottom:none;
+                }
+        }
+        .bulleted li:before{
+                top:6px;
+        }
+}

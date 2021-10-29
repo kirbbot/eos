@@ -12,7 +12,7 @@
         background-color:darken($sage, 20%);
         @include tablet{
                 height:$header_h_desktop;
-                padding:0 40px;
+                padding-left:40px;
         }
         @include phone{
                 height:$header_h_mobile;
@@ -42,22 +42,71 @@
                         @include flex-direction(column);
                 }
 
+                > li{
+                        @include flexbox();
+                        @include align-items(center);
+                        height:100%;
+                        position:relative;
+                        transition: all 0.5s ease;
+                        min-width:120px;
+                        &:hover{
+                                ul{
+                                        display:block;
+                                }
+                        }
+                        >ul{
+                                display:none;
+                                background-color:darken($sage, 40%);
+                                position:absolute;
+                                top:100%;
+                                min-width:100%;
+                                transition: all 0.5s ease;
+                                > li:not(:first-child){
+                                        border-bottom:1px solid darken($sage, 15%); 
+                                        a{
+                                                padding:20px;
+                                        }
+                                        &:hover{
+                                                background-color:darken($sage, 60%) !important;
+                                        }
+                                }
+                        }
+                }
+                p{
+                        white-space: nowrap;
+                        padding:10px 20px;
+                        font-family:apercu;
+                        color:$beige;
+                        font-weight:200;
+                        font-size:12px;
+                        //text-transform: uppercase;
+                        border-bottom:1px solid $beige;
+                        background-color:darken($sage, 30%);
+                        letter-spacing:.03em;
+                }
                 a{
+                        @include flexbox();
+                        @include align-items(center);
+                        height:100%;
                         white-space: nowrap;
                         transition:all 0.5s ease;
-                        border-bottom:1px solid transparent;
                         font-size:16px;
                         color:$beige;
                         text-transform:uppercase;
                         letter-spacing:0.05em;
-                        border-bottom:2px solid transparent;
-                        &:not(:first-child){
-                                margin-left:20px;
+                        padding:0 30px;
+                        &:not(:last-child){
+                                margin-right:2px;
                         }
                         &:hover,
                         &.active{
-                                color:lighten($milk_cafe, 30%);
-                                border-color:lighten($milk_cafe, 30%);
+                                color:lighten($beige, 30%);
+                                background-color:rgba(242, 239, 231, .15)
+                        }
+                        span{
+                                letter-spacing:0;
+                                margin-right:10px;
+                                font-size:12px;
                         }
                 }
         }

@@ -16,8 +16,12 @@ filters
 
 <section id="Community">
         <header id="Community-Filters" class="filters">
-                        <h1 style="margin-bottom:10px">Community</h1>
-                        <label>Filters</label>
+                <div class="tilc-topic">
+                        <h1>Health Crisis</h1>
+                        <img src="./img/topics-healthcrisis.png">
+                        <p>A health crisis can turn your world upside down. We help you turn fear and uncertainty into hope and knowledge!</p>
+                </div>
+                <label>Filters</label>
                 <div class="dropdown" id="Community-Filters-Topics">
                         <button>Topics<span class="icon-standard">navigatedown</span></button>
                         <div class="dropdown-content">
@@ -31,7 +35,7 @@ filters
                                         <li><img src="./img/topics-comingofage.png">Coming of Age</li>
                                         <li><img src="./img/topics-community.png">Community</li>
                                         <li><img src="./img/topics-grieving.png">Grieving</li>
-                                        <li><img src="./img/topics-healthcrisis.png">Health Crisis</li>
+                                        <li class="active"><img src="./img/topics-healthcrisis.png">Health Crisis</li>
                                         <li><img src="./img/topics-homelessness.png">Homelessness</li>
                                         <li><img src="./img/topics-humantrafficking.png">Human Trafficking</li>
                                         <li><img src="./img/topics-military.png">Military</li>
@@ -55,6 +59,23 @@ filters
                 </div>
                 <div class="dropdown">
                         <button>Cost<span class="icon-standard">navigatedown</span></button>
+                </div>
+                <div id="Community-Filters-Applied">
+                        <label>Applied Filters</label>
+                        <ul class="tokens">
+                                <li class="token">
+                                        <p>Health Crisis</p>
+                                        <span>x</span>
+                                </li>
+                                <li class="token">
+                                        <p>Ann Arbor, Michigan</p>
+                                        <span>x</span>
+                                </li>
+                                <li class="token">
+                                        <p>Agnostic</p>
+                                        <span>x</span>
+                                </li>
+                        </ul>
                 </div>
         </header>
         <sidebar id="Community-Tabs">

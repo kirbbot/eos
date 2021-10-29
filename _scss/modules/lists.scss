@@ -1,7 +1,13 @@
-.bulleted{
+.bulleted > li{
+        position:relative;
         &:before{
                 content:"•";
-                margin-right:10px;
+                position:absolute;
+                left:-15px;
+                top:3px;
+        }
+        p{
+                margin-left:0;
         }
 }
 .numbered,
@@ -28,5 +34,10 @@
                         color:darken($sage, 40%);
                         border-bottom:1px solid $sage
                 }
+        }
+}
+.bulleted{
+        li{
+
         }
 }
