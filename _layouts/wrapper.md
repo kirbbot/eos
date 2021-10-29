@@ -39,6 +39,9 @@
                                                 <li>
                                                         <a href="community-healthcrisis.html">Health Crisis</a>
                                                 </li>
+                                                <li>
+                                                        <a href="community-human_trafficking.html">Human Trafficking</a>
+                                                </li>
                                         </ul>
                                 </li>
                                 <li>

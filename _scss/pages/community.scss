@@ -1,3 +1,20 @@
+#Community{
+        &.community-health_crisis{
+                #Community-Life_Transition img{
+                        border:5px solid $orchid;
+                }
+        }
+        &.community-abuse{
+                #Community-Life_Transition img{
+                        border:5px solid $blue;
+                }
+        }
+        &.community-human_trafficking{
+                #Community-Life_Transition img{
+                        border:5px solid $sage;
+                }
+        }
+}
 #Community-Tabs{
         width:15%;
         @include flexbox();
@@ -37,15 +54,42 @@
                 }
         }
 }
+#Community-Header{
+        margin-bottom:20px;
+        padding:20px 0;
+        border-bottom:5px dotted darken($ltblue, 5%);
+        > section{
+                margin-bottom:20px;
+        }
+}
+#Community-Life_Transition{
+        @include flexbox();
+        @include align-items(center);
+        width:100%;
+        margin-bottom:20px;
+        img{
+                height:100%;
+                width:auto;
+                margin-right:30px;
+                border-radius:50%;
+        }
+        .text{
 
+        }
+        h1{
+                margin-bottom:20px;
+        }
+        p{
+                width:100%;
+                font-size:24px;
+                line-height: 36px;
+                margin-top:20px;
+        }   
+}
 #Community-Filters{
         @include flexbox();
-        @include flex-wrap(wrap);
-        width:calc(100% - ( #{$sidebar_w} + 30px) );
-        margin:10px 40px 40px calc(#{$sidebar_w} + 30px);
-        max-width:1280px;
-        padding-bottom:20px;
-        border-bottom:5px dotted darken($ltblue, 5%);
+        @include align-items(center);
+        padding-top:20px;
         label{
                 width:100%;
                 font-family:apercu;
@@ -53,12 +97,13 @@
                 color:darken($blue, 20%);
                 margin-left:20px;
         }
-        h2{
-                font-weight: 200;
+        h4{
+                margin-right:20px;
         }
         .dropdown{
                 position:relative;
                 margin-right:10px;
+                position:relative;
                 &.active{
                         button{
                                 background-color:darken($blue, 20%);
@@ -70,6 +115,19 @@
                 &:not(.active){
                         button{
                                 background-color:darken($blue, 7%);
+                        }
+                }
+                &.selected{
+                        button{
+                                background-color:darken($blue, 20%);
+                                .topics-btn-default{
+                                        position:absolute;
+                                        top:-30px;
+                                        color:darken($blue, 20%);
+                                }
+                                .topics-btn-selected{
+
+                                }
                         }
                 }
                 button{
@@ -84,9 +142,10 @@
                         font-size:12px;
                         line-height: 28px;
                         border-radius:30px;
-                        width:200px;
+                        width:fit-content;
+                        min-width: 200px;
                         transition:all 0.3s ease;
-                        span{
+                        .icon-standard{
                                 margin-left:10px;
                                 font-size:9px;
                         }
@@ -156,27 +215,6 @@
                         }
                 }
         }
-         .tilc-topic{
-                        @include flexbox();
-                        @include align-items(center);
-                        @include flex-wrap(wrap);
-                        width:100%;
-                        margin-top:20px;
-                        padding:20px 0;
-                        h1{
-                                width:100%;
-                                margin-bottom:20px;
-                        }
-                        img{
-                                width:130px;
-                                margin-right:20px;
-                        }
-                        p{
-                                font-size:36px;
-                                line-height: 44px;
-                                max-width: 640px;
-                        }
-                }
         #Community-Filters-Topics{
                 .dropdown-content{
                         padding:20px 40px 20px 40px;
@@ -229,6 +267,7 @@
                                 }
                                 span{
                                         margin-left:10px;
+                                        margin-top:-3px;
                                         font-weight:600;
                                         font-family:apercu;
                                         color:$ltblue;
@@ -247,18 +286,20 @@
         background-color:$ltblue;
         min-height: calc(100vh - #{$header_h});
 
-        section{
-                height:100%;
+        > section,
+        > header{
                 max-width:1280px; 
                 width:calc(100% - ( #{$sidebar_w} + 30px) );
                 margin-left:calc(#{$sidebar_w} + 30px);
                 position:relative;
-                padding:0 !important;
                 header{
                         @include flexbox();
                         @include justify-content(space-between);
                         width:100%;
                 }
+        }
+        > section{
+                height:100%;
         }
         .tabcontent{
                 min-height:800px;

@@ -111,4 +111,11 @@ const topics = [{
         heading: "Abuse",
         textValue: "Survivors of abuse and/or domestic violence CAN heal and become thrivers. You can do this!",
     },
+    {
+        id: "17",
+        contentColor: "blue",
+        imagesrc: "img/topics-mentalhealth.png",
+        heading: "Mental Health / Suicide Prevention",
+        textValue: "Is your emotional, psychological, and/or social well-being stressed by all the personal and societal challenges going on?",
+    },
 ]

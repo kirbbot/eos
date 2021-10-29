@@ -64,7 +64,7 @@ $spacer:30px;
 }
 
 #spin-wheel {
-    @include on-circle($item-count: 16, $circle-size: $spinwheelsize, $item-size: $imagesize);
+    @include on-circle($item-count: 17, $circle-size: $spinwheelsize, $item-size: $imagesize);
     li {
         transition: opacity .75s ease;
         img {
