@@ -4,6 +4,14 @@ footer{
         @include align-items(center);
         background-color:darken($sage, 60%);
         padding:40px;
+        @media screen{
+                @include phone{
+                        @include flex-direction(column);
+                        @include align-items(flex-start);
+                        padding:20px;
+                }
+        }
+        
         section{
                 padding:0 40px;
         }
@@ -15,6 +23,10 @@ footer{
                 &:hover{
                         background-color:darken($sage, 20%);
                         color:darken($sage, 60%);
+                }
+                @include phone{
+                        margin-top:20px;
+                        padding:10px 15px;
                 }
         }
         p{

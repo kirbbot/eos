@@ -54,6 +54,9 @@ $spacer:30px;
     @include justify-content(center);
     width: calc(#{$spinwheelsize} + #{$imagesize});
     margin-right: $spacer;
+    @include phone(){
+        width:100%;
+    }
     h2 {
         position: absolute;
         @include flexbox();

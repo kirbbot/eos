@@ -7,59 +7,86 @@ jQuery(document).ready(function( $ ) {
                 isMobile = true;
         }
 
+        if(isMobile){
+                $("#Mobile_Disclaimer").show();
+        }
 
-        // desktop nav collapse on scroll
-        $(document).on("scroll", function() {
-                if( $(isMobile == false)){
-                        if ($(document).scrollTop() > 100) {
-                                $('.main_header').addClass('shrink');
-                                console.log("shrink");
-                        } else {
-                                $('.main_header').removeClass('shrink');
+        // Add active class to nav
+        // http://www.sweet-web-design.com/wordpress/how-to-add-active-navigation-class-based-on-url-to-menu-item/2401/
+        jQuery(function($) {
+                var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+                $('#Nav_Main a').each(function() {
+                        if (this.href === path) {
+                                $(this).addClass('active');
                         }
-                }
+                });
         });
 
-        // HHHHHH-AAAAAAA-MMMMMMMM-BURGERia
-        $('.hamburger').click(function(e) {
-                $('.main_nav').slideToggle();
-                $('.main_nav').toggleClass('active');
-                e.preventDefault();
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        // F I T V I D
+        // https://github.com/davatron5000/FitVids.js
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        $('iframe[src*="youtube"]').parent().fitVids();
+
+        $("#Open-Prototype").on('click', function(){
+                $("#Disclaimer").hide();
+                sessionStorage.setItem("HiddenDisclaimer","true");
         });
 
-        // Form FUNctionality
-        $(".menu-activator").on("click", function() {
-                $("body").toggleClass("menu-active");
-        });
+        var disclaimer_hidden = sessionStorage.getItem("HiddenDisclaimer");
+        console.log(disclaimer_hidden);
+        if(disclaimer_hidden){
+                $("#Disclaimer").hide();
+        }
 
+        // Reload to show disclaimer on homepage
+        //check for Navigation Timing API support
+        //https://stackoverflow.com/questions/5004978/check-if-page-gets-reloaded-or-refreshed-in-javascript
+        if (window.performance) {
+          console.info("window.performance works fine on this browser");
+        }
+        console.info(performance.navigation.type);
+        if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+          console.info( "This page is reloaded" );
+          sessionStorage.clear();
+        } else {
+          console.info( "This page is not reloaded");
+        }
+
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
         // Dropdowns
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
         $('.dropdown button').on('click', function(){
                 $(this).closest('ul').css('height','100%');
         });
 
-        // Slick
-        // About page Timeline Carousel
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
+        // C A R O U S E L S // 
+        // Slick Carousel
+        // Page : About 
+        // Location : Timeline Carousel
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
         $('#Timeline').slick({
                 dots: false,
                 prevArrow: false,
                 nextArrow: false
         });
-        $('#Timeline-2010').on('click', function(){
+        $('#Timeline-2011').on('click', function(){
                 $('#Timeline').slick('slickGoTo', 0);
         });
-        $('#Timeline-2011').on('click', function(){
+        $('#Timeline-2013').on('click', function(){
                 $('#Timeline').slick('slickGoTo', 1);
         });
-        $('#Timeline-2013').on('click', function(){
+        $('#Timeline-2014').on('click', function(){
                 $('#Timeline').slick('slickGoTo', 2);
         });
-        $('#Timeline-2014').on('click', function(){
+        $('#Timeline-2015').on('click', function(){
                 $('#Timeline').slick('slickGoTo', 3);
         });
-        $('#Timeline-2015').on('click', function(){
+        $('#Timeline-2016a').on('click', function(){
                 $('#Timeline').slick('slickGoTo', 4);
         });
-        $('#Timeline-2016').on('click', function(){
+        $('#Timeline-2016b').on('click', function(){
                 $('#Timeline').slick('slickGoTo', 5);
         });
         $('#Timeline-2017').on('click', function(){
@@ -77,27 +104,26 @@ jQuery(document).ready(function( $ ) {
         $('#Timeline-2021').on('click', function(){
                 $('#Timeline').slick('slickGoTo', 10);
         });
-
         $('#Timeline-Nav li').on('click', function(){
                 $('#Timeline-Nav li').removeClass('active');
                 $(this).addClass('active');
         });   
 
+        // /// // /// // /// // /// // /// // /// // /// 
+        // COMMUNITY PORTAL
+        // /// // /// // /// // /// // /// // /// // /// 
+        $('.dropdown button').on("click", function(){
+                $(this).closest(".dropdown").addClass('active');
+        });
+        $('.dropdown .close').on("click", function(){
+                $('.dropdown').removeClass('active');
+        });
 
+        // /// // /// // /// // /// // /// // /// // /// 
+        // S I G N U P    F O R M
+        // /// // /// // /// // /// // /// // /// // /// 
+        // Modal - Membership Types
         // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
-        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
-        // F I T V I D
-        // https://github.com/davatron5000/FitVids.js
-        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
-        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
-        $('iframe[src*="youtube"]').parent().fitVids();
-
-        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
-        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
-        // S I G N U P   M O D A L S
-        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
-        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ 
-        // Modal - Signup Form Membership Types
         $('#Signup-Membership_Types-Btn').click(function(){
                 event.preventDefault();
                 $('#Signup-Membership_Types-Modal').fadeToggle();
@@ -106,7 +132,9 @@ jQuery(document).ready(function( $ ) {
                 event.preventDefault();
                 $('#Signup-Membership_Types-Modal').fadeToggle();
         });
-        // Modal Signup Form Membership Agreement
+
+        // Modal - Membership Agreement
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ
         $('#Signup-Membership_Agreement-Btn').click(function(){
                 event.preventDefault();
                 $('#Signup-Membership_Agreement-Modal').fadeToggle();
@@ -117,8 +145,9 @@ jQuery(document).ready(function( $ ) {
                 document.getElementById("Signup-Membership_Agreement-Checkbox").disabled = false;
                 document.getElementById("Signup-Membership_Agreement-Checkbox").checked = true;
         });
-        
-        // Modal Signup Form Website Terms
+
+        // Modal - Website Terms
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ
         $('#Signup-Website_Terms-Btn').click(function(){
                 event.preventDefault();
                 $('#Signup-Website_Terms-Modal').fadeToggle();
@@ -130,28 +159,9 @@ jQuery(document).ready(function( $ ) {
                 document.getElementById("Signup-Website_Terms-Checkbox").disabled = false;
         });
 
-
-        // Add active class to nav
-        // http://www.sweet-web-design.com/wordpress/how-to-add-active-navigation-class-based-on-url-to-menu-item/2401/
-        jQuery(function($) {
-                var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
-                $('#Nav_Main a').each(function() {
-                        if (this.href === path) {
-                                $(this).addClass('active');
-                        }
-                });
-        });
-
-        // COMMUNITY PORTAL
-        $('.dropdown button').on("click", function(){
-                $(this).closest(".dropdown").addClass('active');
-        });
-        $('.dropdown .close').on("click", function(){
-                $('.dropdown').removeClass('active');
-        });
-
-        // FORMS
+        // Interactive Form Input Behavior
         // https://codepen.io/nikhil8krishnan/pen/gaybLK
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ
         $('.form').find('.form-control').each(function() {
           var targetItem = $(this).parent();
           if ($(this).val()) {
@@ -182,6 +192,7 @@ jQuery(document).ready(function( $ ) {
         });
 
         // Signup Radio Buttons
+        // ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ ^ ˆ • ˆ
         $("#Signup-Membership_Types > ul > li").click(function(){
                 $("#Signup-Membership_Types > ul > li input").prop("checked",false);
                 $(this).find('input').prop("checked",true);
@@ -222,7 +233,9 @@ function openTab(evt, tabContent) {
   evt.currentTarget.className += " active";
 }
 
+// /// // /// // /// // /// // /// // /// // /// 
 // Topics Wheel
+// /// // /// // /// // /// // /// // /// // /// 
 window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     console.log('derp')
@@ -273,9 +286,6 @@ const makeCircle = (circleValue, idx) => {
         $(contentBox).removeClass().addClass(contentColor)
         $(contentBox).append(headingstuff).append(contentstuff).append(linkstuff).append(linkcta)
     })
-
-
-
     return imagecontainer
 
 }

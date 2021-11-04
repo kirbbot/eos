@@ -1,0 +1,127 @@
+#Disclaimer{
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(space-between);
+        position:fixed;
+        width:100vw;
+        top:0;
+        z-index:10000;
+        overflow-y:scroll;
+        background: rgb(114,160,130);
+        background: linear-gradient(180deg, rgba(114,160,130,1) 37%, rgba(58,88,68,1) 93%);
+        margin-top:0;
+        height:100%;
+        &.hide{
+                display:none;
+        }
+        @include phone{
+                padding:0 20px 40px;
+        }
+        @include tablet{
+                padding:20px 40px 40px;       
+        }
+        img{
+                @include align-self(center);
+                width:200px;
+                height:auto;
+                margin:20px 0 0px;
+        }
+        h1, h4, p, a{ color:$ltsage; }
+        h1{
+                font-size:34px;
+                text-align:center;
+                margin:20px 0 10px;
+        }
+        h4{
+                margin:20px 0 5px;
+                font-family:radley;
+                @include desktop{
+                        margin-bottom:0;
+                        margin-top:40px;
+                }
+        }
+        p{
+                margin-bottom:10px;
+                font-size:22px;
+                line-height:34px;
+
+        }
+        .text{
+                color:$ltsage;
+                max-width:800px;
+        }
+        .feedback{
+                max-width:600px;
+                width:100%;
+                text-align:center;
+                margin-top:40px;
+                @include phone{
+                        margin-top:20px;
+                }
+                a{
+                        border-bottom:1px solid darken($sage, 80%);
+                }
+                h4,p, a{
+                        color:darken($sage, 80%);
+                } 
+                
+        }
+        .tilc{
+                width:100%;
+                color:darken($sage, 80%);
+                text-align: center;
+                margin-top:60px;
+                span{
+                        border-bottom:1px solid darken($sage, 80%);
+                }
+                font-size:12px;
+                font-weight:200;
+                line-height: 18px;
+        }
+        #Open-Prototype.btn,
+        #Open-Demo.btn{
+                width:75%;
+                max-width:500px;
+                margin-top:40px;
+                padding:22px 0;
+                border:2px solid darken($sage, 50%);
+                border-bottom:10px solid darken($sage, 50%);
+                border-right:10px solid darken($sage, 50%);
+                color:darken($sage, 50%);
+                border-radius:20px;
+                font-size:24px;
+                font-weight: 600;
+                background-color:darken($sage, 60%);
+                color:darken($sage, 20%);
+                &:hover{
+                        border-bottom:10px solid darken($sage, 60%);
+                        border-right:10px solid darken($sage, 60%);
+                }
+        }
+        @include phone(){
+                #Open-Demo{
+                       @include flexbox();
+                       width:100% !important;
+                }
+                #Open-Prototype{
+                       display:none;
+                }
+        }
+        @include tablet(){
+                #Open-Demo{
+                        @include flexbox();
+                }
+                #Open-Prototype{
+                       display:none;
+                }
+        }
+        @include desktop(){
+                #Open-Demo{
+                       display:none;
+                }
+                #Open-Prototype{
+                       @include flexbox();
+                }
+        }
+}

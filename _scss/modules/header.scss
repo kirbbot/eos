@@ -13,13 +13,16 @@
         }
         @include phone{
                 height:$header_h_mobile;
-                padding: 0 20px;
+                @include justify-content(center);
         }
         #Logo_Main{
                 @include flexbox();
                 @include align-items(center);
                 height:100%;
                 padding:0 40px;
+                @include phone(){
+                        padding:0 10px;
+                }
                 img{
                         object-fit: contain;
                         height:80%;
@@ -36,10 +39,9 @@
                 @include justify-content(space-between);
                 @include align-items(center);
                 width:100%;
-                @include phone{
-                        @include flex-direction(column);
+                @include phone(){
+                        display:none;
                 }
-
                 > li{
                         @include flexbox();
                         @include justify-content(center);

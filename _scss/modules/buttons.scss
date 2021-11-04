@@ -12,70 +12,44 @@
         letter-spacing: 0.03em;
         white-space: nowrap;
         width:fit-content;
-
-        &-small{
-           border-radius:10px;  
-           font-size:14px;
-           padding:8px 11px;
-           font-weight:400;
-           letter-spacing: 0.03em;
-           &.inverse{
-                padding:6px 9px;
-           }
-        }
-        &-green{
-                background-color:darken($sage, 20%);
-                color:$ltsage;  
-                &:hover{
-                      background-color:darken($sage, 40%);  
-                }
-        }
-        &.inverse{
-                border:2px solid darken($sage, 0%);
-                color:darken($sage, 10%);
-                &:hover{
-                        background-color:darken($sage, 0%);
-                        color:darken($sage, 30%);
-                }
-        }
-}
-
-.btn-plain{
-        font-size:14px;
-        font-weight:200;
-        border-bottom:1px solid $chocolate;
-        padding:0;
-}
-
-.btn-primary{
-        padding:20px 30px;
-        border-radius:5px;
-        background-color:darken($sage, 30%);
-        border-bottom:4px solid darken($sage, 50%) !important;
-        border-right:4px solid darken($sage, 50%);
-        color:$ltsage;
-        min-width:250px;
-        font-weight:400 !important;
-        letter-spacing:.03em;
-        font-size:16px !important;
-        
         &:hover{
-                background-color:darken($sage, 50%);
+                cursor:pointer;
+        }
+        &-primary{
+                padding:20px 30px;
+                border-radius:5px;
+                background-color:darken($sage, 30%);
+                border-bottom:4px solid darken($sage, 50%) !important;
+                border-right:4px solid darken($sage, 50%);
                 color:$ltsage;
+                min-width:250px;
+                font-weight:400 !important;
+                letter-spacing:.03em;
+                font-size:16px !important;
+                &:hover{
+                        background-color:darken($sage, 50%);
+                        color:$ltsage;
+                }
+        }
+        &-plain{
+                font-size:14px;
+                font-weight:200;
+                border-bottom:1px solid $chocolate;
+                padding:0;   
+        }
+        &-set{
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                width:100%;
+                margin-top:20px;
+                a:last-child,
+                button:last-child{
+                        margin-left:20px;
+                }    
         }
 }
 
-.btns-set{
-        @include flexbox();
-        @include align-items(center);
-        @include justify-content(center);
-        width:100%;
-        margin-top:20px;
-        a:last-child,
-        button:last-child{
-                margin-left:20px;
-        }
-}
 .tooltip {
         position: relative;
         display: inline-block;

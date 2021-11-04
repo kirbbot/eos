@@ -152,14 +152,14 @@
                 }
                 .dropdown-content{
                         display:none;
-                        position:fixed;  
-                        top:200px;
+                        position:absolute;  
+                        top:60px;
                         background-color:darken($blue,20%);
                         z-index: 200;
                         border:5px solid darken($blue,22%);
                         border-radius:10px;
-                        width:94vw;
-                        left:3vw;
+                        width:80vw;
+                        left:0;
                         box-shadow:0 0 8px 8px rgba(98, 141, 192, .4);
                         .close{
                                 position:absolute;
@@ -217,7 +217,6 @@
                         padding:20px 40px 20px 40px;
                         label{
                                 @include flexbox();
-                                padding-left:20px;
                                 font-size:12px;
                                 text-transform:uppercase;
                                 font-weight:600;

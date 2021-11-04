@@ -16,12 +16,19 @@ h1 {
     font-family: radley;
     font-size: 44px;
     line-height: 55px;
+    @include phone(){
+        font-size:36px;
+        line-height:44px;
+    }
 }
 
 h2 {
     font-family: apercu;
     font-size: 35px;
     line-height: 45px;
+    @include phone{
+        font-size:32px;
+    }
 }
 
 h3 {
